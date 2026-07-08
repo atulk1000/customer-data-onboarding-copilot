@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/atulk1000/customer-data-onboarding-copilot/actions/workflows/ci.yml/badge.svg)](https://github.com/atulk1000/customer-data-onboarding-copilot/actions/workflows/ci.yml)
 
-Portfolio-grade data onboarding workflow for turning messy customer files into validated, canonical, production-ready records.
+Production-grade data onboarding workflow for turning messy customer files into validated, canonical, production-ready records.
 
 The demo uses a synthetic healthcare eligibility file because the domain is realistic and recruiter-friendly: it has ambiguous customer columns, required fields, enum normalization, row rejection, audit requirements, and publish controls. The product shape is intentionally generic for implementation, FDE, Solutions Engineering, and Data Solutions roles.
 
