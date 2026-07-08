@@ -4,12 +4,12 @@ import unittest
 
 import pandas as pd
 
+from onboarding.profiler import profile_dataframe
 from onboarding.reports import build_report_data, render_html_report, render_pdf_report
 from onboarding.schema import TARGET_SCHEMA
 from onboarding.source_coverage import build_source_coverage
 from onboarding.transform import approved_source_columns_by_target_field, build_canonical_flat, transform_outputs
 from onboarding.validation import validate_canonical_frame
-from onboarding.profiler import profile_dataframe
 
 
 def approved_mapping(target_table: str, target_field: str, source_column: str) -> dict:

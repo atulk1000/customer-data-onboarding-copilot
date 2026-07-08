@@ -40,11 +40,7 @@ class ValidationResult:
 
     @property
     def error_row_numbers(self) -> set[int]:
-        return {
-            issue.source_row_number
-            for issue in self.issues
-            if issue.severity == "error"
-        }
+        return {issue.source_row_number for issue in self.issues if issue.severity == "error"}
 
     @property
     def accepted_row_count(self) -> int:
@@ -60,7 +56,9 @@ class ValidationResult:
 
 
 def is_blank(value: Any) -> bool:
-    return value is None or (pd.isna(value) if not isinstance(value, (list, dict)) else False) or str(value).strip() == ""
+    return (
+        value is None or (pd.isna(value) if not isinstance(value, (list, dict)) else False) or str(value).strip() == ""
+    )
 
 
 def _clean_text(value: Any) -> str | None:
@@ -169,11 +167,7 @@ def validate_canonical_frame(
 ) -> ValidationResult:
     normalized = normalize_canonical_frame(flat_df)
     issues: list[ValidationIssue] = []
-    known_member_ids = {
-        str(value)
-        for value in normalized["member_id"].dropna().tolist()
-        if str(value).strip()
-    }
+    known_member_ids = {str(value) for value in normalized["member_id"].dropna().tolist() if str(value).strip()}
 
     for idx, row in normalized.iterrows():
         raw = flat_df.iloc[idx]
@@ -269,7 +263,9 @@ def validate_canonical_frame(
             _add_issue(issues, row_number, "warning", "gender_unknown", "gender is missing or unknown.", "gender")
 
         if is_blank(row["plan_type"]):
-            _add_issue(issues, row_number, "warning", "plan_type_unknown", "plan_type is missing or unknown.", "plan_type")
+            _add_issue(
+                issues, row_number, "warning", "plan_type_unknown", "plan_type is missing or unknown.", "plan_type"
+            )
 
         if row["coverage_status"] == "terminated" and is_blank(row["coverage_end_date"]):
             _add_issue(

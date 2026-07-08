@@ -90,8 +90,4 @@ def source_coverage_summary(rows: list[dict[str, Any]]) -> dict[str, int]:
 
 
 def unused_source_columns(rows: list[dict[str, Any]]) -> list[str]:
-    return [
-        str(row.get("source_column") or "")
-        for row in rows
-        if row.get("coverage_status") == "unused"
-    ]
+    return [str(row.get("source_column") or "") for row in rows if row.get("coverage_status") == "unused"]

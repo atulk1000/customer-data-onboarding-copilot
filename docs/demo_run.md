@@ -48,6 +48,22 @@ The data is synthetic only and contains no PHI.
 
 ## Verification Commands
 
+Quality gates:
+
+```powershell
+.\.venv\Scripts\python.exe -m black --check .
+.\.venv\Scripts\python.exe -m ruff check .
+.\.venv\Scripts\python.exe -m pytest
+```
+
+Result:
+
+```text
+black --check passed
+ruff check passed
+20 passed
+```
+
 Test suite:
 
 ```powershell

@@ -11,13 +11,13 @@ from onboarding.ai_mapper import AIMapperValidationError, OpenAIConfigurationErr
 from onboarding.database import connection_status, get_engine, init_db, publish_import
 from onboarding.exports import dataframe_to_csv_bytes
 from onboarding.idempotency import build_import_replay_check, source_dataframe_fingerprint
+from onboarding.mapping_quality import apply_mapping_type_alignment, blocking_mapping_alignment_issues
 from onboarding.mapping_templates import (
     apply_mapping_template,
     list_mapping_templates,
     load_mapping_template,
     save_mapping_template,
 )
-from onboarding.mapping_quality import apply_mapping_type_alignment, blocking_mapping_alignment_issues
 from onboarding.profiler import profile_dataframe
 from onboarding.reports import build_report_data, render_html_report, render_pdf_report
 from onboarding.rules_mapper import generate_rules_based_mappings
@@ -199,7 +199,9 @@ def profile_display_rows(profiles: list[dict[str, Any]], columns: list[str]) -> 
     return pd.DataFrame(rows)[columns] if rows else pd.DataFrame(columns=columns)
 
 
-def current_source_coverage(source_df: pd.DataFrame | None, mappings: list[dict[str, Any]] | None) -> list[dict[str, Any]]:
+def current_source_coverage(
+    source_df: pd.DataFrame | None, mappings: list[dict[str, Any]] | None
+) -> list[dict[str, Any]]:
     if source_df is None or mappings is None:
         return []
     profiles = st.session_state.profiles or profile_dataframe(source_df)
@@ -307,11 +309,10 @@ def render_import_replay_check(source_df: pd.DataFrame | None, ok: bool) -> dict
     return check
 
 
-def expand_ai_mappings(ai_mappings: list[dict[str, Any]], fallback_mappings: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    ai_by_key = {
-        (mapping.get("target_table"), mapping.get("target_field")): mapping
-        for mapping in ai_mappings
-    }
+def expand_ai_mappings(
+    ai_mappings: list[dict[str, Any]], fallback_mappings: list[dict[str, Any]]
+) -> list[dict[str, Any]]:
+    ai_by_key = {(mapping.get("target_table"), mapping.get("target_field")): mapping for mapping in ai_mappings}
     expanded = []
     for fallback in fallback_mappings:
         key = (fallback.get("target_table"), fallback.get("target_field"))
@@ -425,7 +426,9 @@ def main() -> None:
 
         source_df = st.session_state.source_df
         if source_df is not None:
-            show_metric_row({"Rows": len(source_df), "Columns": len(source_df.columns), "File": st.session_state.file_name})
+            show_metric_row(
+                {"Rows": len(source_df), "Columns": len(source_df.columns), "File": st.session_state.file_name}
+            )
             st.dataframe(source_df.head(25), use_container_width=True)
 
     if active_step == "Profile":
@@ -486,8 +489,7 @@ def main() -> None:
                 ]
                 if templates:
                     labels = {
-                        f"{template['template_name']} ({template['saved_at']})": template
-                        for template in templates
+                        f"{template['template_name']} ({template['saved_at']})": template for template in templates
                     }
                     selected_label = st.selectbox("Load saved template", list(labels.keys()))
                     if st.button("Load mapping template", use_container_width=True):
@@ -591,7 +593,9 @@ def main() -> None:
                 render_source_coverage_review(source_df, st.session_state.mappings)
 
                 with st.expander("Save Mapping Template", expanded=False):
-                    default_template_name = st.session_state.mapping_template_name or f"{st.session_state.file_name or 'source'} template"
+                    default_template_name = (
+                        st.session_state.mapping_template_name or f"{st.session_state.file_name or 'source'} template"
+                    )
                     template_name = st.text_input("Template name", value=default_template_name)
                     if st.button("Save current mappings as template", use_container_width=True):
                         if not template_name.strip():
@@ -744,7 +748,10 @@ def main() -> None:
             st.info("Transform accepted rows first.")
         else:
             source_file_hash = source_dataframe_fingerprint(st.session_state.source_df)
-            report_replay_check = st.session_state.import_replay_check or {"source_file_hash": source_file_hash, "is_replay": False}
+            report_replay_check = st.session_state.import_replay_check or {
+                "source_file_hash": source_file_hash,
+                "is_replay": False,
+            }
             report_data = build_report_data(
                 file_name=st.session_state.file_name or "uploaded.csv",
                 mapping_mode=st.session_state.mapping_mode,

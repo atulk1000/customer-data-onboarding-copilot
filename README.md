@@ -209,6 +209,7 @@ Demo-limited pieces:
 Run the core test suite:
 
 ```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
 .\.venv\Scripts\python.exe -m pytest
 ```
 
@@ -216,6 +217,14 @@ Optional compile check:
 
 ```powershell
 .\.venv\Scripts\python.exe -m compileall app.py onboarding tests
+```
+
+Quality gates used by CI:
+
+```powershell
+.\.venv\Scripts\python.exe -m black --check .
+.\.venv\Scripts\python.exe -m ruff check .
+.\.venv\Scripts\python.exe -m pytest
 ```
 
 Current local verification is captured in [docs/demo_run.md](docs/demo_run.md).

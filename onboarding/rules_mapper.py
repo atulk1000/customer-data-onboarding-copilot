@@ -3,7 +3,7 @@ from __future__ import annotations
 from difflib import SequenceMatcher
 from typing import Any
 
-from onboarding.profiler import normalize_column_name, normalize_token
+from onboarding.profiler import normalize_column_name
 from onboarding.schema import FIELD_ALIASES, TARGET_FIELDS_BY_FIELD, TARGET_SCHEMA, TargetField
 
 AMBIGUOUS_EXACT_TERMS = {

@@ -19,18 +19,20 @@ def build_import_replay_check(engine: Any, source_file_hash: str) -> dict[str, A
     from sqlalchemy import text
 
     with engine.connect() as conn:
-        row = conn.execute(
-            text(
-                """
+        row = (
+            conn.execute(
+                text("""
                 SELECT id, file_name, completed_at, status
                 FROM import_runs
                 WHERE source_file_hash = :source_file_hash
                 ORDER BY id DESC
                 LIMIT 1
-                """
-            ),
-            {"source_file_hash": source_file_hash},
-        ).mappings().first()
+                """),
+                {"source_file_hash": source_file_hash},
+            )
+            .mappings()
+            .first()
+        )
 
     if row is None:
         return {

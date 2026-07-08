@@ -171,7 +171,9 @@ def _build_rejected_rows(
                 "warning_count": len(warnings),
                 "warning_codes": _issue_values(warnings, "issue_code"),
                 "warning_target_fields": _issue_values(warnings, "target_field"),
-                "warning_source_columns": "; ".join(dict.fromkeys(column for column in warning_source_columns if column)),
+                "warning_source_columns": "; ".join(
+                    dict.fromkeys(column for column in warning_source_columns if column)
+                ),
                 "warnings": _issue_values(warnings, "issue_message"),
                 **raw_payload,
             }

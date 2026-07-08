@@ -154,10 +154,7 @@ def profile_dataframe(df: pd.DataFrame, sample_size: int = 5, top_n: int = 5) ->
         min_date = parsed_dates.min().date().isoformat() if not parsed_dates.empty else None
         max_date = parsed_dates.max().date().isoformat() if not parsed_dates.empty else None
 
-        top_values = {
-            str(key): int(value)
-            for key, value in values.value_counts(dropna=True).head(top_n).items()
-        }
+        top_values = {str(key): int(value) for key, value in values.value_counts(dropna=True).head(top_n).items()}
         sample_values = [str(value) for value in values.drop_duplicates().head(sample_size).tolist()]
 
         profiles.append(

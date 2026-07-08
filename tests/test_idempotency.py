@@ -22,9 +22,7 @@ class IdempotencyTests(unittest.TestCase):
     def test_replay_check_detects_previous_import_run(self) -> None:
         engine = create_engine("sqlite:///:memory:", future=True)
         with engine.begin() as conn:
-            conn.execute(
-                text(
-                    """
+            conn.execute(text("""
                     CREATE TABLE import_runs (
                         id INTEGER PRIMARY KEY,
                         file_name TEXT,
@@ -32,17 +30,11 @@ class IdempotencyTests(unittest.TestCase):
                         status TEXT,
                         source_file_hash TEXT
                     )
-                    """
-                )
-            )
-            conn.execute(
-                text(
-                    """
+                    """))
+            conn.execute(text("""
                     INSERT INTO import_runs (id, file_name, completed_at, status, source_file_hash)
                     VALUES (42, 'demo.csv', '2026-07-07 10:00:00', 'published', 'abc123')
-                    """
-                )
-            )
+                    """))
 
         check = build_import_replay_check(engine, "abc123")
         fresh_check = build_import_replay_check(engine, "newhash")

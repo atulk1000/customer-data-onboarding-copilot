@@ -101,17 +101,13 @@ def validate_ai_mapping_response(
         target_key = (target_table, target_field)
 
         if target_key not in TARGET_FIELDS_BY_KEY:
-            raise AIMapperValidationError(
-                f"AI returned unknown target field: {target_table}.{target_field}."
-            )
+            raise AIMapperValidationError(f"AI returned unknown target field: {target_table}.{target_field}.")
         if source_column and source_column not in source_columns:
             raise AIMapperValidationError(
                 f"AI returned unknown source column for {target_table}.{target_field}: {source_column}."
             )
         if target_key in seen_targets:
-            raise AIMapperValidationError(
-                f"AI returned duplicate mapping for {target_table}.{target_field}."
-            )
+            raise AIMapperValidationError(f"AI returned duplicate mapping for {target_table}.{target_field}.")
         seen_targets.add(target_key)
 
         confidence = mapping.get("confidence")
@@ -122,17 +118,11 @@ def validate_ai_mapping_response(
 
         needs_review = mapping.get("needs_review")
         if not isinstance(needs_review, bool):
-            raise AIMapperValidationError(
-                f"AI returned non-boolean needs_review for {target_table}.{target_field}."
-            )
+            raise AIMapperValidationError(f"AI returned non-boolean needs_review for {target_table}.{target_field}.")
 
         review_flags = mapping.get("review_flags")
-        if not isinstance(review_flags, list) or not all(
-            isinstance(flag, str) for flag in review_flags
-        ):
-            raise AIMapperValidationError(
-                f"AI returned invalid review_flags for {target_table}.{target_field}."
-            )
+        if not isinstance(review_flags, list) or not all(isinstance(flag, str) for flag in review_flags):
+            raise AIMapperValidationError(f"AI returned invalid review_flags for {target_table}.{target_field}.")
 
         rationale = str(mapping.get("rationale") or "").strip()
         transformation_hint = str(mapping.get("transformation_hint") or "").strip()
@@ -242,9 +232,7 @@ def _reasoning_effort() -> str | None:
         return None
     if effort not in SUPPORTED_REASONING_EFFORTS:
         raise OpenAIConfigurationError(
-            "OPENAI_REASONING_EFFORT must be one of: "
-            + ", ".join(sorted(SUPPORTED_REASONING_EFFORTS))
-            + "."
+            "OPENAI_REASONING_EFFORT must be one of: " + ", ".join(sorted(SUPPORTED_REASONING_EFFORTS)) + "."
         )
     return effort
 

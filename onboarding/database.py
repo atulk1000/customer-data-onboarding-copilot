@@ -173,16 +173,24 @@ def init_db(engine: Any) -> None:
         conn.execute(text("ALTER TABLE import_runs ADD COLUMN IF NOT EXISTS source_file_hash TEXT"))
         conn.execute(text("ALTER TABLE import_runs ADD COLUMN IF NOT EXISTS is_replay BOOLEAN NOT NULL DEFAULT FALSE"))
         conn.execute(text("ALTER TABLE import_runs ADD COLUMN IF NOT EXISTS previous_import_run_id INTEGER"))
-        conn.execute(text("ALTER TABLE import_runs ADD COLUMN IF NOT EXISTS replay_acknowledged BOOLEAN NOT NULL DEFAULT FALSE"))
+        conn.execute(
+            text("ALTER TABLE import_runs ADD COLUMN IF NOT EXISTS replay_acknowledged BOOLEAN NOT NULL DEFAULT FALSE")
+        )
         conn.execute(text("ALTER TABLE import_runs ADD COLUMN IF NOT EXISTS target_schema_version TEXT"))
         conn.execute(text("ALTER TABLE import_runs ADD COLUMN IF NOT EXISTS mapping_template_name TEXT"))
-        conn.execute(text("ALTER TABLE import_runs ADD COLUMN IF NOT EXISTS source_coverage_reviewed BOOLEAN NOT NULL DEFAULT FALSE"))
+        conn.execute(
+            text(
+                "ALTER TABLE import_runs ADD COLUMN IF NOT EXISTS source_coverage_reviewed BOOLEAN NOT NULL DEFAULT FALSE"
+            )
+        )
         conn.execute(text("ALTER TABLE import_runs ADD COLUMN IF NOT EXISTS signoff_reviewer_name TEXT"))
         conn.execute(text("ALTER TABLE import_runs ADD COLUMN IF NOT EXISTS signoff_reviewer_role TEXT"))
         conn.execute(text("ALTER TABLE import_runs ADD COLUMN IF NOT EXISTS signoff_decision TEXT"))
         conn.execute(text("ALTER TABLE import_runs ADD COLUMN IF NOT EXISTS signoff_comment TEXT"))
         conn.execute(text("ALTER TABLE import_runs ADD COLUMN IF NOT EXISTS signoff_at TIMESTAMP"))
-        conn.execute(text("CREATE INDEX IF NOT EXISTS idx_import_runs_source_file_hash ON import_runs (source_file_hash)"))
+        conn.execute(
+            text("CREATE INDEX IF NOT EXISTS idx_import_runs_source_file_hash ON import_runs (source_file_hash)")
+        )
 
 
 def _clean_record(record: dict[str, Any]) -> dict[str, Any]:
@@ -215,8 +223,7 @@ def _insert_import_run(
 
     signoff = signoff or {}
     result = conn.execute(
-        text(
-            """
+        text("""
             INSERT INTO import_runs (
                 file_name, mapping_mode, started_at, completed_at, source_file_hash,
                 is_replay, previous_import_run_id, replay_acknowledged, source_row_count,
@@ -234,8 +241,7 @@ def _insert_import_run(
                 :signoff_decision, :signoff_comment, :signoff_at, :status
             )
             RETURNING id
-            """
-        ),
+            """),
         {
             "file_name": file_name,
             "mapping_mode": mapping_mode,
@@ -304,8 +310,7 @@ def publish_import(
 
         for mapping in mappings:
             conn.execute(
-                text(
-                    """
+                text("""
                     INSERT INTO mapping_decisions (
                         import_run_id, target_table, target_field, target_data_type,
                         target_validation_kind, source_inferred_type, type_alignment,
@@ -318,8 +323,7 @@ def publish_import(
                         :type_alignment_reason, :source_column, :confidence, :mapping_mode,
                         :approved, :needs_review, :reason
                     )
-                    """
-                ),
+                    """),
                 {
                     "import_run_id": import_run_id,
                     "target_table": mapping.get("target_table"),
@@ -340,8 +344,7 @@ def publish_import(
 
         for source_column in source_coverage or []:
             conn.execute(
-                text(
-                    """
+                text("""
                     INSERT INTO source_column_audit (
                         import_run_id, source_column, normalized_name, inferred_type,
                         null_rate, unique_rate, coverage_status, mapped_targets,
@@ -352,16 +355,14 @@ def publish_import(
                         :null_rate, :unique_rate, :coverage_status, :mapped_targets,
                         :approved_targets, :review_recommendation
                     )
-                    """
-                ),
+                    """),
                 {**source_column, "import_run_id": import_run_id},
             )
 
         issues_df = validation_result.issues_df
         for issue in dataframe_to_records(issues_df) if not issues_df.empty else []:
             conn.execute(
-                text(
-                    """
+                text("""
                     INSERT INTO validation_issues (
                         import_run_id, source_row_number, severity, issue_code,
                         issue_message, target_field, source_column
@@ -370,8 +371,7 @@ def publish_import(
                         :import_run_id, :source_row_number, :severity, :issue_code,
                         :issue_message, :target_field, :source_column
                     )
-                    """
-                ),
+                    """),
                 {**issue, "import_run_id": import_run_id},
             )
 
@@ -379,16 +379,14 @@ def publish_import(
             error_summary = str(row.get("errors") or "")
             source_row_number = int(row.get("source_row_number"))
             conn.execute(
-                text(
-                    """
+                text("""
                     INSERT INTO rejected_rows (
                         import_run_id, source_row_number, raw_payload_json, error_summary
                     )
                     VALUES (
                         :import_run_id, :source_row_number, CAST(:raw_payload_json AS jsonb), :error_summary
                     )
-                    """
-                ),
+                    """),
                 {
                     "import_run_id": import_run_id,
                     "source_row_number": source_row_number,
@@ -409,8 +407,7 @@ def _upsert_members(conn: Any, members: pd.DataFrame, import_run_id: int) -> Non
 
     for row in dataframe_to_records(members):
         conn.execute(
-            text(
-                """
+            text("""
                 INSERT INTO members (
                     member_id, first_name, last_name, date_of_birth, gender, email, phone, latest_import_run_id
                 )
@@ -425,8 +422,7 @@ def _upsert_members(conn: Any, members: pd.DataFrame, import_run_id: int) -> Non
                     email = EXCLUDED.email,
                     phone = EXCLUDED.phone,
                     latest_import_run_id = EXCLUDED.latest_import_run_id
-                """
-            ),
+                """),
             {**_clean_record(row), "import_run_id": import_run_id},
         )
 
@@ -436,8 +432,7 @@ def _upsert_plans(conn: Any, plans: pd.DataFrame, import_run_id: int) -> None:
 
     for row in dataframe_to_records(plans):
         conn.execute(
-            text(
-                """
+            text("""
                 INSERT INTO plans (
                     plan_id, plan_name, plan_type, carrier_name, latest_import_run_id
                 )
@@ -449,8 +444,7 @@ def _upsert_plans(conn: Any, plans: pd.DataFrame, import_run_id: int) -> None:
                     plan_type = EXCLUDED.plan_type,
                     carrier_name = EXCLUDED.carrier_name,
                     latest_import_run_id = EXCLUDED.latest_import_run_id
-                """
-            ),
+                """),
             {**_clean_record(row), "import_run_id": import_run_id},
         )
 
@@ -460,8 +454,7 @@ def _upsert_member_coverage(conn: Any, coverage: pd.DataFrame, import_run_id: in
 
     for row in dataframe_to_records(coverage):
         conn.execute(
-            text(
-                """
+            text("""
                 INSERT INTO member_coverage (
                     coverage_id, member_id, plan_id, coverage_start_date, coverage_end_date,
                     coverage_status, relationship_to_subscriber, subscriber_id, latest_import_run_id
@@ -479,8 +472,7 @@ def _upsert_member_coverage(conn: Any, coverage: pd.DataFrame, import_run_id: in
                     relationship_to_subscriber = EXCLUDED.relationship_to_subscriber,
                     subscriber_id = EXCLUDED.subscriber_id,
                     latest_import_run_id = EXCLUDED.latest_import_run_id
-                """
-            ),
+                """),
             {**_clean_record(row), "import_run_id": import_run_id},
         )
 

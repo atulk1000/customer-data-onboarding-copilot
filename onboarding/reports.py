@@ -210,7 +210,9 @@ def render_pdf_report(report_data: dict[str, Any]) -> bytes:
     from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
     buffer = BytesIO()
-    doc = SimpleDocTemplate(buffer, pagesize=landscape(letter), rightMargin=36, leftMargin=36, topMargin=36, bottomMargin=36)
+    doc = SimpleDocTemplate(
+        buffer, pagesize=landscape(letter), rightMargin=36, leftMargin=36, topMargin=36, bottomMargin=36
+    )
     styles = getSampleStyleSheet()
     cell_style = ParagraphStyle(
         "ReportCell",
@@ -269,7 +271,10 @@ def render_pdf_report(report_data: dict[str, Any]) -> bytes:
     story.append(Paragraph(f"Sign-off status: {report_data['signoff_status']}", styles["Heading3"]))
 
     add_heading("Import Summary")
-    add_table([{"metric": key, "value": value} for key, value in report_data["import_summary"].items()], "No import summary available.")
+    add_table(
+        [{"metric": key, "value": value} for key, value in report_data["import_summary"].items()],
+        "No import summary available.",
+    )
 
     add_heading("Mapping Summary")
     add_table(
@@ -290,7 +295,10 @@ def render_pdf_report(report_data: dict[str, Any]) -> bytes:
     )
 
     add_heading("Source Coverage")
-    add_table([{"metric": key, "value": value} for key, value in report_data["source_coverage_summary"].items()], "No source coverage available.")
+    add_table(
+        [{"metric": key, "value": value} for key, value in report_data["source_coverage_summary"].items()],
+        "No source coverage available.",
+    )
     add_table(
         _select_columns(
             report_data["source_coverage_detail"],
@@ -312,16 +320,30 @@ def render_pdf_report(report_data: dict[str, Any]) -> bytes:
     add_table(report_data["validation_summary"]["warnings"], "No warnings found.")
 
     add_heading("Reconciliation")
-    add_table([{"metric": key, "value": value} for key, value in report_data["reconciliation_summary"].items()], "No reconciliation summary available.")
+    add_table(
+        [{"metric": key, "value": value} for key, value in report_data["reconciliation_summary"].items()],
+        "No reconciliation summary available.",
+    )
 
     add_heading("Reviewer Signoff")
-    add_table([{"field": key, "value": value} for key, value in report_data["reviewer_signoff"].items()], "No reviewer signoff captured.")
+    add_table(
+        [{"field": key, "value": value} for key, value in report_data["reviewer_signoff"].items()],
+        "No reviewer signoff captured.",
+    )
 
     add_heading("Rejected Rows Preview")
     add_table(
         _select_columns(
             report_data["rejected_rows_preview"],
-            ["source_row_number", "error_count", "error_codes", "error_target_fields", "errors", "warning_count", "warnings"],
+            [
+                "source_row_number",
+                "error_count",
+                "error_codes",
+                "error_target_fields",
+                "errors",
+                "warning_count",
+                "warnings",
+            ],
         ),
         "No rejected rows.",
     )

@@ -42,11 +42,7 @@ def _clean_value(value: Any) -> Any:
 
 
 def _clean_mapping(mapping: dict[str, Any]) -> dict[str, Any]:
-    return {
-        field: _clean_value(mapping.get(field))
-        for field in MAPPING_FIELDS
-        if field in mapping
-    }
+    return {field: _clean_value(mapping.get(field)) for field in MAPPING_FIELDS if field in mapping}
 
 
 def save_mapping_template(
@@ -127,7 +123,9 @@ def apply_mapping_template(
             missing_reason = f"Template source column '{source_column}' is not present in the current file."
             row["review_reason"] = f"{row.get('review_reason') or ''} {missing_reason}".strip()
         else:
-            row["review_reason"] = row.get("review_reason") or "Loaded from mapping template; reviewer approval required."
+            row["review_reason"] = (
+                row.get("review_reason") or "Loaded from mapping template; reviewer approval required."
+            )
 
         row["review_flags"] = sorted(set(flags))
         loaded.append(row)

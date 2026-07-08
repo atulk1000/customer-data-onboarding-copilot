@@ -108,7 +108,9 @@ def base_row(member_number: str, subscriber_id: str, relation: str, is_child: bo
     effective = random_effective_date()
     is_terminated = random.random() < 0.16
     term_date = effective + timedelta(days=random.randint(60, 720)) if is_terminated else None
-    status = random.choice(["Termed", "T", "Terminated"]) if is_terminated else random.choice(["Active", "A", "Pending"])
+    status = (
+        random.choice(["Termed", "T", "Terminated"]) if is_terminated else random.choice(["Active", "A", "Pending"])
+    )
     sex = random.choice(["M", "F", "Male", "Female", "O"])
 
     return {
@@ -121,7 +123,9 @@ def base_row(member_number: str, subscriber_id: str, relation: str, is_child: bo
         "Phone": random_phone(),
         "Plan Code": plan_code,
         "Plan Name": plan_name,
-        "Plan Type": random.choice([plan_type, plan_type.replace("PPO", "P.P.O"), "High Deductible" if plan_type == "HDHP" else plan_type]),
+        "Plan Type": random.choice(
+            [plan_type, plan_type.replace("PPO", "P.P.O"), "High Deductible" if plan_type == "HDHP" else plan_type]
+        ),
         "Carrier": carrier,
         "Effective Date": fmt_date(effective),
         "Term Date": fmt_date(term_date),
