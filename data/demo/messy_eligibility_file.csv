@@ -1,0 +1,1001 @@
+Member Number,First,Last,DOB,Sex,Email Address,Phone,Plan Code,Plan Name,Plan Type,Carrier,Effective Date,Term Date,Status,Relation,Subscriber ID
+MEM000001,Ana,Martinez,1979-02-30,Male,,555-905-5521,HMO-200,Basic HMO,HMO,Acme Health,2023-02-11,2023-08-29,Termed,Self,MEM000001
+MEM000002,Sam,Smith,01/07/1979,Female,not-an-email,555-866-5366,HMO-200,Basic HMO,HMO,Acme Health,2023-04-04,,Pending,Self,MEM000002
+DEP0000021,Leo,Brown,2015/01/18,M,leo.brown.0021@example.com,abc,POS-500,Choice POS,POS,Contoso Care,09/28/2024,,Pending,Dependent,MEM000002
+MEM000003,Mia,Wilson,04/28/1968,M,mia.wilson.0003@example.com,(555) 532-3512,POS-500,Choice POS,POS,Contoso Care,2024/01/21,,UnknownStatus,Self,MEM000003
+DEP0000031,Nina,Lee,1982/03/20,F,nina.lee.0031@example.com,5555438259,POS-500,Choice POS,POS,Contoso Care,2025-01-01,2025-12-10,T,Partner,MEM000003
+DEP0000032,Evan,Patel,1989/08/19,Female,evan.patel.0032@example.com,(555) 851-1988,HDHP-300,Saver HDHP,MysteryPlan,Northstar Benefits,07/09/2025,,Active,Spouse,MEM000003
+MEM000004,Mia,Smith,1998/11/01,Male,mia.smith.0004@example.com,(555) 576-3664,PPO-100,Silver PPO,P.P.O,Acme Health,2025-06-01,2024-01-01,Pending,Self,MEM000004
+DEP0000041,Caleb,Wilson,2014/12/11,O,caleb.wilson.0041@example.com,5553871238,HMO-200,Basic HMO,HMO,Acme Health,2025-04-21,,Pending,Child,
+MEM000005,Tara,Lee,03/15/1993,Male,tara.lee.0005@example.com,5556071651,HMO-200,Basic HMO,HMO,Acme Health,2024-07-19,,A,Self,MEM000005
+MEM000006,Luis,Johnson,2035-01-01,Female,luis.johnson.0006@example.com,(555) 268-2920,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/07/14,,Active,Self,MEM000006
+DEP0000061,,Rivera,1994/11/18,F,luis.rivera.0061@example.com,555-396-2389,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-09-10,,Pending,Spouse,MEM000006
+MEM000007,Mia,Smith,11/14/1976,Female,mia.smith.0007@example.com,(555) 754-9859,,Metro EPO,EPO,Northstar Benefits,2023-10-31,,Pending,Self,MEM000007
+MEM000003,Sofia,Conflict,1962-03-14,Female,sofia.patel.0008@example.com,5553117275,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025-08-27,,Active,Self,MEM000008
+DEP0000081,Maya,Martinez,2018-04-28,M,,(555) 564-7777,HMO-200,Basic HMO,HMO,Acme Health,09/19/2024,,Active,Child,MEM000008
+MEM000009,Maya,Wilson,03/10/1969,Female,maya.wilson.0009@example.com,555-499-3206,PPO-100,Silver PPO,PPO,Acme Health,03/18/2024,,Active,Self,MEM000009
+MEM000010,Leo,Wilson,1966/02/01,Female,leo.wilson.0010@example.com,5551109620,POS-500,Choice POS,POS,Contoso Care,2025/05/12,,Active,Self,MEM000010
+DEP0000101,Tara,Wilson,2011-08-20,Female,tara.wilson.0101@example.com,5551890742,PPO-100,Silver PPO,PPO,Acme Health,12/13/2023,,Active,Dependent,MEM000010
+MEM000011,Evan,Rivera,07/15/1994,Female,evan.rivera.0011@example.com,5556823846,PPO-100,Silver PPO,PPO,Acme Health,2023-03-13,,Active,Self,MEM000011
+DEP0000111,Sofia,Brown,08/21/2018,M,sofia.brown.0111@example.com,555-831-8047,POS-500,Choice POS,POS,Contoso Care,10/01/2024,,A,Child,MEM000011
+MEM000012,Noah,Patel,1963/01/30,O,noah.patel.0012@example.com,(555) 972-2681,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-06-11,,Active,Self,MEM000012
+DEP0000121,Caleb,Chen,06/24/1967,M,caleb.chen.0121@example.com,5559414128,PPO-100,Silver PPO,PPO,Acme Health,2023-07-10,,Active,Spouse,MEM000012
+MEM000013,Sofia,Patel,1969/02/14,M,sofia.patel.0013@example.com,(555) 479-9332,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2024-02-20,,Active,Self,MEM000013
+DEP0000131,Leo,Garcia,2012/01/30,F,leo.garcia.0131@example.com,(555) 301-9457,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-04-01,2025-05-03,Terminated,Child,MEM000013
+DEP0000132,Iris,Brown,03/27/2020,Female,iris.brown.0132@example.com,5552261545,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-10-04,09/13/2027,Terminated,Child,MEM000013
+MEM000014,Riley,Moore,1973/01/12,Female,riley.moore.0014@example.com,555-587-8220,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-01-04,,Active,Self,MEM000014
+DEP0000141,Sofia,Garcia,2020/03/11,Male,sofia.garcia.0141@example.com,(555) 247-8589,POS-500,Choice POS,POS,Contoso Care,2023/07/23,,Active,Dependent,MEM000014
+DEP0000142,Caleb,Rivera,2010-09-26,F,caleb.rivera.0142@example.com,(555) 100-2503,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,12/09/2023,2025/01/10,T,Child,MEM000014
+MEM000015,Tara,Nguyen,1985/08/19,F,tara.nguyen.0015@example.com,555-705-2025,EPO-400,Metro EPO,EPO,Northstar Benefits,2023/01/21,,A,Self,MEM000015
+DEP0000151,Mia,Garcia,2011/07/04,F,mia.garcia.0151@example.com,5558589883,PPO-100,Silver PPO,PPO,Acme Health,07/22/2023,,Active,Dependent,MEM000015
+DEP0000152,Luis,Martinez,2021-05-03,M,luis.martinez.0152@example.com,(555) 949-8836,POS-500,Choice POS,POS,Contoso Care,09/30/2024,,Active,Dependent,MEM000015
+MEM000016,Caleb,Moore,1972/05/07,Male,caleb.moore.0016@example.com,5555140245,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/12/16,,Pending,Self,MEM000016
+DEP0000161,Nina,Davis,2012-06-12,Female,nina.davis.0161@example.com,555-674-2346,EPO-400,Metro EPO,EPO,Northstar Benefits,02/21/2025,,Pending,Dependent,MEM000016
+DEP0000162,Iris,Thomas,2009-03-26,M,iris.thomas.0162@example.com,555-774-1961,POS-500,Choice POS,POS,Contoso Care,2023/01/17,,A,Child,MEM000016
+MEM000017,Jordan,Singh,11/06/1989,O,jordan.singh.0017@example.com,(555) 836-7985,POS-500,Choice POS,POS,Contoso Care,02/18/2024,2024-12-07,T,Self,MEM000017
+DEP0000171,Nina,Thomas,08/03/2019,Male,nina.thomas.0171@example.com,5554560057,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,11/24/2023,,A,Child,MEM000017
+MEM000018,Mia,Thomas,04/11/1978,Male,mia.thomas.0018@example.com,555-111-8078,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-08-21,2024/03/29,T,Self,MEM000018
+DEP0000181,Caleb,Chen,2011/11/29,Female,,555-368-2120,HMO-200,Basic HMO,HMO,Acme Health,2025/06/07,08/22/2026,Terminated,Child,MEM000018
+DEP0000182,Riley,Nguyen,1979-02-30,Male,riley.nguyen.0182@example.com,(555) 108-5720,HMO-200,Basic HMO,HMO,Acme Health,01/24/2023,,Active,Dependent,MEM000018
+MEM000019,Caleb,Rivera,1987-03-04,M,not-an-email,(555) 679-1199,HMO-200,Basic HMO,HMO,Acme Health,2023-03-28,,Pending,Self,MEM000019
+DEP0000191,Marcus,Smith,2018/02/01,Female,,abc,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-02-20,,Pending,Dependent,MEM000019
+DEP0000192,Nina,Patel,2018-09-02,M,nina.patel.0192@example.com,(555) 118-0307,EPO-400,Metro EPO,EPO,Northstar Benefits,03/09/2025,,UnknownStatus,Dependent,MEM000019
+MEM000020,Maya,Wilson,1990/04/07,Male,maya.wilson.0020@example.com,(555) 145-6879,HMO-200,Basic HMO,HMO,Acme Health,2024-11-10,,Active,Partner,MEM000020
+MEM000021,Noah,Wilson,08/12/1990,Female,noah.wilson.0021@example.com,5558997929,POS-500,Choice POS,MysteryPlan,Contoso Care,12/05/2025,,A,Self,MEM000021
+DEP0000211,Jordan,Rivera,01/06/2008,M,jordan.rivera.0211@example.com,555-338-1782,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-06-01,2024-01-01,A,Dependent,MEM000021
+MEM000022,Ana,Wilson,1969-02-24,F,ana.wilson.0022@example.com,(555) 298-0391,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-01-10,,Pending,Self,MEM000022
+DEP0000221,Tara,Nguyen,12/29/2020,O,tara.nguyen.0221@example.com,555-491-9826,POS-500,Choice POS,POS,Contoso Care,2024/04/25,,A,Dependent,MEM999999
+MEM000023,Nina,Smith,2035-01-01,F,nina.smith.0023@example.com,5555001855,HMO-200,Basic HMO,HMO,Acme Health,2023-02-16,,A,Self,MEM000023
+DEP0000231,,Wilson,2019/05/18,M,priya.wilson.0231@example.com,(555) 562-6372,EPO-400,Metro EPO,EPO,Northstar Benefits,2024/11/05,,Active,Dependent,MEM000023
+DEP0000232,Caleb,Wilson,1984-01-30,F,caleb.wilson.0232@example.com,5552603467,,Basic HMO,HMO,Acme Health,10/21/2025,,Active,Spouse,MEM000023
+MEM000019,Sam,Conflict,1962-03-14,F,sam.garcia.0024@example.com,555-189-3829,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-09-27,,Active,Self,MEM000024
+DEP0000241,Caleb,Patel,12/22/2011,F,,555-117-2485,PPO-100,Silver PPO,PPO,Acme Health,2023/09/02,,Active,Child,MEM000024
+MEM000025,Riley,Wilson,1977/01/13,F,riley.wilson.0025@example.com,(555) 688-1025,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024/07/08,,Active,Self,MEM000025
+DEP0000251,Jordan,Smith,07/29/2013,F,jordan.smith.0251@example.com,(555) 771-7131,POS-500,Choice POS,POS,Contoso Care,08/15/2023,,Pending,Dependent,MEM000025
+MEM000026,Ana,Brown,05/01/1984,F,ana.brown.0026@example.com,5552143027,HMO-200,Basic HMO,HMO,Acme Health,2023-09-10,,Pending,Self,MEM000026
+DEP0000261,Jordan,Moore,1969/11/20,Female,jordan.moore.0261@example.com,5553317516,POS-500,Choice POS,POS,Contoso Care,2024-09-22,,Active,Spouse,MEM000026
+DEP0000262,Owen,Patel,1976/09/20,Female,owen.patel.0262@example.com,(555) 223-6376,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2023-02-25,,Pending,Spouse,MEM000026
+MEM000027,Owen,Smith,1998/10/17,F,owen.smith.0027@example.com,5558348671,PPO-100,Silver PPO,P.P.O,Acme Health,08/24/2025,,Active,Self,MEM000027
+DEP0000271,Marcus,Patel,1990/11/22,Male,marcus.patel.0271@example.com,555-350-1842,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-07-08,,Pending,Spouse,MEM000027
+MEM000028,Riley,Wilson,1986-07-04,Male,riley.wilson.0028@example.com,(555) 468-9588,HMO-200,Basic HMO,HMO,Acme Health,05/20/2025,,Pending,Self,MEM000028
+DEP0000281,Caleb,Johnson,02/12/2015,F,caleb.johnson.0281@example.com,555-421-6238,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025-03-07,2027-02-11,Terminated,Child,MEM000028
+MEM000029,Evan,Martinez,1979-07-25,Male,evan.martinez.0029@example.com,5553371638,POS-500,Choice POS,POS,Contoso Care,2025-10-31,,Active,Self,MEM000029
+DEP0000291,Marcus,Moore,2012/02/02,Female,marcus.moore.0291@example.com,555-760-0105,POS-500,Choice POS,POS,Contoso Care,2024/08/15,,Active,Dependent,MEM000029
+MEM000030,Noah,Lee,1962/03/20,F,noah.lee.0030@example.com,(555) 888-4879,EPO-400,Metro EPO,EPO,Northstar Benefits,08/01/2024,06/08/2026,Termed,Self,MEM000030
+MEM000031,Marcus,Garcia,1984-12-11,F,marcus.garcia.0031@example.com,5559186546,HMO-200,Basic HMO,HMO,Acme Health,2023-04-24,,A,Self,MEM000031
+DEP0000311,Riley,Patel,2021-11-30,M,riley.patel.0311@example.com,555-440-4421,PPO-100,Silver PPO,PPO,Acme Health,2023-05-22,,A,Dependent,MEM000031
+MEM000032,Mia,Rivera,1990-07-30,Female,mia.rivera.0032@example.com,(555) 875-7866,POS-500,Choice POS,POS,Contoso Care,2025-03-31,2026/09/08,Terminated,Self,MEM000032
+DEP0000321,Sam,Singh,01/05/2008,F,sam.singh.0321@example.com,(555) 389-3180,HMO-200,Basic HMO,HMO,Acme Health,01/14/2024,,Pending,Child,MEM000032
+DEP0000322,Noah,Singh,02/05/2011,O,,555-796-5532,HMO-200,Basic HMO,HMO,Acme Health,2025/03/09,,Active,Dependent,MEM000032
+MEM000033,Iris,Johnson,1960/11/20,Female,iris.johnson.0033@example.com,5554558879,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/07/18,,A,Self,MEM000033
+DEP0000331,Leo,Wilson,1986/12/26,Female,leo.wilson.0331@example.com,(555) 407-8528,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-03-30,,Active,Spouse,MEM000033
+MEM000034,Riley,Johnson,1984/09/11,Male,riley.johnson.0034@example.com,5555643898,EPO-400,Metro EPO,EPO,Northstar Benefits,05/24/2025,,Pending,Self,MEM000034
+DEP0000341,Maya,Singh,01/09/2010,O,maya.singh.0341@example.com,(555) 689-0126,POS-500,Choice POS,POS,Contoso Care,2023/10/03,,Active,Child,MEM000034
+DEP0000342,Tara,Khan,1972/10/13,O,tara.khan.0342@example.com,(555) 953-8298,PPO-100,Silver PPO,PPO,Acme Health,01/16/2023,11/28/2023,T,Spouse,MEM000034
+MEM000035,Avery,Nguyen,10/08/1986,Female,avery.nguyen.0035@example.com,5558922998,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-08-22,,A,Self,MEM000035
+DEP0000351,Noah,Chen,1979-02-30,F,noah.chen.0351@example.com,555-110-6122,HMO-200,Basic HMO,HMO,Acme Health,2024/12/09,,Active,Spouse,MEM000035
+MEM000036,Noah,Nguyen,1962-07-30,Female,not-an-email,555-191-9931,PPO-100,Silver PPO,P.P.O,Acme Health,2023/10/17,,Pending,Self,MEM000036
+MEM000037,Priya,Nguyen,03/27/1988,Female,priya.nguyen.0037@example.com,abc,PPO-100,Silver PPO,P.P.O,Acme Health,06/21/2023,,Pending,Self,MEM000037
+DEP0000371,Sofia,Garcia,03/25/1997,O,sofia.garcia.0371@example.com,5552716379,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/02/21,2026-07-13,UnknownStatus,Spouse,MEM000037
+DEP0000372,Evan,Davis,2020/02/03,F,evan.davis.0372@example.com,555-452-0467,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,10/26/2025,,Active,Partner,MEM000037
+MEM000038,Jordan,Moore,1976/04/06,F,jordan.moore.0038@example.com,555-717-0969,POS-500,Choice POS,MysteryPlan,Contoso Care,07/20/2024,,A,Self,MEM000038
+DEP0000381,Marcus,Smith,04/30/1960,Male,marcus.smith.0381@example.com,(555) 970-0566,POS-500,Choice POS,POS,Contoso Care,2025-06-01,2024-01-01,Active,Spouse,MEM000038
+MEM000039,Elena,Khan,1977-04-08,O,elena.khan.0039@example.com,(555) 458-0977,POS-500,Choice POS,POS,Contoso Care,2025-01-02,2026/05/10,Terminated,Self,MEM000039
+DEP0000391,Mia,Johnson,2016-08-31,Female,mia.johnson.0391@example.com,(555) 791-0630,HMO-200,Basic HMO,HMO,Acme Health,2025/06/07,,Active,Child,MEM999999
+MEM000040,Ana,Rivera,2035-01-01,F,ana.rivera.0040@example.com,555-347-8685,POS-500,Choice POS,POS,Contoso Care,2024/11/04,,Pending,Self,MEM000040
+DEP0000401,,Khan,01/28/2008,M,iris.khan.0401@example.com,(555) 133-3621,EPO-400,Metro EPO,EPO,Northstar Benefits,2024/07/02,,A,Dependent,MEM000040
+DEP0000402,Mia,Brown,2018/09/19,Female,mia.brown.0402@example.com,5556884156,,Silver PPO,P.P.O,Acme Health,2025-04-08,,Active,Child,MEM000040
+DEP0000021,Caleb,Conflict,1962-03-14,F,caleb.wilson.0041@example.com,(555) 236-7778,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2025-04-20,,Active,Self,MEM000041
+DEP0000411,Priya,Brown,08/13/2017,Female,,5558605354,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-07-20,,Active,Child,MEM000041
+MEM000042,Tara,Chen,1965-07-27,Male,,(555) 267-7789,POS-500,Choice POS,POS,Contoso Care,2023/11/09,,A,Self,MEM000042
+DEP0000421,Marcus,Garcia,03/19/1994,Male,marcus.garcia.0421@example.com,5554589792,POS-500,Choice POS,POS,Contoso Care,01/12/2025,,Active,Spouse,MEM000042
+MEM000043,Owen,Lee,04/27/1988,M,owen.lee.0043@example.com,555-166-3410,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023/04/07,,Active,Self,MEM000043
+DEP0000431,Jordan,Martinez,2017/07/13,F,jordan.martinez.0431@example.com,(555) 446-9831,PPO-100,Silver PPO,PPO,Acme Health,02/13/2024,,Active,Dependent,MEM000043
+MEM000044,Owen,Thomas,03/14/1984,Female,owen.thomas.0044@example.com,(555) 621-3655,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-02-01,,A,Self,MEM000044
+DEP0000441,Marcus,Brown,03/05/1960,Female,marcus.brown.0441@example.com,5551389668,EPO-400,Metro EPO,EPO,Northstar Benefits,07/31/2023,,Active,Spouse,MEM000044
+MEM000045,Priya,Chen,1997/02/27,Male,,5559103659,PPO-100,Silver PPO,PPO,Acme Health,2025-05-23,,A,Self,MEM000045
+DEP0000451,Tara,Singh,1977/05/04,F,tara.singh.0451@example.com,5554112514,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-08-17,,Active,Spouse,MEM000045
+DEP0000452,Caleb,Garcia,11/25/2013,Male,caleb.garcia.0452@example.com,(555) 639-4101,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-11-26,09/23/2025,Termed,Child,MEM000045
+MEM000046,Noah,Nguyen,08/28/1966,M,noah.nguyen.0046@example.com,(555) 783-1223,PPO-100,Silver PPO,PPO,Acme Health,2023-10-23,,Pending,Self,MEM000046
+DEP0000461,Elena,Khan,12/17/2010,F,elena.khan.0461@example.com,(555) 810-2318,POS-500,Choice POS,POS,Contoso Care,2024/01/12,,A,Child,MEM000046
+MEM000047,Sofia,Thomas,1974-04-24,Male,sofia.thomas.0047@example.com,(555) 783-9360,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-10-30,,Pending,Self,MEM000047
+DEP0000471,Nina,Nguyen,09/08/2016,Female,nina.nguyen.0471@example.com,(555) 526-4086,POS-500,Choice POS,POS,Contoso Care,2024/04/03,,Pending,Dependent,MEM000047
+MEM000048,Avery,Smith,1964-08-26,Male,avery.smith.0048@example.com,5555644609,HMO-200,Basic HMO,HMO,Acme Health,07/10/2025,2026/04/16,Termed,Self,MEM000048
+DEP0000481,Luis,Smith,1983-11-05,O,luis.smith.0481@example.com,5551551234,HMO-200,Basic HMO,HMO,Acme Health,2023/03/18,,Active,Spouse,MEM000048
+MEM000049,Tara,Khan,10/10/1965,M,tara.khan.0049@example.com,(555) 491-7328,EPO-400,Metro EPO,EPO,Northstar Benefits,12/07/2024,,Active,Self,MEM000049
+DEP0000491,Elena,Singh,2022/09/18,M,elena.singh.0491@example.com,(555) 187-0863,EPO-400,Metro EPO,EPO,Northstar Benefits,07/25/2023,2024-08-15,Terminated,Child,MEM000049
+DEP0000492,Priya,Smith,2009-02-18,Female,priya.smith.0492@example.com,(555) 158-4007,HMO-200,Basic HMO,HMO,Acme Health,2024/07/12,2024-12-20,Terminated,Child,MEM000049
+MEM000050,Caleb,Brown,1980/09/27,M,caleb.brown.0050@example.com,555-873-1071,EPO-400,Metro EPO,EPO,Northstar Benefits,05/20/2024,,A,Self,MEM000050
+MEM000051,Evan,Singh,10/09/1965,M,evan.singh.0051@example.com,555-820-6680,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2023/12/26,09/18/2024,Terminated,Self,MEM000051
+DEP0000511,Avery,Khan,2012-12-23,M,avery.khan.0511@example.com,(555) 569-3241,PPO-100,Silver PPO,P.P.O,Acme Health,2023/08/01,,A,Dependent,MEM000051
+MEM000052,Priya,Moore,1986-03-05,M,priya.moore.0052@example.com,(555) 705-1920,POS-500,Choice POS,POS,Contoso Care,2025/10/04,,A,Self,MEM000052
+MEM000053,Leo,Nguyen,1989/10/27,Male,leo.nguyen.0053@example.com,(555) 785-6023,HMO-200,Basic HMO,HMO,Acme Health,04/29/2023,,A,Self,MEM000053
+DEP0000531,Elena,Singh,1979-02-30,O,elena.singh.0531@example.com,5555823334,HMO-200,Basic HMO,HMO,Acme Health,05/05/2023,,Pending,Spouse,MEM000053
+DEP0000532,Riley,Nguyen,2009-05-20,Male,not-an-email,(555) 424-6286,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/04/03,,Active,Child,MEM000053
+MEM000054,Owen,Chen,1960-03-01,O,owen.chen.0054@example.com,abc,POS-500,Choice POS,POS,Contoso Care,2024/02/05,,Pending,Self,MEM000054
+MEM000055,Owen,Wilson,1967/09/07,Male,owen.wilson.0055@example.com,5551930349,EPO-400,Metro EPO,EPO,Northstar Benefits,04/27/2023,2025-03-27,UnknownStatus,Self,MEM000055
+MEM000056,Iris,Nguyen,1988/06/04,O,iris.nguyen.0056@example.com,(555) 616-4081,PPO-100,Silver PPO,PPO,Acme Health,2023-09-14,,A,Partner,MEM000056
+DEP0000561,Caleb,Garcia,07/27/2022,O,caleb.garcia.0561@example.com,(555) 670-8330,HDHP-300,Saver HDHP,MysteryPlan,Northstar Benefits,2025-07-03,10/02/2025,Termed,Dependent,MEM000056
+DEP0000562,Sofia,Martinez,2019/11/30,Male,sofia.martinez.0562@example.com,(555) 139-4220,PPO-100,Silver PPO,P.P.O,Acme Health,2025-06-01,2024-01-01,A,Dependent,MEM000056
+MEM000057,Tara,Johnson,1981/04/01,O,tara.johnson.0057@example.com,5554438796,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-07-02,,A,Self,MEM000057
+MEM000058,Riley,Patel,08/09/1991,O,riley.patel.0058@example.com,5556231464,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023/09/12,,Active,Self,MEM000058
+DEP0000581,Luis,Moore,2035-01-01,F,luis.moore.0581@example.com,555-781-6958,HMO-200,Basic HMO,HMO,Acme Health,2025/05/28,01/31/2026,Terminated,Spouse,MEM000058
+DEP0000582,,Brown,1976-04-25,Female,riley.brown.0582@example.com,555-815-4493,HMO-200,Basic HMO,HMO,Acme Health,2024/05/23,,Active,Spouse,MEM000058
+MEM000059,Iris,Brown,08/15/1963,O,iris.brown.0059@example.com,5551784179,,Metro EPO,EPO,Northstar Benefits,2024-08-16,,Active,Self,MEM000059
+MEM000044,Tara,Conflict,1962-03-14,Female,tara.wilson.0060@example.com,555-508-8070,POS-500,Choice POS,POS,Contoso Care,10/30/2023,,Active,Self,MEM000060
+DEP0000601,Marcus,Johnson,1972/02/21,M,marcus.johnson.0601@example.com,5556121840,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024/12/16,,A,Spouse,MEM000060
+DEP0000602,Caleb,Rivera,05/28/2015,O,caleb.rivera.0602@example.com,555-652-4608,POS-500,Choice POS,POS,Contoso Care,2025-07-12,,Active,Child,MEM000060
+MEM000061,Evan,Nguyen,1975/11/20,Female,evan.nguyen.0061@example.com,5557208791,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-12-18,2024-08-31,Terminated,Self,MEM000061
+DEP0000611,Iris,Rivera,2008-06-21,O,iris.rivera.0611@example.com,(555) 927-4603,POS-500,Choice POS,POS,Contoso Care,2024/10/07,01/19/2025,Terminated,Child,MEM000061
+MEM000062,Marcus,Singh,1996/11/26,F,marcus.singh.0062@example.com,(555) 773-8851,PPO-100,Silver PPO,PPO,Acme Health,2023/03/19,,Active,Self,MEM000062
+MEM000063,Ana,Moore,07/09/1965,Female,ana.moore.0063@example.com,(555) 621-5304,POS-500,Choice POS,POS,Contoso Care,2024/06/24,,Pending,Self,MEM000063
+DEP0000631,Leo,Thomas,2022/11/24,M,,555-398-3223,PPO-100,Silver PPO,P.P.O,Acme Health,11/17/2024,,A,Child,MEM000063
+MEM000064,Marcus,Singh,1993/06/10,Female,marcus.singh.0064@example.com,(555) 925-1920,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2024-03-11,,Active,Self,MEM000064
+DEP0000641,Evan,Brown,1979/10/08,Male,evan.brown.0641@example.com,555-502-2637,POS-500,Choice POS,POS,Contoso Care,2025/11/19,,Pending,Spouse,MEM000064
+MEM000065,Tara,Martinez,1990/06/29,M,tara.martinez.0065@example.com,(555) 317-5534,HMO-200,Basic HMO,HMO,Acme Health,06/04/2023,,Pending,Self,MEM000065
+DEP0000651,Noah,Martinez,2009-12-22,O,noah.martinez.0651@example.com,(555) 789-8781,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,04/09/2025,,Active,Child,MEM000065
+MEM000066,Owen,Lee,1983-03-03,O,owen.lee.0066@example.com,(555) 782-5997,PPO-100,Silver PPO,PPO,Acme Health,2023/06/21,,Active,Self,MEM000066
+DEP0000661,Caleb,Garcia,10/22/2013,M,caleb.garcia.0661@example.com,555-278-6816,POS-500,Choice POS,POS,Contoso Care,2024-11-10,04/11/2026,T,Dependent,MEM000066
+MEM000067,Priya,Singh,1991/09/18,M,priya.singh.0067@example.com,(555) 477-6469,HMO-200,Basic HMO,HMO,Acme Health,2023-10-05,,Pending,Self,MEM000067
+DEP0000671,Tara,Rivera,07/11/2011,Male,tara.rivera.0671@example.com,5556218530,HMO-200,Basic HMO,HMO,Acme Health,2025-07-20,01/12/2026,Termed,Child,MEM000067
+MEM000068,Priya,Khan,1988/08/30,Male,,5555929044,HMO-200,Basic HMO,HMO,Acme Health,2024/07/13,2025/03/27,Termed,Self,MEM000068
+DEP0000681,Leo,Wilson,05/11/2012,F,leo.wilson.0681@example.com,555-613-3850,HMO-200,Basic HMO,HMO,Acme Health,2025/05/08,,Active,Child,MEM000068
+DEP0000682,Maya,Johnson,09/30/2009,Female,maya.johnson.0682@example.com,5555215536,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-07-03,,Active,Dependent,MEM000068
+MEM000069,Sam,Patel,1961-01-22,M,sam.patel.0069@example.com,(555) 262-8062,EPO-400,Metro EPO,EPO,Northstar Benefits,2025/11/28,,Active,Self,MEM000069
+MEM000070,Marcus,Chen,1993/04/23,F,marcus.chen.0070@example.com,5556472391,POS-500,Choice POS,POS,Contoso Care,2025-05-11,,A,Self,MEM000070
+DEP0000701,Sam,Wilson,08/12/1961,Male,sam.wilson.0701@example.com,555-997-5670,POS-500,Choice POS,POS,Contoso Care,2025-10-29,,Active,Spouse,MEM000070
+MEM000071,Priya,Thomas,1978/04/19,Female,priya.thomas.0071@example.com,5557677396,POS-500,Choice POS,POS,Contoso Care,03/24/2023,,A,Self,MEM000071
+MEM000072,Nina,Davis,04/04/1968,Female,,555-762-7533,POS-500,Choice POS,POS,Contoso Care,2024/12/15,,Active,Self,MEM000072
+MEM000073,Noah,Thomas,1983-09-11,Male,noah.thomas.0073@example.com,5559266658,POS-500,Choice POS,POS,Contoso Care,01/11/2024,2025-07-12,T,Self,MEM000073
+DEP0000731,Iris,Lee,1979-02-30,O,iris.lee.0731@example.com,(555) 141-2140,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-12-17,,A,Child,MEM000073
+DEP0000732,Marcus,Smith,08/11/2019,M,not-an-email,555-710-3121,PPO-100,Silver PPO,P.P.O,Acme Health,2024/11/30,,Pending,Dependent,MEM000073
+MEM000074,Jordan,Thomas,1981/08/17,Male,jordan.thomas.0074@example.com,abc,PPO-100,Silver PPO,P.P.O,Acme Health,2025/01/14,,Active,Self,MEM000074
+DEP0000741,Sam,Lee,2012/01/22,Male,sam.lee.0741@example.com,5558329519,EPO-400,Metro EPO,EPO,Northstar Benefits,05/02/2025,,UnknownStatus,Dependent,MEM000074
+DEP0000742,Noah,Davis,08/29/2011,Male,noah.davis.0742@example.com,(555) 753-0545,HMO-200,Basic HMO,HMO,Acme Health,2023/06/21,,Pending,Partner,MEM000074
+MEM000075,Leo,Nguyen,1991/09/10,Female,leo.nguyen.0075@example.com,(555) 686-5722,EPO-400,Metro EPO,MysteryPlan,Northstar Benefits,2023-04-19,11/17/2023,Terminated,Self,MEM000075
+DEP0000751,Noah,Khan,2015/12/08,Female,noah.khan.0751@example.com,(555) 278-4181,PPO-100,Silver PPO,P.P.O,Acme Health,2025-06-01,2024-01-01,Active,Dependent,MEM000075
+DEP0000752,Luis,Brown,03/24/1987,M,luis.brown.0752@example.com,5553333218,PPO-100,Silver PPO,PPO,Acme Health,2024/08/07,,Pending,Spouse,
+MEM000076,Jordan,Singh,1964/06/16,Female,jordan.singh.0076@example.com,5559049706,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-07-22,12/06/2023,T,Self,MEM000076
+DEP0000761,Caleb,Nguyen,2035-01-01,F,caleb.nguyen.0761@example.com,555-336-0428,PPO-100,Silver PPO,PPO,Acme Health,2025/10/26,,Active,Child,MEM000076
+DEP0000762,,Davis,2011-05-23,O,sofia.davis.0762@example.com,(555) 700-3433,HMO-200,Basic HMO,HMO,Acme Health,2023/10/24,,Pending,Child,MEM000076
+MEM000077,Marcus,Martinez,1960-02-23,O,marcus.martinez.0077@example.com,(555) 858-5262,,Choice POS,POS,Contoso Care,2024/05/28,,Active,Self,MEM000077
+DEP0000471,Sofia,Conflict,1962-03-14,M,sofia.moore.0078@example.com,5552195888,PPO-100,Silver PPO,PPO,Acme Health,2024-09-28,,A,Self,MEM000078
+DEP0000781,Avery,Martinez,2011/02/26,F,avery.martinez.0781@example.com,5552336829,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-12-01,,A,Child,MEM000078
+DEP0000782,Sofia,Smith,2016-04-10,O,sofia.smith.0782@example.com,555-379-5125,PPO-100,Silver PPO,PPO,Acme Health,2023-01-03,,Pending,Child,MEM000078
+MEM000079,Noah,Nguyen,1978-06-28,F,noah.nguyen.0079@example.com,5554252808,HMO-200,Basic HMO,HMO,Acme Health,2024-06-17,,Pending,Self,MEM000079
+DEP0000791,Sam,Davis,1984/01/11,F,sam.davis.0791@example.com,555-671-6602,POS-500,Choice POS,POS,Contoso Care,2024/11/13,,A,Spouse,MEM000079
+MEM000080,Caleb,Garcia,1970-02-22,Male,caleb.garcia.0080@example.com,(555) 576-9870,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-06-29,04/03/2026,Termed,Self,MEM000080
+DEP0000801,Mia,Smith,10/03/2022,M,mia.smith.0801@example.com,(555) 180-2256,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2025/11/03,,Pending,Dependent,MEM000080
+MEM000081,Luis,Nguyen,02/04/1961,F,luis.nguyen.0081@example.com,(555) 282-2312,HMO-200,Basic HMO,HMO,Acme Health,2024/09/26,,Pending,Self,MEM000081
+DEP0000811,Noah,Khan,1995-02-03,Male,noah.khan.0811@example.com,555-441-7142,PPO-100,Silver PPO,PPO,Acme Health,03/14/2024,2024-10-01,T,Spouse,MEM000081
+MEM000082,Riley,Rivera,1993/08/13,O,riley.rivera.0082@example.com,555-789-8121,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-05-19,10/31/2026,Termed,Self,MEM000082
+DEP0000821,Maya,Chen,02/12/2008,F,maya.chen.0821@example.com,5551909183,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-03-22,,Pending,Dependent,MEM000082
+MEM000083,Luis,Nguyen,01/06/1981,Male,luis.nguyen.0083@example.com,5552576184,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,02/19/2025,,Active,Self,MEM000083
+DEP0000831,Marcus,Chen,2013/06/17,Female,marcus.chen.0831@example.com,5559993149,HMO-200,Basic HMO,HMO,Acme Health,2023/06/04,,Pending,Dependent,MEM000083
+MEM000084,Elena,Brown,05/24/1981,M,elena.brown.0084@example.com,5556222587,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024/08/28,2024/11/11,Terminated,Self,MEM000084
+DEP0000841,Riley,Smith,1981/04/26,Male,riley.smith.0841@example.com,(555) 822-0910,POS-500,Choice POS,POS,Contoso Care,2024/05/22,,Active,Spouse,MEM000084
+MEM000085,Avery,Moore,1987/03/15,Male,avery.moore.0085@example.com,5551009540,HMO-200,Basic HMO,HMO,Acme Health,2025/11/17,2026-01-26,Termed,Self,MEM000085
+MEM000086,Riley,Moore,1995-09-20,Female,riley.moore.0086@example.com,(555) 858-6721,EPO-400,Metro EPO,EPO,Northstar Benefits,11/19/2023,,Pending,Self,MEM000086
+DEP0000861,Priya,Moore,2021-12-06,Male,,(555) 458-3290,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,10/08/2024,,Pending,Dependent,MEM000086
+MEM000087,Marcus,Nguyen,1981/01/23,M,marcus.nguyen.0087@example.com,(555) 544-3632,PPO-100,Silver PPO,PPO,Acme Health,08/01/2024,,Active,Self,MEM000087
+DEP0000871,Luis,Martinez,2009/01/14,F,luis.martinez.0871@example.com,5558913255,POS-500,Choice POS,POS,Contoso Care,2023-03-12,,Active,Dependent,MEM000087
+DEP0000872,Evan,Singh,2021-09-16,M,evan.singh.0872@example.com,555-186-8483,PPO-100,Silver PPO,P.P.O,Acme Health,06/07/2023,,Active,Child,MEM000087
+MEM000088,Maya,Lee,07/30/1980,M,maya.lee.0088@example.com,555-929-2965,HMO-200,Basic HMO,HMO,Acme Health,2024-04-03,,A,Self,MEM000088
+DEP0000881,Maya,Martinez,07/21/2015,M,maya.martinez.0881@example.com,5558440106,PPO-100,Silver PPO,PPO,Acme Health,2023-04-28,,A,Child,MEM000088
+MEM000089,Caleb,Garcia,09/26/1980,M,caleb.garcia.0089@example.com,555-469-3770,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,03/12/2023,,A,Self,MEM000089
+DEP0000891,Maya,Thomas,05/25/1979,Female,,555-930-8629,POS-500,Choice POS,POS,Contoso Care,2024/02/12,,Pending,Spouse,MEM000089
+DEP0000892,Priya,Wilson,1979-02-30,Female,priya.wilson.0892@example.com,5556237046,POS-500,Choice POS,POS,Contoso Care,2025-08-07,,Active,Child,MEM000089
+MEM000090,Avery,Singh,05/12/1971,O,not-an-email,(555) 472-9102,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024/12/18,,A,Self,MEM000090
+DEP0000901,Jordan,Lee,2009-06-07,O,jordan.lee.0901@example.com,abc,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024/07/07,,Pending,Dependent,MEM000090
+MEM000091,Leo,Garcia,1968-01-19,O,leo.garcia.0091@example.com,(555) 616-7078,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-02-17,,UnknownStatus,Self,MEM000091
+DEP0000911,Avery,Lee,2016/07/20,Male,avery.lee.0911@example.com,555-927-0958,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-10-28,,Active,Partner,MEM000091
+MEM000092,Leo,Davis,12/16/1983,F,leo.davis.0092@example.com,555-749-3103,EPO-400,Metro EPO,MysteryPlan,Northstar Benefits,2025-07-03,,Active,Self,MEM000092
+MEM000093,Ana,Rivera,1996-04-11,F,ana.rivera.0093@example.com,5551752407,HMO-200,Basic HMO,HMO,Acme Health,2025-06-01,2024-01-01,A,Self,MEM000093
+DEP0000931,Marcus,Singh,11/06/2011,O,,555-678-2477,EPO-400,Metro EPO,EPO,Northstar Benefits,03/29/2023,2024-05-28,Termed,Child,
+MEM000094,Owen,Moore,1983/06/20,M,owen.moore.0094@example.com,(555) 901-9982,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/05/22,,A,Self,MEM000094
+MEM000095,Leo,Moore,2035-01-01,Female,leo.moore.0095@example.com,5551585134,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-03-22,,A,Self,MEM000095
+DEP0000951,,Thomas,2011/05/20,O,,(555) 258-0564,POS-500,Choice POS,POS,Contoso Care,2025-04-27,,Pending,Child,MEM000095
+MEM000096,Noah,Garcia,1962-11-27,Male,noah.garcia.0096@example.com,(555) 975-5013,,Saver HDHP,HDHP,Northstar Benefits,01/04/2023,,Active,Self,MEM000096
+DEP0000142,Owen,Conflict,1962-03-14,F,owen.patel.0961@example.com,5557011592,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-09-27,,A,Spouse,MEM000096
+MEM000097,Riley,Wilson,1984/06/10,O,riley.wilson.0097@example.com,(555) 520-4270,HMO-200,Basic HMO,HMO,Acme Health,12/31/2024,,Active,Self,MEM000097
+MEM000098,Evan,Singh,1998/08/20,Female,evan.singh.0098@example.com,5553259041,HMO-200,Basic HMO,HMO,Acme Health,2023/11/26,,Pending,Self,MEM000098
+MEM000099,Elena,Chen,1961/11/28,M,elena.chen.0099@example.com,5556122827,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-05-22,,Active,Self,MEM000099
+DEP0000991,Avery,Davis,04/23/1990,F,avery.davis.0991@example.com,5559659108,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-05-13,,Active,Spouse,MEM000099
+MEM000100,Sam,Garcia,01/04/1962,F,sam.garcia.0100@example.com,(555) 884-5275,POS-500,Choice POS,POS,Contoso Care,2025-08-02,,Active,Self,MEM000100
+DEP0001001,Leo,Chen,04/15/2010,Female,leo.chen.1001@example.com,555-356-8210,EPO-400,Metro EPO,EPO,Northstar Benefits,2023/05/15,,A,Child,MEM000100
+MEM000101,Marcus,Nguyen,1997-04-28,Male,marcus.nguyen.0101@example.com,555-817-0337,POS-500,Choice POS,POS,Contoso Care,2025/08/26,,Active,Self,MEM000101
+DEP0001011,Riley,Thomas,2011/10/02,Male,riley.thomas.1011@example.com,555-593-6255,HMO-200,Basic HMO,HMO,Acme Health,2025-12-08,,A,Dependent,MEM000101
+DEP0001012,Marcus,Davis,2013/07/05,F,marcus.davis.1012@example.com,5555165324,EPO-400,Metro EPO,EPO,Northstar Benefits,08/05/2024,,Pending,Dependent,MEM000101
+MEM000102,Marcus,Singh,06/26/1972,Female,marcus.singh.0102@example.com,555-291-7301,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-07-09,,Active,Self,MEM000102
+MEM000103,Iris,Khan,1961-04-12,Female,iris.khan.0103@example.com,555-460-9764,EPO-400,Metro EPO,EPO,Northstar Benefits,02/20/2024,,Pending,Self,MEM000103
+DEP0001031,Ana,Wilson,2015-12-15,Female,ana.wilson.1031@example.com,(555) 320-5440,EPO-400,Metro EPO,EPO,Northstar Benefits,08/14/2025,,A,Dependent,MEM000103
+DEP0001032,Jordan,Martinez,2010-10-25,M,jordan.martinez.1032@example.com,5559684617,EPO-400,Metro EPO,EPO,Northstar Benefits,2023/11/29,03/29/2024,T,Dependent,MEM000103
+MEM000104,Evan,Brown,07/04/1983,F,evan.brown.0104@example.com,555-612-0949,HMO-200,Basic HMO,HMO,Acme Health,2023/03/20,02/19/2024,T,Self,MEM000104
+DEP0001041,Luis,Garcia,1967/06/12,Female,luis.garcia.1041@example.com,5558697171,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/10/30,,Active,Spouse,MEM000104
+DEP0001042,Jordan,Smith,2011-11-02,Male,jordan.smith.1042@example.com,5559133874,HMO-200,Basic HMO,HMO,Acme Health,2024-09-11,,Pending,Dependent,MEM000104
+MEM000105,Riley,Singh,1968/02/22,Male,riley.singh.0105@example.com,555-930-9812,PPO-100,Silver PPO,PPO,Acme Health,2023/08/17,,A,Self,MEM000105
+DEP0001051,Iris,Garcia,12/04/1995,O,iris.garcia.1051@example.com,555-621-1237,EPO-400,Metro EPO,EPO,Northstar Benefits,02/05/2025,,Pending,Spouse,MEM000105
+DEP0001052,Evan,Thomas,2008/03/22,Male,evan.thomas.1052@example.com,(555) 919-2223,PPO-100,Silver PPO,P.P.O,Acme Health,2024/05/27,,Pending,Dependent,MEM000105
+MEM000106,Sam,Davis,1984-10-09,O,sam.davis.0106@example.com,(555) 548-4247,PPO-100,Silver PPO,PPO,Acme Health,2025-05-06,,Pending,Self,MEM000106
+DEP0001061,Iris,Johnson,02/21/2015,M,iris.johnson.1061@example.com,(555) 399-7292,POS-500,Choice POS,POS,Contoso Care,2025-11-22,,Pending,Dependent,MEM000106
+MEM000107,Avery,Johnson,1977-12-12,M,avery.johnson.0107@example.com,555-787-5565,EPO-400,Metro EPO,EPO,Northstar Benefits,06/29/2023,,Active,Self,MEM000107
+DEP0001071,Caleb,Moore,2013-01-12,O,caleb.moore.1071@example.com,5559717343,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-10-02,,Active,Dependent,MEM000107
+DEP0001072,Owen,Martinez,02/20/1993,Male,owen.martinez.1072@example.com,555-485-5301,POS-500,Choice POS,POS,Contoso Care,07/02/2025,,A,Spouse,MEM000107
+MEM000108,Marcus,Lee,1979-02-30,Male,marcus.lee.0108@example.com,(555) 609-8335,EPO-400,Metro EPO,EPO,Northstar Benefits,2023/07/08,,Pending,Self,MEM000108
+DEP0001081,Ana,Garcia,1968-02-20,F,not-an-email,5551767004,PPO-100,Silver PPO,PPO,Acme Health,2023/12/07,2025-05-28,Termed,Spouse,MEM000108
+MEM000109,Caleb,Garcia,1960/02/15,M,caleb.garcia.0109@example.com,abc,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-02-20,,Active,Self,MEM000109
+DEP0001091,Avery,Brown,09/16/1968,O,avery.brown.1091@example.com,555-999-1600,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2025/07/10,12/13/2026,UnknownStatus,Spouse,MEM000109
+MEM000110,Mia,Martinez,08/29/1971,M,mia.martinez.0110@example.com,555-507-3880,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,04/20/2024,,Pending,Partner,MEM000110
+MEM000111,Tara,Davis,03/09/1964,M,tara.davis.0111@example.com,(555) 981-6415,EPO-400,Metro EPO,MysteryPlan,Northstar Benefits,2024-08-10,,A,Self,MEM000111
+MEM000112,Evan,Wilson,1966-09-06,Male,,555-580-3719,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2025-06-01,2024-01-01,T,Self,MEM000112
+DEP0001121,Leo,Khan,2014-06-02,O,leo.khan.1121@example.com,5554239307,PPO-100,Silver PPO,PPO,Acme Health,2025-09-02,,A,Dependent,
+DEP0001122,Priya,Nguyen,2020-02-06,Female,priya.nguyen.1122@example.com,5555162390,HMO-200,Basic HMO,HMO,Acme Health,2023-01-29,,Pending,Child,MEM999999
+MEM000113,Caleb,Davis,2035-01-01,O,caleb.davis.0113@example.com,555-945-3629,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023/05/24,,A,Self,MEM000113
+DEP0001131,,Moore,2022-11-26,M,iris.moore.1131@example.com,555-139-4246,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-08-03,,Active,Dependent,MEM000113
+MEM000114,Ana,Johnson,1977/02/25,Female,ana.johnson.0114@example.com,(555) 332-9161,,Basic HMO,HMO,Acme Health,2023/07/12,,A,Self,MEM000114
+DEP0000232,Caleb,Conflict,1962-03-14,F,caleb.khan.1141@example.com,5555736460,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/11/09,,Pending,Child,MEM000114
+DEP0001142,Avery,Lee,2016/09/06,O,avery.lee.1142@example.com,(555) 333-9361,HMO-200,Basic HMO,HMO,Acme Health,07/19/2024,,Active,Child,MEM000114
+MEM000115,Tara,Singh,1975-12-08,M,tara.singh.0115@example.com,5555077167,EPO-400,Metro EPO,EPO,Northstar Benefits,01/23/2024,,Active,Self,MEM000115
+DEP0001151,Jordan,Wilson,2016/01/26,F,jordan.wilson.1151@example.com,5551090240,HMO-200,Basic HMO,HMO,Acme Health,2025/10/24,,A,Child,MEM000115
+MEM000116,Caleb,Johnson,04/14/1996,O,caleb.johnson.0116@example.com,555-952-5124,HMO-200,Basic HMO,HMO,Acme Health,03/06/2025,2027/01/05,Terminated,Self,MEM000116
+DEP0001161,Riley,Singh,2021/06/11,F,riley.singh.1161@example.com,(555) 697-3032,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024/11/27,,A,Dependent,MEM000116
+MEM000117,Jordan,Rivera,07/25/1977,F,jordan.rivera.0117@example.com,555-601-2628,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-10-14,,Pending,Self,MEM000117
+DEP0001171,Caleb,Garcia,07/24/1990,Female,caleb.garcia.1171@example.com,5551287610,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-08-31,,Active,Spouse,MEM000117
+MEM000118,Sam,Martinez,1962-04-21,Female,sam.martinez.0118@example.com,(555) 145-7411,POS-500,Choice POS,POS,Contoso Care,2025-07-27,,Active,Self,MEM000118
+DEP0001181,Leo,Davis,1982/07/07,O,leo.davis.1181@example.com,555-698-2910,HMO-200,Basic HMO,HMO,Acme Health,09/05/2023,,A,Spouse,MEM000118
+MEM000119,Owen,Chen,1981-08-17,Female,owen.chen.0119@example.com,555-186-1854,PPO-100,Silver PPO,PPO,Acme Health,2025-09-21,,Active,Self,MEM000119
+DEP0001191,Iris,Thomas,2019-03-17,Male,iris.thomas.1191@example.com,5556500905,POS-500,Choice POS,POS,Contoso Care,10/01/2023,2024/05/11,Terminated,Child,MEM000119
+DEP0001192,Mia,Thomas,2009-12-15,F,mia.thomas.1192@example.com,555-899-6417,HMO-200,Basic HMO,HMO,Acme Health,2024-07-15,,Pending,Dependent,MEM000119
+MEM000120,Sofia,Rivera,1989-03-09,M,sofia.rivera.0120@example.com,5552338185,PPO-100,Silver PPO,PPO,Acme Health,05/02/2023,,Pending,Self,MEM000120
+MEM000121,Luis,Lee,1965/06/03,Female,luis.lee.0121@example.com,(555) 764-8578,HMO-200,Basic HMO,HMO,Acme Health,05/12/2025,,Active,Self,MEM000121
+DEP0001211,Riley,Rivera,1990-10-01,O,riley.rivera.1211@example.com,5557863003,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-10-20,,Active,Spouse,MEM000121
+DEP0001212,Priya,Chen,12/30/2009,M,priya.chen.1212@example.com,555-383-6481,POS-500,Choice POS,POS,Contoso Care,2023/07/15,,Active,Child,MEM000121
+MEM000122,Marcus,Davis,1989/01/31,M,marcus.davis.0122@example.com,555-897-7959,PPO-100,Silver PPO,PPO,Acme Health,2023/08/17,,A,Self,MEM000122
+DEP0001221,Riley,Garcia,07/29/2012,Female,riley.garcia.1221@example.com,555-437-4164,EPO-400,Metro EPO,EPO,Northstar Benefits,2023/03/22,,Pending,Dependent,MEM000122
+MEM000123,Luis,Wilson,1978/05/21,F,luis.wilson.0123@example.com,(555) 878-4311,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/09/08,,A,Self,MEM000123
+DEP0001231,Evan,Lee,2020-06-02,O,evan.lee.1231@example.com,(555) 423-4753,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-04-19,,Pending,Dependent,MEM000123
+MEM000124,Jordan,Lee,10/24/1992,Female,jordan.lee.0124@example.com,5553358707,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-11-13,08/10/2024,Termed,Self,MEM000124
+DEP0001241,Tara,Chen,10/12/1961,F,tara.chen.1241@example.com,555-478-8677,PPO-100,Silver PPO,P.P.O,Acme Health,2023-12-11,,Pending,Spouse,MEM000124
+MEM000125,Maya,Martinez,03/27/1960,O,maya.martinez.0125@example.com,5559187830,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2024/05/22,,A,Self,MEM000125
+DEP0001251,Priya,Khan,09/23/1978,O,priya.khan.1251@example.com,(555) 565-2950,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,11/30/2023,,A,Spouse,MEM000125
+MEM000126,Nina,Martinez,1979-02-30,Male,,555-258-8348,EPO-400,Metro EPO,EPO,Northstar Benefits,05/12/2025,,A,Self,MEM000126
+MEM000127,Marcus,Johnson,1989/06/15,M,not-an-email,(555) 322-3518,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-04-14,,Pending,Self,MEM000127
+DEP0001271,Iris,Singh,1986-12-27,F,iris.singh.1271@example.com,abc,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2023-08-09,,Active,Spouse,MEM000127
+DEP0001272,Mia,Khan,2019-07-21,F,mia.khan.1272@example.com,555-117-4432,PPO-100,Silver PPO,PPO,Acme Health,2025-03-24,,UnknownStatus,Child,MEM000127
+MEM000128,Avery,Garcia,1964-10-29,Female,avery.garcia.0128@example.com,(555) 982-4966,EPO-400,Metro EPO,EPO,Northstar Benefits,12/02/2023,,A,Partner,MEM000128
+DEP0001281,Priya,Martinez,2008/01/07,M,priya.martinez.1281@example.com,5551075960,PPO-100,Silver PPO,MysteryPlan,Acme Health,2023/10/08,,Pending,Child,MEM000128
+MEM000129,Sam,Khan,09/18/1995,Male,sam.khan.0129@example.com,5557114165,PPO-100,Silver PPO,PPO,Acme Health,2025-06-01,2024-01-01,A,Self,MEM000129
+DEP0001291,Iris,Johnson,2013-05-09,M,iris.johnson.1291@example.com,555-355-0832,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025-05-27,,A,Dependent,
+DEP0001292,Riley,Thomas,08/05/2019,O,riley.thomas.1292@example.com,555-891-9653,HMO-200,Basic HMO,HMO,Acme Health,2024/09/19,,A,Dependent,MEM999999
+MEM000130,Evan,Patel,2035-01-01,M,evan.patel.0130@example.com,(555) 720-6068,POS-500,Choice POS,POS,Contoso Care,12/28/2023,,Pending,Self,MEM000130
+MEM000131,,Wilson,1970/11/09,F,luis.wilson.0131@example.com,(555) 401-9540,POS-500,Choice POS,POS,Contoso Care,2025-06-17,,Active,Self,MEM000131
+DEP0001311,Owen,Singh,1986-06-18,Female,owen.singh.1311@example.com,555-696-3699,,Basic HMO,HMO,Acme Health,06/15/2024,,Active,Spouse,MEM000131
+DEP0001121,Ana,Conflict,1962-03-14,Male,ana.singh.0132@example.com,5552544769,EPO-400,Metro EPO,EPO,Northstar Benefits,06/28/2023,,Pending,Self,MEM000132
+MEM000133,Elena,Thomas,1971/07/30,F,elena.thomas.0133@example.com,555-272-9111,PPO-100,Silver PPO,PPO,Acme Health,2023-09-19,,Active,Self,MEM000133
+DEP0001331,Avery,Moore,2015-12-01,Male,avery.moore.1331@example.com,555-720-3136,PPO-100,Silver PPO,PPO,Acme Health,2023-01-22,2023-03-29,T,Dependent,MEM000133
+MEM000134,Sam,Martinez,1963-04-19,F,sam.martinez.0134@example.com,5557056875,HMO-200,Basic HMO,HMO,Acme Health,2024/02/17,,Active,Self,MEM000134
+DEP0001341,Caleb,Chen,2021-04-10,Female,caleb.chen.1341@example.com,555-380-2416,PPO-100,Silver PPO,PPO,Acme Health,09/17/2023,,Pending,Child,MEM000134
+MEM000135,Avery,Chen,1962-06-06,M,avery.chen.0135@example.com,555-448-5454,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-07-06,,A,Self,MEM000135
+DEP0001351,Noah,Chen,2017/04/05,M,noah.chen.1351@example.com,5554171100,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-10-21,,A,Child,MEM000135
+DEP0001352,Leo,Smith,2018/06/03,Male,leo.smith.1352@example.com,5554128336,PPO-100,Silver PPO,PPO,Acme Health,2023/01/25,2024/12/18,Termed,Child,MEM000135
+MEM000136,Sofia,Singh,1976/02/06,F,sofia.singh.0136@example.com,555-113-6468,POS-500,Choice POS,POS,Contoso Care,2024/09/24,,Active,Self,MEM000136
+DEP0001361,Marcus,Martinez,2013-03-28,O,marcus.martinez.1361@example.com,5552138554,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2025-02-02,,A,Child,MEM000136
+MEM000137,Caleb,Khan,1998/10/09,Male,caleb.khan.0137@example.com,5552874299,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025-08-08,,Active,Self,MEM000137
+MEM000138,Avery,Chen,1997/08/25,Female,,555-417-6320,HMO-200,Basic HMO,HMO,Acme Health,2023/06/12,2025-03-10,Termed,Self,MEM000138
+DEP0001381,Leo,Khan,1987-11-04,Male,leo.khan.1381@example.com,5551215231,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024/05/07,,A,Spouse,MEM000138
+MEM000139,Maya,Khan,1972-03-15,M,maya.khan.0139@example.com,5555647669,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-07-10,,A,Self,MEM000139
+DEP0001391,Jordan,Wilson,1967/05/09,O,jordan.wilson.1391@example.com,555-584-8063,EPO-400,Metro EPO,EPO,Northstar Benefits,02/25/2025,,Pending,Spouse,MEM000139
+MEM000140,Sam,Thomas,1961-02-13,Male,sam.thomas.0140@example.com,(555) 630-9271,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,05/19/2024,,Active,Self,MEM000140
+DEP0001401,Nina,Lee,1967-01-02,Female,nina.lee.1401@example.com,555-121-6015,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/09/16,2027-05-24,Terminated,Spouse,MEM000140
+DEP0001402,Maya,Wilson,2013-02-09,M,maya.wilson.1402@example.com,555-373-6155,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-03-19,,Active,Child,MEM000140
+MEM000141,Noah,Chen,1993/06/12,F,noah.chen.0141@example.com,(555) 898-9286,HMO-200,Basic HMO,HMO,Acme Health,2025-03-28,,A,Self,MEM000141
+DEP0001411,Leo,Rivera,05/05/2022,Male,leo.rivera.1411@example.com,555-507-2016,PPO-100,Silver PPO,PPO,Acme Health,2024-02-03,,Pending,Dependent,MEM000141
+DEP0001412,Owen,Lee,1987/07/17,F,owen.lee.1412@example.com,(555) 678-0443,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,05/18/2024,,Active,Spouse,MEM000141
+MEM000142,Owen,Brown,1986/02/28,O,owen.brown.0142@example.com,555-367-7294,POS-500,Choice POS,POS,Contoso Care,2023-02-04,,Pending,Self,MEM000142
+MEM000143,Avery,Patel,01/10/1998,M,avery.patel.0143@example.com,5556350148,HMO-200,Basic HMO,HMO,Acme Health,04/21/2023,,A,Self,MEM000143
+DEP0001431,Marcus,Singh,1998/04/15,M,marcus.singh.1431@example.com,(555) 596-6924,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-06-27,,A,Spouse,MEM000143
+DEP0001432,Sam,Thomas,10/18/1975,Male,sam.thomas.1432@example.com,5559571045,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024/12/02,,A,Spouse,MEM000143
+MEM000144,Priya,Rivera,1979-02-30,Female,priya.rivera.0144@example.com,(555) 179-5201,HMO-200,Basic HMO,HMO,Acme Health,2025/12/10,2026-02-25,Termed,Self,MEM000144
+DEP0001441,Owen,Wilson,2022/04/22,F,not-an-email,555-996-1919,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023/07/25,,Active,Dependent,MEM000144
+DEP0001442,Priya,Martinez,2015/06/04,F,priya.martinez.1442@example.com,abc,EPO-400,Metro EPO,EPO,Northstar Benefits,11/28/2023,,Active,Dependent,MEM000144
+MEM000145,Tara,Thomas,1972-09-26,Female,tara.thomas.0145@example.com,555-204-0156,POS-500,Choice POS,POS,Contoso Care,2025/02/24,,UnknownStatus,Self,MEM000145
+MEM000146,Riley,Chen,12/27/1987,F,riley.chen.0146@example.com,5558349105,HMO-200,Basic HMO,HMO,Acme Health,2023-10-26,,Pending,Partner,MEM000146
+DEP0001461,Avery,Smith,2012/03/03,F,avery.smith.1461@example.com,5556078582,HMO-200,Basic HMO,MysteryPlan,Acme Health,2024/10/18,,A,Dependent,MEM000146
+MEM000147,Priya,Lee,1996-03-25,F,priya.lee.0147@example.com,(555) 433-7879,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-06-01,2024-01-01,Pending,Self,MEM000147
+DEP0001471,Sam,Moore,2009-11-04,Female,sam.moore.1471@example.com,555-469-9179,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-05-21,,A,Child,
+MEM000148,Priya,Rivera,1981/10/31,M,priya.rivera.0148@example.com,555-546-8482,HMO-200,Basic HMO,HMO,Acme Health,01/03/2024,2024/12/21,Terminated,Self,MEM000148
+DEP0001481,Owen,Moore,2035-01-01,M,owen.moore.1481@example.com,555-834-4957,HMO-200,Basic HMO,HMO,Acme Health,2024/07/08,,A,Child,MEM000148
+MEM000149,,Wilson,1971/08/03,O,sam.wilson.0149@example.com,(555) 302-9722,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023/09/09,,A,Self,MEM000149
+DEP0001491,Iris,Singh,08/26/2021,Female,iris.singh.1491@example.com,(555) 796-3310,,Choice POS,POS,Contoso Care,2025-12-08,,Active,Dependent,MEM000149
+DEP0001251,Priya,Conflict,1962-03-14,F,,555-269-6944,HMO-200,Basic HMO,HMO,Acme Health,2023/08/17,,Pending,Dependent,MEM000149
+MEM000150,Tara,Patel,07/20/1965,O,tara.patel.0150@example.com,5558346729,HMO-200,Basic HMO,HMO,Acme Health,10/21/2025,,Pending,Self,MEM000150
+DEP0001501,Owen,Rivera,1976/07/21,Female,owen.rivera.1501@example.com,5556262663,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-10-06,,Pending,Spouse,MEM000150
+DEP0001502,Evan,Singh,2008-12-10,M,evan.singh.1502@example.com,(555) 112-3498,HMO-200,Basic HMO,HMO,Acme Health,03/22/2025,,A,Child,MEM000150
+MEM000151,Mia,Smith,02/19/1995,M,,555-150-3827,HMO-200,Basic HMO,HMO,Acme Health,2025/04/28,,A,Self,MEM000151
+DEP0001511,Sofia,Moore,11/09/2011,Male,sofia.moore.1511@example.com,(555) 768-0067,POS-500,Choice POS,POS,Contoso Care,2025-01-03,2025/04/30,Termed,Dependent,MEM000151
+MEM000152,Maya,Garcia,1993-09-08,Female,maya.garcia.0152@example.com,(555) 948-2619,POS-500,Choice POS,POS,Contoso Care,01/31/2023,,Active,Self,MEM000152
+DEP0001521,Jordan,Wilson,2018/10/09,Female,jordan.wilson.1521@example.com,555-889-8735,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024/10/14,,Active,Child,MEM000152
+DEP0001522,Sam,Nguyen,04/30/2017,Female,sam.nguyen.1522@example.com,(555) 721-0353,PPO-100,Silver PPO,PPO,Acme Health,2025/04/30,,A,Dependent,MEM000152
+MEM000153,Marcus,Rivera,1982/03/30,Female,,555-228-8485,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,01/09/2025,,A,Self,MEM000153
+MEM000154,Ana,Martinez,09/23/1980,Female,,555-849-8848,HMO-200,Basic HMO,HMO,Acme Health,2023/01/31,,A,Self,MEM000154
+DEP0001541,Tara,Nguyen,10/11/1995,F,tara.nguyen.1541@example.com,5558111187,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,07/22/2025,,A,Spouse,MEM000154
+MEM000155,Avery,Johnson,1963-05-15,Female,avery.johnson.0155@example.com,555-833-5407,PPO-100,Silver PPO,PPO,Acme Health,2023/05/15,,Active,Self,MEM000155
+DEP0001551,Sam,Brown,2008/02/15,Female,sam.brown.1551@example.com,5557594441,PPO-100,Silver PPO,PPO,Acme Health,05/24/2025,12/20/2026,Terminated,Child,MEM000155
+MEM000156,Owen,Patel,04/07/1965,F,owen.patel.0156@example.com,555-180-9286,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024/05/17,,Pending,Self,MEM000156
+DEP0001561,Iris,Patel,01/24/2014,O,iris.patel.1561@example.com,555-480-5959,PPO-100,Silver PPO,PPO,Acme Health,2025/12/21,,Pending,Dependent,MEM000156
+MEM000157,Tara,Lee,01/29/1982,Male,,(555) 649-5994,PPO-100,Silver PPO,P.P.O,Acme Health,01/11/2024,,Pending,Self,MEM000157
+MEM000158,Riley,Rivera,1986-05-13,M,riley.rivera.0158@example.com,555-751-3841,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,08/10/2023,,Active,Self,MEM000158
+MEM000159,Elena,Lee,01/05/1988,O,elena.lee.0159@example.com,(555) 746-9778,POS-500,Choice POS,POS,Contoso Care,09/04/2025,2026-07-03,Terminated,Self,MEM000159
+MEM000160,Owen,Davis,1987-06-24,Male,owen.davis.0160@example.com,555-913-2211,PPO-100,Silver PPO,PPO,Acme Health,2024-06-18,,Pending,Self,MEM000160
+DEP0001601,Avery,Garcia,1995-12-12,Female,avery.garcia.1601@example.com,5553116776,HMO-200,Basic HMO,HMO,Acme Health,02/09/2025,,A,Spouse,MEM000160
+MEM000161,Sofia,Martinez,09/16/1990,M,sofia.martinez.0161@example.com,5556119547,POS-500,Choice POS,POS,Contoso Care,04/04/2023,,Active,Self,MEM000161
+MEM000162,Iris,Davis,1960-07-28,M,iris.davis.0162@example.com,555-731-6052,PPO-100,Silver PPO,P.P.O,Acme Health,01/01/2026,,Pending,Self,MEM000162
+MEM000163,Avery,Wilson,1967/08/01,M,avery.wilson.0163@example.com,555-213-5087,POS-500,Choice POS,POS,Contoso Care,2024-05-12,,Pending,Self,MEM000163
+DEP0001631,Sofia,Khan,12/26/2014,Male,sofia.khan.1631@example.com,555-484-7853,HMO-200,Basic HMO,HMO,Acme Health,2024-07-14,,Pending,Child,MEM000163
+MEM000164,Tara,Patel,1979-02-30,Male,tara.patel.0164@example.com,(555) 177-5949,EPO-400,Metro EPO,EPO,Northstar Benefits,09/26/2023,,A,Self,MEM000164
+DEP0001641,Luis,Johnson,03/03/1967,F,not-an-email,555-292-6886,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2023/03/04,,Active,Spouse,MEM000164
+DEP0001642,Leo,Khan,1992-11-24,Male,leo.khan.1642@example.com,abc,PPO-100,Silver PPO,P.P.O,Acme Health,04/11/2024,,A,Spouse,MEM000164
+MEM000165,Jordan,Smith,1979/02/28,O,jordan.smith.0165@example.com,(555) 964-8567,HMO-200,Basic HMO,HMO,Acme Health,2023/11/19,04/15/2024,UnknownStatus,Self,MEM000165
+DEP0001651,Riley,Singh,05/23/1977,M,riley.singh.1651@example.com,(555) 379-3287,HMO-200,Basic HMO,HMO,Acme Health,2024-07-15,,A,Partner,MEM000165
+MEM000166,Ana,Thomas,1972-02-17,Female,ana.thomas.0166@example.com,(555) 938-8135,HMO-200,Basic HMO,MysteryPlan,Acme Health,02/23/2023,,A,Self,MEM000166
+DEP0001661,Sofia,Davis,1963/09/16,Female,sofia.davis.1661@example.com,555-173-2303,PPO-100,Silver PPO,P.P.O,Acme Health,2025-06-01,2024-01-01,A,Spouse,MEM000166
+DEP0001662,Luis,Smith,07/23/1972,M,luis.smith.1662@example.com,5559289306,EPO-400,Metro EPO,EPO,Northstar Benefits,12/16/2023,,Active,Spouse,
+MEM000167,Sam,Martinez,1990-10-19,Female,sam.martinez.0167@example.com,(555) 472-4904,EPO-400,Metro EPO,EPO,Northstar Benefits,2023/12/03,,A,Self,MEM000167
+DEP0001671,Jordan,Martinez,2035-01-01,M,,5552553201,EPO-400,Metro EPO,EPO,Northstar Benefits,2023/02/14,,Pending,Dependent,MEM000167
+MEM000168,,Rivera,11/29/1995,Female,tara.rivera.0168@example.com,(555) 592-7860,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023/03/05,01/07/2025,Terminated,Self,MEM000168
+DEP0001681,Nina,Patel,1982-06-30,Male,nina.patel.1681@example.com,5552765083,,Choice POS,POS,Contoso Care,2025-06-09,2027-03-13,T,Spouse,MEM000168
+MEM000167,Maya,Conflict,1962-03-14,Male,maya.davis.1682@example.com,5555745102,PPO-100,Silver PPO,PPO,Acme Health,2025-12-14,,Pending,Child,MEM000168
+MEM000169,Luis,Khan,1998-07-09,O,luis.khan.0169@example.com,(555) 161-1811,POS-500,Choice POS,POS,Contoso Care,2025/03/30,,Active,Self,MEM000169
+DEP0001691,Evan,Davis,1977/09/11,M,evan.davis.1691@example.com,(555) 191-4296,HMO-200,Basic HMO,HMO,Acme Health,2024/12/20,,Pending,Spouse,MEM000169
+MEM000170,Sam,Rivera,1980/10/21,F,sam.rivera.0170@example.com,5559526064,HMO-200,Basic HMO,HMO,Acme Health,2024-05-07,2025-05-27,Termed,Self,MEM000170
+DEP0001701,Evan,Martinez,2019-06-12,F,evan.martinez.1701@example.com,(555) 636-5285,EPO-400,Metro EPO,EPO,Northstar Benefits,08/19/2025,,Pending,Dependent,MEM000170
+MEM000171,Evan,Lee,05/24/1966,Male,evan.lee.0171@example.com,5556923871,PPO-100,Silver PPO,PPO,Acme Health,2025/12/06,,Active,Self,MEM000171
+DEP0001711,Ana,Smith,2011/05/23,M,ana.smith.1711@example.com,5558701934,POS-500,Choice POS,POS,Contoso Care,2025/12/05,2027-09-14,Termed,Child,MEM000171
+MEM000172,Nina,Patel,08/07/1994,M,nina.patel.0172@example.com,(555) 822-1981,HMO-200,Basic HMO,HMO,Acme Health,2024/08/21,,A,Self,MEM000172
+DEP0001721,Riley,Rivera,1992-08-14,Female,riley.rivera.1721@example.com,555-811-3870,POS-500,Choice POS,POS,Contoso Care,2023-07-07,,A,Spouse,MEM000172
+MEM000173,Owen,Davis,1987/06/17,F,owen.davis.0173@example.com,555-723-4085,POS-500,Choice POS,POS,Contoso Care,2024-12-17,,Pending,Self,MEM000173
+DEP0001731,Sam,Martinez,1993/02/27,O,sam.martinez.1731@example.com,5551280780,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2023-03-06,2025-01-26,T,Spouse,MEM000173
+MEM000174,Sofia,Khan,1965/04/13,M,sofia.khan.0174@example.com,5559826366,EPO-400,Metro EPO,EPO,Northstar Benefits,2025/07/20,,A,Self,MEM000174
+MEM000175,Maya,Davis,1993-08-02,Female,maya.davis.0175@example.com,5558000468,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-11-13,,Pending,Self,MEM000175
+DEP0001751,Iris,Nguyen,07/21/2012,M,iris.nguyen.1751@example.com,5557875169,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-12-02,,Pending,Dependent,MEM000175
+DEP0001752,Nina,Martinez,2012-05-26,O,nina.martinez.1752@example.com,555-255-9073,HMO-200,Basic HMO,HMO,Acme Health,2025-01-20,,A,Child,MEM000175
+MEM000176,Sofia,Smith,09/23/1990,F,sofia.smith.0176@example.com,(555) 235-5475,HMO-200,Basic HMO,HMO,Acme Health,04/24/2025,,Pending,Self,MEM000176
+DEP0001761,Maya,Davis,1990-11-26,F,maya.davis.1761@example.com,5557473962,POS-500,Choice POS,POS,Contoso Care,2025/10/10,,A,Spouse,MEM000176
+MEM000177,Evan,Wilson,11/15/1975,Female,evan.wilson.0177@example.com,555-385-7068,PPO-100,Silver PPO,PPO,Acme Health,2025/09/30,,A,Self,MEM000177
+DEP0001771,Ana,Thomas,1961-02-16,O,ana.thomas.1771@example.com,5558767047,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,08/09/2025,,Active,Spouse,MEM000177
+MEM000178,Owen,Lee,1990-01-28,F,owen.lee.0178@example.com,5559305243,EPO-400,Metro EPO,EPO,Northstar Benefits,2024/06/10,,Pending,Self,MEM000178
+DEP0001781,Tara,Smith,2008-03-12,M,tara.smith.1781@example.com,5557778060,POS-500,Choice POS,POS,Contoso Care,2023-05-24,,A,Child,MEM000178
+MEM000179,Jordan,Johnson,02/01/1974,Female,jordan.johnson.0179@example.com,5555727828,PPO-100,Silver PPO,PPO,Acme Health,2025-07-07,,Active,Self,MEM000179
+DEP0001791,Mia,Martinez,1964-07-25,Male,mia.martinez.1791@example.com,(555) 108-4166,POS-500,Choice POS,POS,Contoso Care,2024-11-29,,Pending,Spouse,MEM000179
+MEM000180,Riley,Nguyen,1985/04/28,O,riley.nguyen.0180@example.com,(555) 813-6926,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2023-10-14,,Active,Self,MEM000180
+MEM000181,Elena,Wilson,1964/07/07,F,elena.wilson.0181@example.com,(555) 764-0975,PPO-100,Silver PPO,PPO,Acme Health,04/26/2024,07/23/2025,Terminated,Self,MEM000181
+MEM000182,Riley,Rivera,1979-02-30,F,riley.rivera.0182@example.com,(555) 994-8314,EPO-400,Metro EPO,EPO,Northstar Benefits,02/24/2024,,A,Self,MEM000182
+DEP0001821,Jordan,Davis,1970/02/24,O,not-an-email,5553036309,POS-500,Choice POS,POS,Contoso Care,2024/01/16,,Pending,Spouse,MEM000182
+MEM000183,Noah,Khan,1960/01/15,O,noah.khan.0183@example.com,abc,PPO-100,Silver PPO,P.P.O,Acme Health,2023-03-19,,Active,Self,MEM000183
+MEM000184,Elena,Chen,1965/03/23,Female,elena.chen.0184@example.com,555-797-8636,EPO-400,Metro EPO,EPO,Northstar Benefits,2024/12/12,11/10/2025,UnknownStatus,Self,MEM000184
+DEP0001841,Mia,Chen,2017-08-20,O,mia.chen.1841@example.com,(555) 152-5867,HMO-200,Basic HMO,HMO,Acme Health,10/01/2024,2025/11/17,Terminated,Partner,MEM000184
+DEP0001842,Mia,Khan,2016/02/11,Male,mia.khan.1842@example.com,(555) 548-3172,POS-500,Choice POS,MysteryPlan,Contoso Care,2024/02/23,,Active,Child,MEM000184
+MEM000185,Luis,Garcia,1964-08-23,M,luis.garcia.0185@example.com,(555) 304-6061,HMO-200,Basic HMO,HMO,Acme Health,2025-06-01,2024-01-01,A,Self,MEM000185
+DEP0001851,Mia,Thomas,2008/05/07,O,mia.thomas.1851@example.com,(555) 303-4273,POS-500,Choice POS,POS,Contoso Care,2025-07-31,2026-12-23,T,Dependent,
+MEM000186,Priya,Chen,1977-06-04,F,priya.chen.0186@example.com,(555) 753-3075,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-07-15,,Active,Self,MEM000186
+DEP0001861,Evan,Smith,2035-01-01,M,evan.smith.1861@example.com,(555) 102-6103,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-04-04,,Active,Dependent,MEM000186
+MEM000187,,Thomas,1971/09/21,O,jordan.thomas.0187@example.com,(555) 293-7887,PPO-100,Silver PPO,PPO,Acme Health,07/20/2025,,Active,Self,MEM000187
+DEP0001871,Priya,Patel,10/03/2011,Female,priya.patel.1871@example.com,5556523371,,Metro EPO,EPO,Northstar Benefits,2024/03/03,,Active,Child,MEM000187
+DEP0000671,Mia,Conflict,1962-03-14,F,mia.davis.0188@example.com,(555) 824-0492,POS-500,Choice POS,POS,Contoso Care,2024-08-22,,A,Self,MEM000188
+DEP0001881,Iris,Rivera,1964/07/03,Male,iris.rivera.1881@example.com,(555) 934-9761,PPO-100,Silver PPO,PPO,Acme Health,2025-05-26,05/01/2027,T,Spouse,MEM000188
+DEP0001882,Leo,Lee,03/30/2021,F,leo.lee.1882@example.com,555-874-0815,POS-500,Choice POS,POS,Contoso Care,2024-11-12,,A,Dependent,MEM000188
+MEM000189,Iris,Wilson,1990-10-09,Male,iris.wilson.0189@example.com,(555) 855-4302,POS-500,Choice POS,POS,Contoso Care,2025/09/24,,A,Self,MEM000189
+DEP0001891,Tara,Chen,1971/01/13,Female,tara.chen.1891@example.com,5552754100,POS-500,Choice POS,POS,Contoso Care,08/14/2025,,Active,Spouse,MEM000189
+MEM000190,Nina,Nguyen,12/11/1977,Female,nina.nguyen.0190@example.com,(555) 659-8879,PPO-100,Silver PPO,PPO,Acme Health,06/16/2024,,A,Self,MEM000190
+DEP0001901,Maya,Moore,2017-07-08,F,maya.moore.1901@example.com,(555) 318-9826,POS-500,Choice POS,POS,Contoso Care,2025/08/28,,A,Dependent,MEM000190
+MEM000191,Jordan,Lee,1980-12-24,M,jordan.lee.0191@example.com,555-280-8889,HMO-200,Basic HMO,HMO,Acme Health,2024-04-18,,A,Self,MEM000191
+DEP0001911,Ana,Rivera,2010/03/27,F,ana.rivera.1911@example.com,(555) 776-5145,EPO-400,Metro EPO,EPO,Northstar Benefits,09/22/2025,,A,Dependent,MEM000191
+MEM000192,Sam,Brown,08/05/1984,Female,sam.brown.0192@example.com,5558701829,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2024-06-14,,Pending,Self,MEM000192
+DEP0001921,Elena,Brown,02/27/2016,F,elena.brown.1921@example.com,(555) 890-8241,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2025-05-08,2026/02/20,T,Child,MEM000192
+MEM000193,Caleb,Brown,1977/03/19,O,caleb.brown.0193@example.com,(555) 766-8697,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,05/16/2023,,Active,Self,MEM000193
+MEM000194,Priya,Singh,1967/10/03,O,priya.singh.0194@example.com,(555) 298-4746,POS-500,Choice POS,POS,Contoso Care,2025/10/01,,Pending,Self,MEM000194
+DEP0001941,Elena,Brown,06/09/1985,M,elena.brown.1941@example.com,5557983807,HMO-200,Basic HMO,HMO,Acme Health,2024/08/02,,A,Spouse,MEM000194
+MEM000195,Nina,Brown,1983/12/05,O,nina.brown.0195@example.com,5552175838,POS-500,Choice POS,POS,Contoso Care,2023-08-12,,A,Self,MEM000195
+DEP0001951,Riley,Smith,10/18/1990,M,riley.smith.1951@example.com,(555) 206-5906,POS-500,Choice POS,POS,Contoso Care,02/15/2024,,A,Spouse,MEM000195
+MEM000196,Priya,Garcia,1983-10-21,O,priya.garcia.0196@example.com,5559465287,POS-500,Choice POS,POS,Contoso Care,10/01/2025,,Active,Self,MEM000196
+DEP0001961,Iris,Lee,05/31/2019,O,iris.lee.1961@example.com,(555) 254-9336,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-01-27,,A,Child,MEM000196
+DEP0001962,Elena,Brown,1993/08/20,M,elena.brown.1962@example.com,(555) 397-9587,HMO-200,Basic HMO,HMO,Acme Health,10/31/2025,09/03/2026,T,Spouse,MEM000196
+MEM000197,Evan,Wilson,1970-08-26,O,evan.wilson.0197@example.com,555-631-7474,PPO-100,Silver PPO,PPO,Acme Health,2024-05-27,2024-08-09,T,Self,MEM000197
+DEP0001971,Tara,Nguyen,2014/04/23,Male,tara.nguyen.1971@example.com,(555) 864-6127,PPO-100,Silver PPO,P.P.O,Acme Health,2024-01-07,,Active,Dependent,MEM000197
+MEM000198,Maya,Davis,1964-11-29,F,maya.davis.0198@example.com,(555) 926-8060,PPO-100,Silver PPO,PPO,Acme Health,2024-05-31,,Pending,Self,MEM000198
+DEP0001981,Nina,Garcia,2017-05-08,Female,nina.garcia.1981@example.com,5554883979,EPO-400,Metro EPO,EPO,Northstar Benefits,04/13/2024,,Pending,Dependent,MEM000198
+MEM000199,Owen,Lee,06/26/1987,Female,owen.lee.0199@example.com,555-651-0616,PPO-100,Silver PPO,PPO,Acme Health,2023-10-06,06/28/2025,Termed,Self,MEM000199
+DEP0001991,Marcus,Martinez,2011-04-27,Female,marcus.martinez.1991@example.com,555-888-8278,HMO-200,Basic HMO,HMO,Acme Health,07/16/2025,,Pending,Dependent,MEM000199
+MEM000200,Luis,Johnson,1979-02-30,O,luis.johnson.0200@example.com,(555) 909-9334,POS-500,Choice POS,POS,Contoso Care,2024/06/15,,Pending,Self,MEM000200
+DEP0002001,Sam,Lee,11/05/2013,M,not-an-email,(555) 897-5222,EPO-400,Metro EPO,EPO,Northstar Benefits,2024/08/27,,Pending,Child,MEM000200
+MEM000201,Sam,Lee,1996/05/01,O,sam.lee.0201@example.com,abc,PPO-100,Silver PPO,PPO,Acme Health,02/12/2024,,A,Self,MEM000201
+DEP0002011,Evan,Garcia,12/08/1961,Female,evan.garcia.2011@example.com,5555744752,HMO-200,Basic HMO,HMO,Acme Health,2025-05-12,,UnknownStatus,Spouse,MEM000201
+MEM000202,Sam,Brown,1964-09-29,Male,sam.brown.0202@example.com,555-883-8982,POS-500,Choice POS,POS,Contoso Care,2025-08-24,,A,Partner,MEM000202
+DEP0002021,Sam,Martinez,2012/10/28,O,sam.martinez.2021@example.com,(555) 873-4781,POS-500,Choice POS,MysteryPlan,Contoso Care,2025-11-27,,Pending,Dependent,MEM000202
+MEM000203,Jordan,Chen,1963/02/12,O,jordan.chen.0203@example.com,5553145096,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-06-01,2024-01-01,Active,Self,MEM000203
+DEP0002031,Luis,Brown,1981/01/25,Male,luis.brown.2031@example.com,555-853-5991,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-05-18,,Pending,Spouse,
+MEM000204,Nina,Khan,1986/07/18,F,nina.khan.0204@example.com,(555) 993-9908,HMO-200,Basic HMO,HMO,Acme Health,05/09/2025,,A,Self,MEM000204
+DEP0002041,Nina,Chen,2035-01-01,O,nina.chen.2041@example.com,5559698483,POS-500,Choice POS,POS,Contoso Care,2025/03/12,,A,Child,MEM000204
+MEM000205,,Johnson,1996-11-30,M,sofia.johnson.0205@example.com,555-270-9769,POS-500,Choice POS,POS,Contoso Care,09/23/2023,2024/06/25,T,Self,MEM000205
+DEP0002051,Marcus,Singh,2021-10-26,O,marcus.singh.2051@example.com,5552796878,,Silver PPO,P.P.O,Acme Health,10/30/2023,2025/07/20,Terminated,Dependent,MEM000205
+DEP0001662,Luis,Conflict,1962-03-14,M,luis.moore.2052@example.com,5553739782,PPO-100,Silver PPO,PPO,Acme Health,04/09/2023,,Pending,Spouse,MEM000205
+MEM000206,Marcus,Lee,1973-06-12,O,,555-307-3557,HMO-200,Basic HMO,HMO,Acme Health,2025/06/29,,Active,Self,MEM000206
+DEP0002061,Avery,Patel,06/11/1967,Male,avery.patel.2061@example.com,(555) 647-8389,EPO-400,Metro EPO,EPO,Northstar Benefits,08/22/2024,,Active,Spouse,MEM000206
+MEM000207,Tara,Moore,06/10/1989,F,tara.moore.0207@example.com,(555) 245-6832,PPO-100,Silver PPO,P.P.O,Acme Health,2023/07/16,2023/10/16,Termed,Self,MEM000207
+DEP0002071,Leo,Lee,1982-10-22,M,leo.lee.2071@example.com,(555) 925-7322,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2024-10-24,,Active,Spouse,MEM000207
+MEM000208,Sofia,Martinez,08/27/1972,F,sofia.martinez.0208@example.com,555-252-9513,PPO-100,Silver PPO,P.P.O,Acme Health,2023-03-31,,A,Self,MEM000208
+DEP0002081,Iris,Patel,2010-03-20,Male,iris.patel.2081@example.com,(555) 767-0090,HMO-200,Basic HMO,HMO,Acme Health,09/26/2025,,Pending,Dependent,MEM000208
+MEM000209,Priya,Chen,05/09/1966,Male,,5552327908,EPO-400,Metro EPO,EPO,Northstar Benefits,01/06/2024,,Active,Self,MEM000209
+MEM000210,Owen,Chen,1991-05-29,F,owen.chen.0210@example.com,555-262-1577,PPO-100,Silver PPO,PPO,Acme Health,2023/04/20,,Pending,Self,MEM000210
+DEP0002101,Maya,Johnson,2016-01-09,O,maya.johnson.2101@example.com,555-696-9266,HMO-200,Basic HMO,HMO,Acme Health,09/08/2024,,Active,Dependent,MEM000210
+MEM000211,Jordan,Wilson,06/17/1968,Male,jordan.wilson.0211@example.com,555-875-6131,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-07-25,,Pending,Self,MEM000211
+DEP0002111,Nina,Moore,08/18/2020,Female,nina.moore.2111@example.com,5555526343,HMO-200,Basic HMO,HMO,Acme Health,2025-01-30,2025-11-05,Termed,Dependent,MEM000211
+MEM000212,Evan,Davis,1995/06/18,Male,evan.davis.0212@example.com,(555) 515-4099,PPO-100,Silver PPO,PPO,Acme Health,2024/11/18,,Active,Self,MEM000212
+MEM000213,Noah,Lee,03/12/1992,O,noah.lee.0213@example.com,(555) 410-4462,POS-500,Choice POS,POS,Contoso Care,2025-03-03,,A,Self,MEM000213
+DEP0002131,Tara,Thomas,04/05/2020,Female,tara.thomas.2131@example.com,555-235-5962,PPO-100,Silver PPO,PPO,Acme Health,2025/07/22,,Active,Child,MEM000213
+DEP0002132,Nina,Nguyen,1992/11/24,O,nina.nguyen.2132@example.com,(555) 199-2682,PPO-100,Silver PPO,PPO,Acme Health,02/16/2024,06/10/2024,T,Spouse,MEM000213
+MEM000214,Marcus,Khan,1972/04/18,Female,,(555) 330-3546,POS-500,Choice POS,POS,Contoso Care,06/04/2024,,Active,Self,MEM000214
+DEP0002141,Sofia,Thomas,03/12/1968,O,sofia.thomas.2141@example.com,5554293459,HMO-200,Basic HMO,HMO,Acme Health,2023/10/30,06/17/2024,Termed,Spouse,MEM000214
+DEP0002142,Jordan,Thomas,08/13/2022,Female,jordan.thomas.2142@example.com,(555) 278-4017,PPO-100,Silver PPO,P.P.O,Acme Health,2025/06/08,,Pending,Child,MEM000214
+MEM000215,Riley,Patel,1968-06-13,O,riley.patel.0215@example.com,(555) 970-7968,PPO-100,Silver PPO,PPO,Acme Health,2024/07/09,2025/05/13,Terminated,Self,MEM000215
+DEP0002151,Elena,Brown,1998-08-01,M,elena.brown.2151@example.com,5558602374,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,05/11/2025,,Active,Spouse,MEM000215
+DEP0002152,Avery,Patel,10/29/1981,M,avery.patel.2152@example.com,555-657-4669,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2025-11-23,,Pending,Spouse,MEM000215
+MEM000216,Nina,Rivera,1981/09/25,O,nina.rivera.0216@example.com,5554329175,EPO-400,Metro EPO,EPO,Northstar Benefits,11/22/2023,,A,Self,MEM000216
+DEP0002161,Leo,Davis,08/24/1982,O,leo.davis.2161@example.com,(555) 388-0225,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,10/17/2024,,A,Spouse,MEM000216
+DEP0002162,Noah,Patel,2017-12-01,O,noah.patel.2162@example.com,5552306122,POS-500,Choice POS,POS,Contoso Care,01/27/2023,,A,Child,MEM000216
+MEM000217,Iris,Martinez,1979-02-30,Female,iris.martinez.0217@example.com,555-170-5813,HMO-200,Basic HMO,HMO,Acme Health,12/08/2023,,A,Self,MEM000217
+DEP0002171,Jordan,Rivera,1973-04-02,O,not-an-email,5555090876,POS-500,Choice POS,POS,Contoso Care,03/20/2023,,Pending,Spouse,MEM000217
+MEM000218,Owen,Lee,1967-08-05,F,owen.lee.0218@example.com,abc,HMO-200,Basic HMO,HMO,Acme Health,06/14/2023,,Active,Self,MEM000218
+DEP0002181,Priya,Rivera,1984-10-21,Male,,555-554-7498,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024/08/17,,UnknownStatus,Spouse,MEM000218
+DEP0002182,Jordan,Khan,1968/11/30,M,jordan.khan.2182@example.com,(555) 205-7482,POS-500,Choice POS,POS,Contoso Care,2023-07-25,,Active,Partner,MEM000218
+MEM000219,Tara,Chen,1985/11/18,M,tara.chen.0219@example.com,5559987008,PPO-100,Silver PPO,MysteryPlan,Acme Health,08/13/2024,,Active,Self,MEM000219
+MEM000220,Mia,Nguyen,1998/04/25,F,mia.nguyen.0220@example.com,(555) 171-6087,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2025-06-01,2024-01-01,Terminated,Self,MEM000220
+MEM000221,Owen,Smith,1985-11-14,M,owen.smith.0221@example.com,5552016734,POS-500,Choice POS,POS,Contoso Care,2023-06-16,,Pending,Self,MEM000221
+DEP0002211,Iris,Garcia,1993/11/19,Male,iris.garcia.2211@example.com,555-520-6737,HMO-200,Basic HMO,HMO,Acme Health,2024-01-06,10/03/2024,T,Spouse,MEM999999
+MEM000222,Marcus,Rivera,2035-01-01,Male,marcus.rivera.0222@example.com,(555) 655-9201,HMO-200,Basic HMO,HMO,Acme Health,01/14/2024,,Active,Self,MEM000222
+DEP0002221,,Rivera,1975/04/03,O,elena.rivera.2221@example.com,(555) 936-4284,HMO-200,Basic HMO,HMO,Acme Health,2024-03-18,,Pending,Spouse,MEM000222
+MEM000223,Avery,Khan,1963/03/19,Female,avery.khan.0223@example.com,5557899792,,Silver PPO,P.P.O,Acme Health,05/21/2023,,A,Self,MEM000223
+MEM000034,Elena,Conflict,1962-03-14,Male,elena.nguyen.0224@example.com,(555) 639-9120,PPO-100,Silver PPO,PPO,Acme Health,2023-08-13,,A,Self,MEM000224
+DEP0002241,Ana,Nguyen,2022-04-29,O,ana.nguyen.2241@example.com,5557045771,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-06-09,2025/03/08,Termed,Dependent,MEM000224
+MEM000225,Caleb,Patel,03/02/1991,Female,caleb.patel.0225@example.com,5558219418,HMO-200,Basic HMO,HMO,Acme Health,07/20/2024,,Active,Self,MEM000225
+DEP0002251,Owen,Moore,2015-05-25,Male,,555-180-7265,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-10-17,,Active,Child,MEM000225
+DEP0002252,Caleb,Garcia,08/31/2015,Female,caleb.garcia.2252@example.com,5551021101,EPO-400,Metro EPO,EPO,Northstar Benefits,01/14/2024,,Pending,Child,MEM000225
+MEM000226,Sam,Nguyen,12/03/1971,F,sam.nguyen.0226@example.com,(555) 172-0950,POS-500,Choice POS,POS,Contoso Care,2023-12-28,,Pending,Self,MEM000226
+MEM000227,Marcus,Rivera,08/14/1965,Male,marcus.rivera.0227@example.com,(555) 318-5582,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/08/22,,Pending,Self,MEM000227
+DEP0002271,Caleb,Martinez,2015-10-30,M,caleb.martinez.2271@example.com,(555) 601-2219,POS-500,Choice POS,POS,Contoso Care,2024-05-22,,A,Dependent,MEM000227
+MEM000228,Maya,Nguyen,1988-11-27,O,maya.nguyen.0228@example.com,555-790-1509,HMO-200,Basic HMO,HMO,Acme Health,2025-10-22,,Pending,Self,MEM000228
+DEP0002281,Elena,Rivera,04/19/2018,Female,elena.rivera.2281@example.com,555-795-6345,EPO-400,Metro EPO,EPO,Northstar Benefits,2025/03/24,,A,Dependent,MEM000228
+DEP0002282,Priya,Rivera,05/21/2011,Male,priya.rivera.2282@example.com,555-627-6893,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/06/11,,A,Child,MEM000228
+MEM000229,Mia,Martinez,1964/09/01,O,mia.martinez.0229@example.com,555-691-2297,PPO-100,Silver PPO,PPO,Acme Health,2023/03/30,,Active,Self,MEM000229
+MEM000230,Elena,Garcia,1989-07-01,Female,elena.garcia.0230@example.com,555-857-0315,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,04/15/2024,,Active,Self,MEM000230
+DEP0002301,Evan,Khan,01/05/2015,F,evan.khan.2301@example.com,(555) 954-4597,POS-500,Choice POS,POS,Contoso Care,2023/08/19,,Active,Dependent,MEM000230
+MEM000231,Sam,Khan,1998/03/14,Female,,5555429206,HMO-200,Basic HMO,HMO,Acme Health,2023-01-09,,Active,Self,MEM000231
+MEM000232,Luis,Johnson,08/09/1987,Female,luis.johnson.0232@example.com,5552316893,PPO-100,Silver PPO,PPO,Acme Health,2024-01-27,,A,Self,MEM000232
+MEM000233,Noah,Rivera,1968-05-13,Female,,5559653897,PPO-100,Silver PPO,PPO,Acme Health,2024/11/24,,A,Self,MEM000233
+MEM000234,Sofia,Singh,1972/08/25,F,sofia.singh.0234@example.com,555-172-8269,HMO-200,Basic HMO,HMO,Acme Health,01/07/2025,,A,Self,MEM000234
+DEP0002341,Luis,Khan,07/17/2020,M,luis.khan.2341@example.com,(555) 620-9189,PPO-100,Silver PPO,P.P.O,Acme Health,2025/07/29,,Pending,Dependent,MEM000234
+DEP0002342,Ana,Garcia,09/19/2009,Male,ana.garcia.2342@example.com,5551485336,POS-500,Choice POS,POS,Contoso Care,2025/11/19,,A,Dependent,MEM000234
+MEM000235,Riley,Brown,1994-11-10,Male,riley.brown.0235@example.com,555-418-7903,HMO-200,Basic HMO,HMO,Acme Health,2025-09-09,,Active,Self,MEM000235
+DEP0002351,Owen,Johnson,1989/07/18,Female,owen.johnson.2351@example.com,555-541-6443,HMO-200,Basic HMO,HMO,Acme Health,2023-02-16,,A,Spouse,MEM000235
+DEP0002352,Elena,Nguyen,12/30/1991,Male,elena.nguyen.2352@example.com,555-485-3619,HMO-200,Basic HMO,HMO,Acme Health,09/21/2024,,Active,Spouse,MEM000235
+MEM000236,Riley,Thomas,08/24/1986,Female,riley.thomas.0236@example.com,(555) 329-7798,POS-500,Choice POS,POS,Contoso Care,2023/06/25,,Active,Self,MEM000236
+DEP0002361,Elena,Wilson,12/27/1987,Female,elena.wilson.2361@example.com,555-881-4112,PPO-100,Silver PPO,P.P.O,Acme Health,12/09/2023,,Pending,Spouse,MEM000236
+DEP0002362,Riley,Wilson,1979-02-30,M,,555-814-6733,PPO-100,Silver PPO,PPO,Acme Health,11/28/2024,,Active,Spouse,MEM000236
+MEM000237,Owen,Smith,03/05/1977,F,not-an-email,5551916903,POS-500,Choice POS,POS,Contoso Care,2023-02-27,,Active,Self,MEM000237
+MEM000238,Jordan,Martinez,01/24/1971,F,jordan.martinez.0238@example.com,abc,HMO-200,Basic HMO,HMO,Acme Health,2024-01-26,,Pending,Self,MEM000238
+MEM000239,Luis,Davis,1992/08/07,Male,luis.davis.0239@example.com,555-599-7385,POS-500,Choice POS,POS,Contoso Care,2025/09/21,,UnknownStatus,Self,MEM000239
+DEP0002391,Iris,Brown,11/13/1991,F,iris.brown.2391@example.com,(555) 330-1962,PPO-100,Silver PPO,PPO,Acme Health,2025-10-01,,A,Partner,MEM000239
+MEM000240,Tara,Smith,1987-09-28,F,tara.smith.0240@example.com,5552603063,PPO-100,Silver PPO,MysteryPlan,Acme Health,2024/09/21,,A,Self,MEM000240
+DEP0002401,Avery,Chen,2011/07/25,F,avery.chen.2401@example.com,5555755941,PPO-100,Silver PPO,P.P.O,Acme Health,2025-06-01,2024-01-01,Pending,Child,MEM000240
+DEP0002402,Caleb,Davis,1995-12-22,O,caleb.davis.2402@example.com,5551843502,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,10/05/2023,,Pending,Spouse,
+MEM000241,Elena,Davis,03/25/1980,M,elena.davis.0241@example.com,(555) 346-8672,POS-500,Choice POS,POS,Contoso Care,10/23/2024,,Pending,Self,MEM000241
+DEP0002411,Luis,Chen,2035-01-01,Female,luis.chen.2411@example.com,5555234838,EPO-400,Metro EPO,EPO,Northstar Benefits,2025/01/27,,A,Spouse,MEM000241
+DEP0002412,,Nguyen,08/06/2018,O,evan.nguyen.2412@example.com,5554707177,PPO-100,Silver PPO,PPO,Acme Health,2024-02-22,,Active,Child,MEM000241
+MEM000242,Avery,Moore,1997-08-02,M,avery.moore.0242@example.com,555-370-4375,,Metro EPO,EPO,Northstar Benefits,2023-12-26,,A,Self,MEM000242
+MEM000039,Caleb,Conflict,1962-03-14,Female,,(555) 456-3583,PPO-100,Silver PPO,PPO,Acme Health,09/02/2024,,Pending,Spouse,MEM000242
+MEM000243,Jordan,Rivera,1983-03-04,O,,555-747-9676,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-07-17,,Active,Self,MEM000243
+DEP0002431,Jordan,Moore,2011/02/17,Female,jordan.moore.2431@example.com,555-306-5331,POS-500,Choice POS,POS,Contoso Care,02/10/2024,,Active,Child,MEM000243
+MEM000244,Ana,Rivera,1993/07/24,M,ana.rivera.0244@example.com,(555) 523-7014,HMO-200,Basic HMO,HMO,Acme Health,10/27/2024,,Active,Self,MEM000244
+DEP0002441,Priya,Brown,10/21/2015,Female,priya.brown.2441@example.com,5557436193,POS-500,Choice POS,POS,Contoso Care,2025-12-02,,Active,Dependent,MEM000244
+MEM000245,Elena,Wilson,11/12/1995,Male,elena.wilson.0245@example.com,5553886349,PPO-100,Silver PPO,PPO,Acme Health,2023/05/07,03/14/2025,Terminated,Self,MEM000245
+MEM000246,Marcus,Garcia,03/23/1974,O,,555-318-2778,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-02-18,,Active,Self,MEM000246
+DEP0002461,Luis,Patel,2012-07-12,M,luis.patel.2461@example.com,555-487-8299,EPO-400,Metro EPO,EPO,Northstar Benefits,07/01/2025,,Pending,Dependent,MEM000246
+MEM000247,Noah,Lee,1996/08/02,Male,noah.lee.0247@example.com,5552495895,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025-10-30,,A,Self,MEM000247
+DEP0002471,Luis,Lee,11/24/1967,O,luis.lee.2471@example.com,(555) 197-0981,POS-500,Choice POS,POS,Contoso Care,08/18/2024,,Pending,Spouse,MEM000247
+MEM000248,Tara,Johnson,1961-12-18,O,tara.johnson.0248@example.com,(555) 512-5178,HMO-200,Basic HMO,HMO,Acme Health,06/03/2023,,Active,Self,MEM000248
+DEP0002481,Sofia,Singh,12/12/2010,F,sofia.singh.2481@example.com,5555327860,POS-500,Choice POS,POS,Contoso Care,05/27/2023,,Active,Child,MEM000248
+MEM000249,Ana,Khan,10/20/1996,Male,ana.khan.0249@example.com,555-213-3882,PPO-100,Silver PPO,PPO,Acme Health,2024/04/23,,Pending,Self,MEM000249
+DEP0002491,Luis,Smith,2019/11/09,Female,luis.smith.2491@example.com,(555) 268-3494,HMO-200,Basic HMO,HMO,Acme Health,2024/02/01,,A,Child,MEM000249
+DEP0002492,Caleb,Johnson,2015/02/09,M,caleb.johnson.2492@example.com,555-603-4761,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,08/26/2025,,Pending,Child,MEM000249
+MEM000250,Avery,Lee,04/03/1977,O,avery.lee.0250@example.com,555-144-8643,EPO-400,Metro EPO,EPO,Northstar Benefits,10/24/2025,2026-10-21,Terminated,Self,MEM000250
+DEP0002501,Maya,Chen,2020-07-28,Female,maya.chen.2501@example.com,5551989325,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-01-31,,A,Dependent,MEM000250
+DEP0002502,Sam,Smith,1962/04/12,O,sam.smith.2502@example.com,5558847465,PPO-100,Silver PPO,P.P.O,Acme Health,08/02/2023,,Active,Spouse,MEM000250
+MEM000251,Sofia,Garcia,1979-10-26,Female,sofia.garcia.0251@example.com,555-954-2063,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-05-20,,A,Self,MEM000251
+DEP0002511,Iris,Khan,2014-11-12,O,iris.khan.2511@example.com,555-452-2353,EPO-400,Metro EPO,EPO,Northstar Benefits,2023/08/25,11/16/2023,T,Dependent,MEM000251
+MEM000252,Leo,Smith,1980-07-01,Male,leo.smith.0252@example.com,(555) 870-7788,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025-12-26,03/28/2026,Termed,Self,MEM000252
+MEM000253,Sofia,Thomas,1970-08-15,O,sofia.thomas.0253@example.com,5557020176,PPO-100,Silver PPO,PPO,Acme Health,01/05/2024,10/06/2024,T,Self,MEM000253
+DEP0002531,Sofia,Garcia,2015/06/14,O,sofia.garcia.2531@example.com,5559181981,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,02/27/2023,,Pending,Child,MEM000253
+MEM000254,Noah,Garcia,1991/10/22,M,noah.garcia.0254@example.com,5559372134,POS-500,Choice POS,POS,Contoso Care,02/28/2023,08/01/2024,Termed,Self,MEM000254
+MEM000255,Iris,Rivera,10/14/1961,O,iris.rivera.0255@example.com,555-958-0142,POS-500,Choice POS,POS,Contoso Care,2023-04-13,,Pending,Self,MEM000255
+DEP0002551,Noah,Smith,1979-02-30,Male,noah.smith.2551@example.com,555-714-9522,POS-500,Choice POS,POS,Contoso Care,2024-09-13,,Active,Dependent,MEM000255
+MEM000256,Riley,Thomas,06/04/1967,Female,not-an-email,555-307-3074,EPO-400,Metro EPO,EPO,Northstar Benefits,2023/12/13,,Active,Self,MEM000256
+DEP0002561,Elena,Brown,2020/07/27,Female,elena.brown.2561@example.com,abc,HMO-200,Basic HMO,HMO,Acme Health,2024-04-03,,Pending,Dependent,MEM000256
+MEM000257,Luis,Khan,1975/05/01,Female,luis.khan.0257@example.com,(555) 163-1939,POS-500,Choice POS,POS,Contoso Care,2025/12/20,,UnknownStatus,Self,MEM000257
+MEM000258,Maya,Davis,1961-10-14,F,maya.davis.0258@example.com,5556764401,POS-500,Choice POS,POS,Contoso Care,2024-10-20,,Active,Partner,MEM000258
+DEP0002581,Iris,Davis,11/03/2019,O,iris.davis.2581@example.com,5555740217,HMO-200,Basic HMO,MysteryPlan,Acme Health,07/09/2023,,Active,Dependent,MEM000258
+MEM000259,Sam,Thomas,1970/10/26,Male,sam.thomas.0259@example.com,5552931715,HMO-200,Basic HMO,HMO,Acme Health,2025-06-01,2024-01-01,Active,Self,MEM000259
+MEM000260,Maya,Thomas,1981/05/23,Male,maya.thomas.0260@example.com,555-573-3354,PPO-100,Silver PPO,P.P.O,Acme Health,09/29/2024,,Active,Self,MEM000260
+DEP0002601,Tara,Brown,2015/06/20,F,tara.brown.2601@example.com,(555) 711-7445,PPO-100,Silver PPO,PPO,Acme Health,2024-04-19,,Pending,Child,MEM999999
+MEM000261,Nina,Lee,2035-01-01,Female,nina.lee.0261@example.com,555-325-5558,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2025/05/28,,Active,Self,MEM000261
+DEP0002611,,Brown,01/13/2019,M,avery.brown.2611@example.com,(555) 135-6656,HMO-200,Basic HMO,HMO,Acme Health,2025/03/27,,A,Child,MEM000261
+MEM000262,Luis,Garcia,1960/08/22,Male,luis.garcia.0262@example.com,(555) 223-8781,,Metro EPO,EPO,Northstar Benefits,2025/12/31,2027/04/27,T,Self,MEM000262
+MEM000146,Ana,Conflict,1962-03-14,Female,ana.chen.2621@example.com,555-189-2725,EPO-400,Metro EPO,EPO,Northstar Benefits,2023/10/02,,A,Spouse,MEM000262
+DEP0002622,Elena,Rivera,1993-08-13,M,elena.rivera.2622@example.com,5558479004,PPO-100,Silver PPO,P.P.O,Acme Health,12/18/2023,,Pending,Spouse,MEM000262
+MEM000263,Nina,Singh,1996/04/06,F,nina.singh.0263@example.com,5552888240,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2025-02-07,04/26/2026,Terminated,Self,MEM000263
+DEP0002631,Caleb,Singh,12/29/2018,M,caleb.singh.2631@example.com,5558721217,PPO-100,Silver PPO,P.P.O,Acme Health,04/13/2024,,A,Child,MEM000263
+DEP0002632,Iris,Chen,10/09/2010,F,iris.chen.2632@example.com,555-636-5232,POS-500,Choice POS,POS,Contoso Care,04/10/2025,,Active,Dependent,MEM000263
+MEM000264,Luis,Khan,1967/03/05,Male,luis.khan.0264@example.com,555-839-9807,EPO-400,Metro EPO,EPO,Northstar Benefits,10/25/2024,,Pending,Self,MEM000264
+DEP0002641,Sofia,Nguyen,1982/08/03,F,sofia.nguyen.2641@example.com,(555) 919-6712,PPO-100,Silver PPO,P.P.O,Acme Health,2023-12-30,,Pending,Spouse,MEM000264
+DEP0002642,Evan,Patel,1992-05-24,F,evan.patel.2642@example.com,(555) 316-2341,HMO-200,Basic HMO,HMO,Acme Health,2025/01/10,,Pending,Spouse,MEM000264
+MEM000265,Tara,Khan,1965/04/01,F,tara.khan.0265@example.com,555-804-5321,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-10-12,,Active,Self,MEM000265
+DEP0002651,Jordan,Martinez,1961/10/22,Female,jordan.martinez.2651@example.com,(555) 792-1179,POS-500,Choice POS,POS,Contoso Care,2025-10-03,,Pending,Spouse,MEM000265
+MEM000266,Owen,Patel,01/19/1983,Female,,(555) 847-9512,HMO-200,Basic HMO,HMO,Acme Health,2023/03/06,,Pending,Self,MEM000266
+DEP0002661,Ana,Singh,1968/12/06,O,ana.singh.2661@example.com,5554317672,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2023-02-16,,Pending,Spouse,MEM000266
+MEM000267,Noah,Davis,02/22/1983,M,noah.davis.0267@example.com,5558987015,POS-500,Choice POS,POS,Contoso Care,07/09/2024,,A,Self,MEM000267
+DEP0002671,Owen,Moore,2009-03-06,M,owen.moore.2671@example.com,5551699909,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2024/07/05,,Pending,Dependent,MEM000267
+MEM000268,Ana,Khan,1992-02-25,Female,ana.khan.0268@example.com,(555) 205-2340,POS-500,Choice POS,POS,Contoso Care,2025-07-20,12/23/2025,Terminated,Self,MEM000268
+DEP0002681,Luis,Patel,1962-11-29,Male,luis.patel.2681@example.com,555-788-9374,HMO-200,Basic HMO,HMO,Acme Health,2023/12/26,,Active,Spouse,MEM000268
+MEM000269,Caleb,Khan,1979-04-17,M,caleb.khan.0269@example.com,(555) 694-4063,HMO-200,Basic HMO,HMO,Acme Health,2025-06-04,,Pending,Self,MEM000269
+DEP0002691,Riley,Brown,1974/07/25,Female,riley.brown.2691@example.com,555-440-3688,HMO-200,Basic HMO,HMO,Acme Health,2025/10/03,,A,Spouse,MEM000269
+MEM000270,Mia,Nguyen,12/31/1968,Female,mia.nguyen.0270@example.com,(555) 236-3157,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/06/15,,Pending,Self,MEM000270
+DEP0002701,Ana,Chen,11/29/2011,O,ana.chen.2701@example.com,(555) 162-4240,EPO-400,Metro EPO,EPO,Northstar Benefits,03/02/2025,,A,Child,MEM000270
+MEM000271,Owen,Davis,10/25/1987,O,owen.davis.0271@example.com,(555) 854-8634,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024/03/26,,A,Self,MEM000271
+DEP0002711,Ana,Moore,2019/10/24,O,ana.moore.2711@example.com,555-739-2227,EPO-400,Metro EPO,EPO,Northstar Benefits,11/23/2025,2026/10/11,T,Child,MEM000271
+DEP0002712,Maya,Khan,11/01/1998,Male,maya.khan.2712@example.com,555-982-4506,POS-500,Choice POS,POS,Contoso Care,2025-02-02,07/20/2025,T,Spouse,MEM000271
+MEM000272,Maya,Rivera,11/02/1991,O,maya.rivera.0272@example.com,(555) 102-2679,HMO-200,Basic HMO,HMO,Acme Health,2024/03/30,,A,Self,MEM000272
+DEP0002721,Iris,Rivera,1979-09-23,M,iris.rivera.2721@example.com,555-213-5025,POS-500,Choice POS,POS,Contoso Care,2024/04/18,,Pending,Spouse,MEM000272
+DEP0002722,Noah,Khan,1979-02-30,F,,555-789-7885,EPO-400,Metro EPO,EPO,Northstar Benefits,12/20/2024,,Active,Child,MEM000272
+MEM000273,Leo,Davis,09/23/1991,M,not-an-email,(555) 204-4562,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-03-22,,Pending,Self,MEM000273
+DEP0002731,Mia,Moore,12/22/1966,Male,,abc,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-04-29,,Pending,Spouse,MEM000273
+MEM000274,Priya,Moore,1981-09-08,Male,priya.moore.0274@example.com,555-841-2126,HMO-200,Basic HMO,HMO,Acme Health,2024/04/15,,UnknownStatus,Self,MEM000274
+DEP0002741,Marcus,Brown,06/20/2014,Female,marcus.brown.2741@example.com,555-369-1381,EPO-400,Metro EPO,EPO,Northstar Benefits,06/25/2024,,Pending,Partner,MEM000274
+MEM000275,Elena,Davis,1960/05/11,M,elena.davis.0275@example.com,(555) 877-2970,PPO-100,Silver PPO,MysteryPlan,Acme Health,2024-11-06,,A,Self,MEM000275
+DEP0002751,Leo,Nguyen,1991-08-25,M,leo.nguyen.2751@example.com,5553313803,PPO-100,Silver PPO,P.P.O,Acme Health,2025-06-01,2024-01-01,Active,Spouse,MEM000275
+MEM000276,Marcus,Khan,1967/02/19,Female,marcus.khan.0276@example.com,(555) 409-5573,POS-500,Choice POS,POS,Contoso Care,2023/07/15,2025/04/29,Termed,Self,MEM000276
+DEP0002761,Iris,Wilson,1994/10/06,M,iris.wilson.2761@example.com,5558911930,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024/08/28,,Pending,Spouse,MEM999999
+MEM000277,Maya,Chen,2035-01-01,F,maya.chen.0277@example.com,(555) 617-7605,HMO-200,Basic HMO,HMO,Acme Health,07/28/2025,,Active,Self,MEM000277
+DEP0002771,,Singh,2016-11-07,Female,,5551492963,EPO-400,Metro EPO,EPO,Northstar Benefits,2025/07/29,,A,Dependent,MEM000277
+MEM000278,Nina,Moore,02/23/1990,M,nina.moore.0278@example.com,5551743333,,Basic HMO,HMO,Acme Health,03/07/2025,,A,Self,MEM000278
+MEM000264,Caleb,Conflict,1962-03-14,F,caleb.wilson.2781@example.com,5555805689,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-01-24,,Pending,Spouse,MEM000278
+MEM000279,Sam,Rivera,1991-06-08,O,sam.rivera.0279@example.com,555-560-7530,HMO-200,Basic HMO,HMO,Acme Health,06/11/2023,,Pending,Self,MEM000279
+DEP0002791,Iris,Martinez,2015/07/10,F,iris.martinez.2791@example.com,555-999-2780,POS-500,Choice POS,POS,Contoso Care,2025-08-23,,Active,Child,MEM000279
+MEM000280,Marcus,Lee,1985/09/26,Female,marcus.lee.0280@example.com,555-674-8191,HMO-200,Basic HMO,HMO,Acme Health,2025-12-02,,A,Self,MEM000280
+DEP0002801,Mia,Singh,2008/12/25,M,mia.singh.2801@example.com,555-747-9847,HMO-200,Basic HMO,HMO,Acme Health,2025-11-08,,Active,Child,MEM000280
+MEM000281,Elena,Brown,07/26/1972,M,elena.brown.0281@example.com,5552637468,POS-500,Choice POS,POS,Contoso Care,2024/04/02,,Pending,Self,MEM000281
+MEM000282,Evan,Chen,1967/06/02,F,evan.chen.0282@example.com,5555282629,HMO-200,Basic HMO,HMO,Acme Health,2023-08-24,,Active,Self,MEM000282
+MEM000283,Evan,Patel,1997/07/14,F,evan.patel.0283@example.com,5558756992,HMO-200,Basic HMO,HMO,Acme Health,01/28/2024,,A,Self,MEM000283
+MEM000284,Luis,Rivera,02/26/1980,O,luis.rivera.0284@example.com,5559457608,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-12-04,2025-07-06,Termed,Self,MEM000284
+DEP0002841,Evan,Johnson,09/22/2012,Male,evan.johnson.2841@example.com,5551864513,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-10-26,,Active,Dependent,MEM000284
+MEM000285,Avery,Brown,1979-10-08,O,avery.brown.0285@example.com,555-748-7013,EPO-400,Metro EPO,EPO,Northstar Benefits,2025/11/22,,Active,Self,MEM000285
+DEP0002851,Avery,Lee,2022/08/29,Female,avery.lee.2851@example.com,555-255-2213,POS-500,Choice POS,POS,Contoso Care,2024/12/26,,Active,Dependent,MEM000285
+MEM000286,Owen,Wilson,1962-02-18,M,owen.wilson.0286@example.com,(555) 281-3124,HMO-200,Basic HMO,HMO,Acme Health,2023-01-09,,A,Self,MEM000286
+DEP0002861,Luis,Patel,12/15/2021,O,luis.patel.2861@example.com,5556003616,HMO-200,Basic HMO,HMO,Acme Health,2025/07/24,,A,Dependent,MEM000286
+MEM000287,Sam,Patel,1963/09/06,M,sam.patel.0287@example.com,5559048874,EPO-400,Metro EPO,EPO,Northstar Benefits,2025/09/27,,Active,Self,MEM000287
+MEM000288,Ana,Rivera,07/05/1994,M,ana.rivera.0288@example.com,(555) 689-5058,HMO-200,Basic HMO,HMO,Acme Health,2024/04/21,,A,Self,MEM000288
+DEP0002881,Nina,Patel,08/10/2018,Male,nina.patel.2881@example.com,555-191-6841,PPO-100,Silver PPO,PPO,Acme Health,2023-10-12,03/29/2025,Termed,Dependent,MEM000288
+MEM000289,Marcus,Khan,1968-12-22,Male,marcus.khan.0289@example.com,(555) 693-3697,PPO-100,Silver PPO,PPO,Acme Health,2023/08/19,,Active,Self,MEM000289
+DEP0002891,Luis,Smith,2017/05/26,F,luis.smith.2891@example.com,5553312673,PPO-100,Silver PPO,PPO,Acme Health,2024/01/20,2025/07/27,T,Dependent,MEM000289
+MEM000290,Owen,Chen,1963-11-20,O,owen.chen.0290@example.com,5552473365,HMO-200,Basic HMO,HMO,Acme Health,2025-07-27,,Active,Self,MEM000290
+MEM000291,Caleb,Rivera,1974/02/23,M,caleb.rivera.0291@example.com,5558206010,POS-500,Choice POS,POS,Contoso Care,2024-11-12,,A,Self,MEM000291
+MEM000292,Elena,Lee,02/02/1989,M,elena.lee.0292@example.com,555-550-7666,PPO-100,Silver PPO,P.P.O,Acme Health,2024-05-18,,Pending,Self,MEM000292
+DEP0002921,Ana,Chen,1974/12/31,Male,ana.chen.2921@example.com,(555) 279-7473,POS-500,Choice POS,POS,Contoso Care,11/15/2023,,Active,Spouse,MEM000292
+MEM000293,Luis,Moore,1971-04-25,F,luis.moore.0293@example.com,5559903461,PPO-100,Silver PPO,P.P.O,Acme Health,2024/09/22,,A,Self,MEM000293
+DEP0002931,Maya,Lee,2017-06-27,M,maya.lee.2931@example.com,(555) 415-7755,PPO-100,Silver PPO,P.P.O,Acme Health,08/11/2024,04/09/2025,T,Child,MEM000293
+MEM000294,Nina,Garcia,1979-02-30,O,,555-162-1259,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-01-15,,Pending,Self,MEM000294
+MEM000295,Iris,Khan,1965-06-13,F,not-an-email,555-895-5460,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2024-10-24,,Pending,Self,MEM000295
+DEP0002951,Leo,Johnson,1984-06-17,M,leo.johnson.2951@example.com,abc,PPO-100,Silver PPO,PPO,Acme Health,2023/07/18,,Pending,Spouse,MEM000295
+DEP0002952,Iris,Garcia,01/06/2012,O,iris.garcia.2952@example.com,5553298511,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/04/23,,UnknownStatus,Child,MEM000295
+MEM000296,Noah,Garcia,1988/02/28,O,noah.garcia.0296@example.com,(555) 159-9543,POS-500,Choice POS,POS,Contoso Care,12/03/2024,,Active,Partner,MEM000296
+DEP0002961,Elena,Chen,2015-04-04,O,elena.chen.2961@example.com,555-553-5439,HDHP-300,Saver HDHP,MysteryPlan,Northstar Benefits,06/09/2024,,Active,Dependent,MEM000296
+DEP0002962,Owen,Khan,2013/11/29,M,owen.khan.2962@example.com,5553577355,POS-500,Choice POS,POS,Contoso Care,2025-06-01,2024-01-01,A,Child,MEM000296
+MEM000297,Marcus,Thomas,11/07/1967,Male,marcus.thomas.0297@example.com,(555) 635-4441,PPO-100,Silver PPO,PPO,Acme Health,09/16/2025,,Pending,Self,MEM000297
+MEM000298,Sam,Lee,09/07/1988,Female,sam.lee.0298@example.com,5556039672,POS-500,Choice POS,POS,Contoso Care,2023-07-17,,Active,Self,MEM000298
+DEP0002981,Riley,Martinez,2035-01-01,Female,riley.martinez.2981@example.com,555-643-1486,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2023/04/13,,Pending,Spouse,MEM000298
+MEM000299,,Martinez,1962/05/25,F,mia.martinez.0299@example.com,(555) 791-4671,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024/03/05,,A,Self,MEM000299
+DEP0002991,Leo,Khan,1981/02/11,M,leo.khan.2991@example.com,(555) 427-7115,,Metro EPO,EPO,Northstar Benefits,2023/10/16,,Active,Spouse,MEM000299
+MEM000244,Priya,Conflict,1962-03-14,Male,priya.moore.0300@example.com,555-829-5994,HMO-200,Basic HMO,HMO,Acme Health,10/10/2023,,A,Self,MEM000300
+DEP0003001,Ana,Moore,2008-10-14,O,ana.moore.3001@example.com,(555) 130-2107,HMO-200,Basic HMO,HMO,Acme Health,09/27/2023,,Active,Dependent,MEM000300
+DEP0003002,Luis,Chen,2012-11-15,Female,luis.chen.3002@example.com,(555) 765-2874,HMO-200,Basic HMO,HMO,Acme Health,11/16/2025,,A,Child,MEM000300
+MEM000301,Elena,Garcia,1981-02-05,M,elena.garcia.0301@example.com,5559407947,EPO-400,Metro EPO,EPO,Northstar Benefits,06/16/2025,04/12/2026,Terminated,Self,MEM000301
+DEP0003011,Mia,Nguyen,01/10/2022,Male,mia.nguyen.3011@example.com,(555) 442-4009,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-09-28,,Pending,Child,MEM000301
+MEM000302,Avery,Chen,05/23/1976,Female,avery.chen.0302@example.com,555-526-7981,PPO-100,Silver PPO,PPO,Acme Health,11/15/2023,2024/12/27,Termed,Self,MEM000302
+DEP0003021,Priya,Rivera,10/01/2016,M,priya.rivera.3021@example.com,(555) 196-5102,EPO-400,Metro EPO,EPO,Northstar Benefits,2025/12/23,,A,Child,MEM000302
+MEM000303,Noah,Chen,06/25/1960,M,noah.chen.0303@example.com,(555) 210-0288,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025-10-12,,Pending,Self,MEM000303
+MEM000304,Ana,Nguyen,1975/02/20,M,ana.nguyen.0304@example.com,(555) 436-9244,PPO-100,Silver PPO,PPO,Acme Health,2023/03/07,03/04/2024,Terminated,Self,MEM000304
+DEP0003041,Evan,Moore,2015/08/17,O,evan.moore.3041@example.com,5554513516,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2023/04/19,,Pending,Dependent,MEM000304
+DEP0003042,Tara,Smith,03/20/2020,O,tara.smith.3042@example.com,(555) 852-9454,PPO-100,Silver PPO,PPO,Acme Health,07/18/2024,2026/01/04,Terminated,Child,MEM000304
+MEM000305,Nina,Nguyen,1997-06-02,F,nina.nguyen.0305@example.com,(555) 121-5996,HMO-200,Basic HMO,HMO,Acme Health,2024-02-02,,Pending,Self,MEM000305
+DEP0003051,Owen,Rivera,2015-10-25,M,owen.rivera.3051@example.com,(555) 706-4198,HMO-200,Basic HMO,HMO,Acme Health,2023-01-24,,Pending,Dependent,MEM000305
+MEM000306,Iris,Wilson,1983/12/11,Male,,5557991563,EPO-400,Metro EPO,EPO,Northstar Benefits,2025/06/13,,A,Self,MEM000306
+DEP0003061,Evan,Thomas,1964-01-19,Male,evan.thomas.3061@example.com,(555) 779-2062,EPO-400,Metro EPO,EPO,Northstar Benefits,03/29/2024,,A,Spouse,MEM000306
+MEM000307,Sam,Patel,1980-04-03,M,sam.patel.0307@example.com,555-911-0631,PPO-100,Silver PPO,P.P.O,Acme Health,2023-04-11,,Active,Self,MEM000307
+DEP0003071,Sam,Martinez,12/14/1962,M,sam.martinez.3071@example.com,5556256030,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2024-03-24,,A,Spouse,MEM000307
+DEP0003072,Nina,Chen,2022-03-01,F,nina.chen.3072@example.com,5559770652,EPO-400,Metro EPO,EPO,Northstar Benefits,07/03/2024,,Pending,Child,MEM000307
+MEM000308,Sofia,Smith,1970/03/28,F,sofia.smith.0308@example.com,5555566425,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/04/22,2026/01/18,Termed,Self,MEM000308
+DEP0003081,Tara,Moore,01/24/1967,F,tara.moore.3081@example.com,5551179885,PPO-100,Silver PPO,PPO,Acme Health,2023/08/15,,A,Spouse,MEM000308
+MEM000309,Sofia,Johnson,1990/04/23,Male,sofia.johnson.0309@example.com,5554891959,PPO-100,Silver PPO,P.P.O,Acme Health,2023-10-22,,Active,Self,MEM000309
+MEM000310,Nina,Singh,1979-01-04,O,nina.singh.0310@example.com,555-988-3208,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-02-14,,Pending,Self,MEM000310
+MEM000311,Nina,Lee,1986-11-06,F,nina.lee.0311@example.com,(555) 125-3428,POS-500,Choice POS,POS,Contoso Care,2025-03-31,,Active,Self,MEM000311
+DEP0003111,Sam,Khan,1972-02-20,Male,sam.khan.3111@example.com,(555) 696-8015,HMO-200,Basic HMO,HMO,Acme Health,2025-06-27,,Active,Spouse,MEM000311
+DEP0003112,Maya,Nguyen,11/13/2021,Female,maya.nguyen.3112@example.com,(555) 760-9573,EPO-400,Metro EPO,EPO,Northstar Benefits,01/17/2023,10/12/2024,Terminated,Dependent,MEM000311
+MEM000312,Jordan,Lee,1979-02-30,M,jordan.lee.0312@example.com,(555) 254-2150,POS-500,Choice POS,POS,Contoso Care,11/13/2024,,Pending,Self,MEM000312
+DEP0003121,Avery,Lee,2017-12-09,Female,not-an-email,5552746811,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/12/07,,A,Dependent,MEM000312
+MEM000313,Ana,Rivera,1991/10/24,M,ana.rivera.0313@example.com,abc,EPO-400,Metro EPO,EPO,Northstar Benefits,2024/01/31,,Active,Self,MEM000313
+DEP0003131,Owen,Rivera,2016/01/15,O,owen.rivera.3131@example.com,555-749-8558,POS-500,Choice POS,POS,Contoso Care,2025/10/31,2027/08/07,UnknownStatus,Dependent,MEM000313
+MEM000314,Elena,Rivera,08/25/1983,F,elena.rivera.0314@example.com,(555) 446-9399,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-01-06,2024-01-30,T,Partner,MEM000314
+DEP0003141,Nina,Johnson,2017/08/15,O,nina.johnson.3141@example.com,(555) 572-4987,HDHP-300,Saver HDHP,MysteryPlan,Northstar Benefits,2023/05/01,,Active,Child,MEM000314
+MEM000315,Sam,Smith,1972-10-10,M,sam.smith.0315@example.com,555-872-4909,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-06-01,2024-01-01,Pending,Self,MEM000315
+MEM000316,Luis,Smith,1981/03/21,Male,luis.smith.0316@example.com,5552567994,EPO-400,Metro EPO,EPO,Northstar Benefits,01/13/2025,,Active,Self,MEM000316
+DEP0003161,Ana,Rivera,2008-01-15,O,ana.rivera.3161@example.com,555-487-8758,HMO-200,Basic HMO,HMO,Acme Health,09/26/2024,,Pending,Dependent,MEM999999
+MEM000317,Caleb,Smith,2035-01-01,O,caleb.smith.0317@example.com,555-443-7026,POS-500,Choice POS,POS,Contoso Care,11/03/2024,,A,Self,MEM000317
+DEP0003171,,Johnson,05/31/1960,O,tara.johnson.3171@example.com,5559581521,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,06/26/2025,,Active,Spouse,MEM000317
+MEM000318,Iris,Garcia,04/28/1998,F,iris.garcia.0318@example.com,(555) 674-5657,,Basic HMO,HMO,Acme Health,2025/02/22,,Pending,Self,MEM000318
+DEP0002351,Elena,Conflict,1962-03-14,F,,555-703-6996,PPO-100,Silver PPO,PPO,Acme Health,2024/03/17,,A,Self,MEM000319
+MEM000320,Avery,Moore,1966-09-04,Male,avery.moore.0320@example.com,(555) 820-6491,PPO-100,Silver PPO,P.P.O,Acme Health,2023-02-09,,A,Self,MEM000320
+DEP0003201,Luis,Wilson,03/05/2016,Male,luis.wilson.3201@example.com,555-752-2121,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,07/07/2025,,A,Child,MEM000320
+MEM000321,Sam,Garcia,1990/12/21,Female,sam.garcia.0321@example.com,5552209070,PPO-100,Silver PPO,PPO,Acme Health,11/22/2023,,Pending,Self,MEM000321
+MEM000322,Mia,Brown,1980-05-02,Male,mia.brown.0322@example.com,5556834930,EPO-400,Metro EPO,EPO,Northstar Benefits,2023/09/07,,A,Self,MEM000322
+DEP0003221,Jordan,Johnson,2010/03/08,F,jordan.johnson.3221@example.com,555-863-2806,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-01-16,,Active,Child,MEM000322
+MEM000323,Elena,Brown,1983-01-01,Male,elena.brown.0323@example.com,5557300492,PPO-100,Silver PPO,P.P.O,Acme Health,2025-04-21,,A,Self,MEM000323
+DEP0003231,Ana,Garcia,2012/03/21,Female,ana.garcia.3231@example.com,(555) 977-0286,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,02/29/2024,,Active,Child,MEM000323
+MEM000324,Sofia,Rivera,01/31/1967,O,sofia.rivera.0324@example.com,555-979-4920,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,06/19/2025,,Active,Self,MEM000324
+DEP0003241,Maya,Thomas,1963/09/27,Female,maya.thomas.3241@example.com,(555) 498-3648,HMO-200,Basic HMO,HMO,Acme Health,2025-11-25,,A,Spouse,MEM000324
+MEM000325,Sofia,Singh,1974/09/11,O,sofia.singh.0325@example.com,555-942-9970,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/09/04,2027/06/16,T,Self,MEM000325
+DEP0003251,Tara,Lee,06/17/1968,O,tara.lee.3251@example.com,5556701029,POS-500,Choice POS,POS,Contoso Care,02/21/2025,2026/10/27,Termed,Spouse,MEM000325
+DEP0003252,Tara,Nguyen,2015-09-13,Male,tara.nguyen.3252@example.com,5553633109,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-12-31,,Pending,Dependent,MEM000325
+MEM000326,Caleb,Moore,1995-02-27,F,caleb.moore.0326@example.com,5559110144,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-04-25,,Active,Self,MEM000326
+DEP0003261,Jordan,Rivera,09/04/1966,F,jordan.rivera.3261@example.com,5558612463,HMO-200,Basic HMO,HMO,Acme Health,2025/01/25,,Active,Spouse,MEM000326
+DEP0003262,Tara,Garcia,2017/03/22,Male,tara.garcia.3262@example.com,5553962481,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-01-26,,Pending,Child,MEM000326
+MEM000327,Nina,Lee,1967-11-06,M,nina.lee.0327@example.com,555-300-7499,PPO-100,Silver PPO,PPO,Acme Health,2023/12/01,,A,Self,MEM000327
+DEP0003271,Elena,Singh,03/05/2016,Female,elena.singh.3271@example.com,5558342802,EPO-400,Metro EPO,EPO,Northstar Benefits,2023/10/23,,Active,Dependent,MEM000327
+DEP0003272,Mia,Lee,2016/05/02,F,mia.lee.3272@example.com,5559300393,POS-500,Choice POS,POS,Contoso Care,12/07/2024,,A,Dependent,MEM000327
+MEM000328,Mia,Brown,1970/12/12,F,mia.brown.0328@example.com,(555) 427-9567,POS-500,Choice POS,POS,Contoso Care,2024-05-23,,Active,Self,MEM000328
+DEP0003281,Leo,Chen,03/16/2016,M,leo.chen.3281@example.com,555-566-1862,POS-500,Choice POS,POS,Contoso Care,12/03/2024,,Active,Dependent,MEM000328
+MEM000329,Owen,Thomas,1986-10-18,O,owen.thomas.0329@example.com,(555) 532-6739,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2023-05-29,,Pending,Self,MEM000329
+MEM000330,Luis,Nguyen,1986-06-25,F,luis.nguyen.0330@example.com,(555) 145-5887,POS-500,Choice POS,POS,Contoso Care,2024-04-07,,Active,Self,MEM000330
+MEM000331,Sam,Brown,1974/08/04,F,sam.brown.0331@example.com,(555) 216-9075,POS-500,Choice POS,POS,Contoso Care,05/13/2024,,Pending,Self,MEM000331
+MEM000332,Mia,Chen,11/30/1986,Female,mia.chen.0332@example.com,555-395-9166,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-05-03,,Pending,Self,MEM000332
+DEP0003321,Jordan,Martinez,1979-02-30,F,jordan.martinez.3321@example.com,(555) 436-1990,POS-500,Choice POS,POS,Contoso Care,2024-04-07,,A,Child,MEM000332
+MEM000333,Sofia,Patel,1968/02/04,M,not-an-email,5558812499,POS-500,Choice POS,POS,Contoso Care,2024-12-18,,Pending,Self,MEM000333
+DEP0003331,Sofia,Singh,08/29/2015,O,sofia.singh.3331@example.com,abc,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025-03-30,,A,Dependent,MEM000333
+MEM000334,Caleb,Singh,04/26/1991,Female,caleb.singh.0334@example.com,5554373611,POS-500,Choice POS,POS,Contoso Care,08/28/2023,,UnknownStatus,Self,MEM000334
+DEP0003341,Luis,Rivera,2017/03/27,O,luis.rivera.3341@example.com,5552390983,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-02-09,,Active,Partner,MEM000334
+MEM000335,Tara,Patel,1964-03-05,M,tara.patel.0335@example.com,5553692258,EPO-400,Metro EPO,MysteryPlan,Northstar Benefits,2025/05/20,,A,Self,MEM000335
+DEP0003351,Avery,Brown,03/25/2015,O,,(555) 133-3961,HMO-200,Basic HMO,HMO,Acme Health,2025-06-01,2024-01-01,A,Child,MEM000335
+MEM000336,Marcus,Khan,1993/08/28,O,marcus.khan.0336@example.com,555-105-0461,EPO-400,Metro EPO,EPO,Northstar Benefits,06/04/2023,,Active,Self,MEM000336
+DEP0003361,Marcus,Johnson,1980-01-27,Male,,5558864384,PPO-100,Silver PPO,PPO,Acme Health,2023-06-26,2025/03/22,Termed,Spouse,MEM999999
+MEM000337,Caleb,Johnson,2035-01-01,Female,,555-916-0707,HMO-200,Basic HMO,HMO,Acme Health,2024-06-22,,A,Self,MEM000337
+DEP0003371,,Khan,1980/11/04,Male,sam.khan.3371@example.com,5551814721,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-04-22,,Pending,Spouse,MEM000337
+MEM000338,Marcus,Johnson,1972/11/19,F,marcus.johnson.0338@example.com,555-257-9838,,Silver PPO,PPO,Acme Health,2023-01-20,,Active,Self,MEM000338
+MEM000015,Riley,Conflict,1962-03-14,M,riley.davis.0339@example.com,5554943151,POS-500,Choice POS,POS,Contoso Care,2025/07/12,2027-01-13,Terminated,Self,MEM000339
+MEM000340,Jordan,Lee,1978-12-25,Male,jordan.lee.0340@example.com,5551377832,EPO-400,Metro EPO,EPO,Northstar Benefits,03/12/2024,,Active,Self,MEM000340
+DEP0003401,Noah,Johnson,04/30/2016,Male,noah.johnson.3401@example.com,(555) 515-3540,HMO-200,Basic HMO,HMO,Acme Health,06/28/2024,02/27/2026,Terminated,Dependent,MEM000340
+MEM000341,Avery,Singh,1997/01/06,Female,avery.singh.0341@example.com,(555) 714-6794,HMO-200,Basic HMO,HMO,Acme Health,2024-07-13,,A,Self,MEM000341
+DEP0003411,Maya,Davis,1986/10/20,Female,maya.davis.3411@example.com,5555738856,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-11-01,,Active,Spouse,MEM000341
+MEM000342,Avery,Moore,1992-03-06,M,avery.moore.0342@example.com,(555) 779-8249,POS-500,Choice POS,POS,Contoso Care,2024/04/23,,Active,Self,MEM000342
+DEP0003421,Maya,Thomas,1968-11-04,Male,maya.thomas.3421@example.com,(555) 499-8050,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-10-23,2024-09-17,Terminated,Spouse,MEM000342
+MEM000343,Priya,Moore,05/12/1982,O,priya.moore.0343@example.com,555-424-8367,HMO-200,Basic HMO,HMO,Acme Health,2023-04-14,,Active,Self,MEM000343
+DEP0003431,Elena,Khan,2015-02-19,Male,elena.khan.3431@example.com,5558950986,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-07-14,,Active,Child,MEM000343
+DEP0003432,Avery,Thomas,2017-08-31,Male,avery.thomas.3432@example.com,555-221-6714,EPO-400,Metro EPO,EPO,Northstar Benefits,11/10/2024,,Active,Child,MEM000343
+MEM000344,Sam,Chen,1960/05/03,O,sam.chen.0344@example.com,(555) 501-6581,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/05/16,2026-08-17,Terminated,Self,MEM000344
+DEP0003441,Owen,Martinez,2017/11/04,M,owen.martinez.3441@example.com,5552154631,PPO-100,Silver PPO,P.P.O,Acme Health,02/11/2025,,Pending,Child,MEM000344
+MEM000345,Marcus,Brown,12/18/1979,Female,marcus.brown.0345@example.com,5555164663,EPO-400,Metro EPO,EPO,Northstar Benefits,01/16/2023,,Pending,Self,MEM000345
+DEP0003451,Nina,Wilson,03/20/2016,Female,nina.wilson.3451@example.com,555-860-6944,PPO-100,Silver PPO,PPO,Acme Health,2024-01-04,,Pending,Child,MEM000345
+MEM000346,Maya,Thomas,1962-10-28,M,maya.thomas.0346@example.com,(555) 463-4751,HMO-200,Basic HMO,HMO,Acme Health,2025-06-13,2026-04-18,Termed,Self,MEM000346
+MEM000347,Evan,Lee,1962-06-25,O,evan.lee.0347@example.com,(555) 827-5244,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-10-01,,Pending,Self,MEM000347
+DEP0003471,Sam,Lee,2019-02-04,O,sam.lee.3471@example.com,5555049649,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-02-27,,Pending,Child,MEM000347
+MEM000348,Jordan,Davis,11/14/1973,O,jordan.davis.0348@example.com,(555) 330-9303,PPO-100,Silver PPO,P.P.O,Acme Health,04/27/2025,,A,Self,MEM000348
+DEP0003481,Iris,Martinez,2016-04-26,F,iris.martinez.3481@example.com,5552146961,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2023-03-30,,Active,Child,MEM000348
+MEM000349,Caleb,Davis,12/28/1981,O,caleb.davis.0349@example.com,5559333328,PPO-100,Silver PPO,P.P.O,Acme Health,05/22/2025,,Pending,Self,MEM000349
+DEP0003491,Evan,Smith,04/27/2016,Female,evan.smith.3491@example.com,5555676098,HMO-200,Basic HMO,HMO,Acme Health,2025/01/17,,A,Child,MEM000349
+DEP0003492,Jordan,Nguyen,2013-07-30,Female,jordan.nguyen.3492@example.com,(555) 491-0100,PPO-100,Silver PPO,PPO,Acme Health,10/23/2025,,Active,Child,MEM000349
+MEM000350,Ana,Davis,1976-06-04,Female,ana.davis.0350@example.com,(555) 293-6119,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025-06-20,,A,Self,MEM000350
+MEM000351,Owen,Martinez,05/20/1960,Male,owen.martinez.0351@example.com,(555) 473-1940,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-07-24,,Pending,Self,MEM000351
+DEP0003511,Riley,Nguyen,09/08/1975,Male,riley.nguyen.3511@example.com,(555) 497-5301,PPO-100,Silver PPO,PPO,Acme Health,2023-05-16,,A,Spouse,MEM000351
+MEM000352,Leo,Singh,1979-02-30,F,leo.singh.0352@example.com,5552032909,POS-500,Choice POS,POS,Contoso Care,2023-12-03,,Pending,Self,MEM000352
+MEM000353,Priya,Thomas,09/01/1969,Male,not-an-email,(555) 751-3686,EPO-400,Metro EPO,EPO,Northstar Benefits,08/01/2023,,A,Self,MEM000353
+MEM000354,Caleb,Davis,06/03/1991,Female,caleb.davis.0354@example.com,abc,HMO-200,Basic HMO,HMO,Acme Health,2024/08/05,,Active,Self,MEM000354
+MEM000355,Leo,Nguyen,01/23/1980,F,leo.nguyen.0355@example.com,(555) 532-1492,POS-500,Choice POS,POS,Contoso Care,2023-10-17,,UnknownStatus,Self,MEM000355
+DEP0003551,Nina,Johnson,08/14/2014,F,nina.johnson.3551@example.com,5554645020,EPO-400,Metro EPO,EPO,Northstar Benefits,07/30/2025,2026-06-25,Termed,Partner,MEM000355
+MEM000356,Noah,Lee,1983-02-24,F,noah.lee.0356@example.com,555-871-7286,HDHP-300,Saver HDHP,MysteryPlan,Northstar Benefits,2023/01/08,,Active,Self,MEM000356
+DEP0003561,Tara,Rivera,2015/12/08,M,tara.rivera.3561@example.com,555-186-2522,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-06-01,2024-01-01,A,Dependent,MEM000356
+DEP0003562,Sofia,Khan,1967/06/19,Female,sofia.khan.3562@example.com,(555) 550-2259,PPO-100,Silver PPO,PPO,Acme Health,03/22/2025,,A,Spouse,
+MEM000357,Tara,Rivera,1992-10-04,F,tara.rivera.0357@example.com,555-691-8767,EPO-400,Metro EPO,EPO,Northstar Benefits,2023/06/14,,Pending,Self,MEM000357
+DEP0003571,Owen,Garcia,2035-01-01,M,,(555) 821-4274,PPO-100,Silver PPO,P.P.O,Acme Health,2025-09-20,,A,Child,MEM000357
+DEP0003572,,Brown,11/05/2014,F,sofia.brown.3572@example.com,(555) 465-8271,POS-500,Choice POS,POS,Contoso Care,02/10/2025,,Active,Dependent,MEM000357
+MEM000358,Avery,Lee,1963-06-14,F,avery.lee.0358@example.com,5553752735,,Choice POS,POS,Contoso Care,2024/04/08,,A,Self,MEM000358
+MEM000282,Ana,Conflict,1962-03-14,O,ana.garcia.3581@example.com,555-723-4692,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-06-22,2024/10/24,Terminated,Child,MEM000358
+MEM000359,Elena,Smith,1985/01/22,Female,elena.smith.0359@example.com,5557505060,PPO-100,Silver PPO,PPO,Acme Health,2024-03-15,,Pending,Self,MEM000359
+DEP0003591,Avery,Wilson,2010/10/14,Female,avery.wilson.3591@example.com,555-753-7651,PPO-100,Silver PPO,PPO,Acme Health,10/03/2024,2025-05-14,T,Child,MEM000359
+MEM000360,Marcus,Khan,1996/12/22,Female,marcus.khan.0360@example.com,5551843098,EPO-400,Metro EPO,EPO,Northstar Benefits,2024/01/12,10/26/2025,Terminated,Self,MEM000360
+DEP0003601,Mia,Garcia,2016-06-06,M,mia.garcia.3601@example.com,555-695-2998,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025-06-14,,Active,Dependent,MEM000360
+DEP0003602,Avery,Garcia,03/01/2021,M,avery.garcia.3602@example.com,555-198-2688,HMO-200,Basic HMO,HMO,Acme Health,2023/01/21,,Pending,Dependent,MEM000360
+MEM000361,Marcus,Moore,1966-10-23,O,marcus.moore.0361@example.com,(555) 100-1131,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-03-22,2026-03-11,T,Self,MEM000361
+DEP0003611,Luis,Smith,01/09/2018,F,luis.smith.3611@example.com,555-275-2853,EPO-400,Metro EPO,EPO,Northstar Benefits,10/05/2025,,A,Dependent,MEM000361
+MEM000362,Owen,Brown,09/16/1977,F,owen.brown.0362@example.com,(555) 450-8423,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023/07/03,,A,Self,MEM000362
+DEP0003621,Ana,Singh,1974/12/08,O,,5552553531,HMO-200,Basic HMO,HMO,Acme Health,09/16/2023,,A,Spouse,MEM000362
+MEM000363,Elena,Moore,01/11/1961,Male,elena.moore.0363@example.com,5552007238,EPO-400,Metro EPO,EPO,Northstar Benefits,11/19/2023,,A,Self,MEM000363
+DEP0003631,Luis,Rivera,1993-02-12,M,,555-715-6617,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,03/05/2023,,A,Spouse,MEM000363
+MEM000364,Riley,Johnson,06/03/1991,F,riley.johnson.0364@example.com,5553273482,HMO-200,Basic HMO,HMO,Acme Health,2025-06-16,03/24/2027,Termed,Self,MEM000364
+DEP0003641,Sam,Johnson,2008/12/13,Male,sam.johnson.3641@example.com,5554937064,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-11-23,,Active,Dependent,MEM000364
+DEP0003642,Nina,Nguyen,12/10/2012,Male,nina.nguyen.3642@example.com,(555) 794-0455,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023/11/13,,Active,Dependent,MEM000364
+MEM000365,Owen,Johnson,1965/11/05,F,owen.johnson.0365@example.com,5556610032,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023/10/02,,Active,Self,MEM000365
+DEP0003651,Mia,Johnson,1976/08/28,Female,mia.johnson.3651@example.com,5558153176,EPO-400,Metro EPO,EPO,Northstar Benefits,11/20/2024,,A,Spouse,MEM000365
+DEP0003652,Maya,Davis,2014/03/21,M,maya.davis.3652@example.com,5553434612,POS-500,Choice POS,POS,Contoso Care,09/18/2024,,A,Child,MEM000365
+MEM000366,Caleb,Patel,1965-10-08,Male,caleb.patel.0366@example.com,555-297-1474,PPO-100,Silver PPO,P.P.O,Acme Health,08/20/2025,,Active,Self,MEM000366
+MEM000367,Marcus,Thomas,1975/07/19,F,marcus.thomas.0367@example.com,(555) 185-0710,HMO-200,Basic HMO,HMO,Acme Health,2024/01/12,,A,Self,MEM000367
+DEP0003671,Marcus,Davis,04/11/2008,O,marcus.davis.3671@example.com,(555) 501-1916,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,03/04/2023,2025-01-01,Terminated,Child,MEM000367
+MEM000368,Riley,Moore,1993/09/11,F,riley.moore.0368@example.com,(555) 550-9969,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-09-05,2025/05/20,Termed,Self,MEM000368
+DEP0003681,Jordan,Rivera,2018/07/12,M,jordan.rivera.3681@example.com,555-754-8724,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2023/05/20,,Active,Child,MEM000368
+DEP0003682,Jordan,Nguyen,01/29/2022,Male,jordan.nguyen.3682@example.com,555-522-0335,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/11/18,,Pending,Dependent,MEM000368
+MEM000369,Caleb,Martinez,09/15/1990,Male,caleb.martinez.0369@example.com,555-990-7759,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-08-16,,A,Self,MEM000369
+DEP0003691,Sam,Nguyen,1979-02-30,Female,sam.nguyen.3691@example.com,(555) 624-4309,POS-500,Choice POS,POS,Contoso Care,2025-01-08,,Active,Dependent,MEM000369
+DEP0003692,Avery,Brown,1990-08-22,F,not-an-email,555-503-1614,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-06-21,,Pending,Spouse,MEM000369
+MEM000370,Maya,Brown,1974/01/31,Male,maya.brown.0370@example.com,abc,PPO-100,Silver PPO,PPO,Acme Health,01/18/2023,,A,Self,MEM000370
+DEP0003701,Ana,Moore,06/14/2010,F,ana.moore.3701@example.com,555-549-7631,POS-500,Choice POS,POS,Contoso Care,2023-03-13,,UnknownStatus,Dependent,MEM000370
+DEP0003702,Owen,Chen,03/15/2014,M,owen.chen.3702@example.com,5558505786,EPO-400,Metro EPO,EPO,Northstar Benefits,2024/09/08,08/19/2025,T,Partner,MEM000370
+MEM000371,Mia,Patel,1983/02/10,M,mia.patel.0371@example.com,5551530439,PPO-100,Silver PPO,MysteryPlan,Acme Health,2023/01/19,2023/09/26,Terminated,Self,MEM000371
+DEP0003711,Ana,Martinez,2021/12/21,M,ana.martinez.3711@example.com,555-552-0860,HMO-200,Basic HMO,HMO,Acme Health,2025-06-01,2024-01-01,Pending,Child,MEM000371
+DEP0003712,Avery,Martinez,2011/07/12,F,avery.martinez.3712@example.com,(555) 523-5733,HMO-200,Basic HMO,HMO,Acme Health,08/29/2024,2024-10-29,Terminated,Dependent,
+MEM000372,Sofia,Brown,1960/05/09,Male,sofia.brown.0372@example.com,5552545431,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-06-03,,Pending,Self,MEM000372
+MEM000373,Evan,Khan,2035-01-01,O,evan.khan.0373@example.com,555-536-5554,POS-500,Choice POS,POS,Contoso Care,2023/08/04,,A,Self,MEM000373
+MEM000374,,Wilson,1964-04-10,Female,owen.wilson.0374@example.com,(555) 232-9304,HMO-200,Basic HMO,HMO,Acme Health,2025-08-22,,A,Self,MEM000374
+MEM000375,Mia,Thomas,1985/03/07,O,mia.thomas.0375@example.com,555-683-3750,,Choice POS,POS,Contoso Care,06/04/2023,,Pending,Self,MEM000375
+MEM000039,Iris,Conflict,1962-03-14,M,iris.wilson.3751@example.com,5551964114,POS-500,Choice POS,POS,Contoso Care,2025/05/15,,Pending,Dependent,MEM000375
+MEM000376,Sofia,Smith,10/15/1969,M,sofia.smith.0376@example.com,555-742-9591,HMO-200,Basic HMO,HMO,Acme Health,05/26/2024,,A,Self,MEM000376
+DEP0003761,Nina,Lee,2011/09/27,Male,nina.lee.3761@example.com,5554131344,PPO-100,Silver PPO,PPO,Acme Health,2025-06-19,04/15/2027,Termed,Dependent,MEM000376
+MEM000377,Elena,Singh,07/26/1970,O,elena.singh.0377@example.com,(555) 185-8471,POS-500,Choice POS,POS,Contoso Care,2025-11-19,,A,Self,MEM000377
+DEP0003771,Tara,Chen,2021-04-10,O,tara.chen.3771@example.com,(555) 372-1610,EPO-400,Metro EPO,EPO,Northstar Benefits,09/11/2024,,Pending,Child,MEM000377
+DEP0003772,Sam,Patel,06/11/1970,M,sam.patel.3772@example.com,555-599-7693,POS-500,Choice POS,POS,Contoso Care,2025-11-01,,A,Spouse,MEM000377
+MEM000378,Mia,Wilson,1994/10/03,O,mia.wilson.0378@example.com,555-784-3925,HMO-200,Basic HMO,HMO,Acme Health,04/10/2024,,Pending,Self,MEM000378
+DEP0003781,Ana,Rivera,1990-09-04,O,ana.rivera.3781@example.com,(555) 722-1086,PPO-100,Silver PPO,PPO,Acme Health,2025/07/29,,A,Spouse,MEM000378
+DEP0003782,Luis,Thomas,08/23/2011,M,luis.thomas.3782@example.com,(555) 142-8890,PPO-100,Silver PPO,PPO,Acme Health,01/24/2025,,A,Child,MEM000378
+MEM000379,Caleb,Patel,1968-10-04,Male,caleb.patel.0379@example.com,5557467411,EPO-400,Metro EPO,EPO,Northstar Benefits,12/12/2025,,Pending,Self,MEM000379
+MEM000380,Riley,Smith,1983/09/13,Male,riley.smith.0380@example.com,5552032191,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,03/27/2025,12/23/2025,Termed,Self,MEM000380
+DEP0003801,Tara,Garcia,06/25/1964,F,,555-596-2436,EPO-400,Metro EPO,EPO,Northstar Benefits,10/07/2024,,Active,Spouse,MEM000380
+DEP0003802,Luis,Khan,2016-05-09,O,luis.khan.3802@example.com,(555) 693-9763,POS-500,Choice POS,POS,Contoso Care,2024-07-12,,Active,Child,MEM000380
+MEM000381,Marcus,Patel,1978-08-24,M,marcus.patel.0381@example.com,(555) 953-7256,POS-500,Choice POS,POS,Contoso Care,2025-06-03,,A,Self,MEM000381
+DEP0003811,Iris,Lee,2011-11-05,F,iris.lee.3811@example.com,5554090535,HMO-200,Basic HMO,HMO,Acme Health,2025/12/14,2027/03/01,T,Dependent,MEM000381
+MEM000382,Riley,Martinez,1985/06/03,O,riley.martinez.0382@example.com,5554292340,PPO-100,Silver PPO,PPO,Acme Health,2024/01/30,,A,Self,MEM000382
+DEP0003821,Sofia,Thomas,2017-01-27,F,sofia.thomas.3821@example.com,5557069198,POS-500,Choice POS,POS,Contoso Care,01/01/2025,,A,Child,MEM000382
+MEM000383,Riley,Johnson,12/25/1962,Male,riley.johnson.0383@example.com,(555) 765-6145,PPO-100,Silver PPO,P.P.O,Acme Health,03/09/2025,,Active,Self,MEM000383
+DEP0003831,Caleb,Nguyen,07/10/2014,Male,caleb.nguyen.3831@example.com,5556592235,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023/06/05,,Active,Dependent,MEM000383
+MEM000384,Evan,Patel,1992/05/20,M,evan.patel.0384@example.com,5557835182,HMO-200,Basic HMO,HMO,Acme Health,2025-08-15,,Pending,Self,MEM000384
+DEP0003841,Nina,Chen,2011-02-24,O,nina.chen.3841@example.com,555-105-9480,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-04-26,,A,Child,MEM000384
+MEM000385,Maya,Wilson,1977/04/05,F,maya.wilson.0385@example.com,555-593-4685,EPO-400,Metro EPO,EPO,Northstar Benefits,2023/11/21,,A,Self,MEM000385
+DEP0003851,Maya,Khan,2008-12-06,F,maya.khan.3851@example.com,555-203-3280,HMO-200,Basic HMO,HMO,Acme Health,12/15/2024,,Active,Child,MEM000385
+MEM000386,Mia,Martinez,1985-08-12,Female,mia.martinez.0386@example.com,555-651-5941,EPO-400,Metro EPO,EPO,Northstar Benefits,2025/06/19,,Active,Self,MEM000386
+DEP0003861,Ana,Wilson,2015-05-23,Male,ana.wilson.3861@example.com,5556158472,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025-07-31,,A,Child,MEM000386
+DEP0003862,Priya,Nguyen,1979-02-30,M,priya.nguyen.3862@example.com,(555) 684-7494,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-12-15,,Pending,Spouse,MEM000386
+MEM000387,Sam,Martinez,1978/12/06,M,not-an-email,(555) 631-3822,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2023/02/08,,Pending,Self,MEM000387
+DEP0003871,Iris,Patel,2018/11/26,O,iris.patel.3871@example.com,abc,HMO-200,Basic HMO,HMO,Acme Health,2023/04/02,,Active,Dependent,MEM000387
+DEP0003872,Marcus,Rivera,2015-09-28,F,marcus.rivera.3872@example.com,555-840-8531,POS-500,Choice POS,POS,Contoso Care,2024/07/09,,UnknownStatus,Child,MEM000387
+MEM000388,Noah,Garcia,1996-10-30,Male,noah.garcia.0388@example.com,5554745082,PPO-100,Silver PPO,PPO,Acme Health,2025-07-20,,Pending,Partner,MEM000388
+MEM000389,Mia,Johnson,1998/01/12,M,mia.johnson.0389@example.com,5558733334,PPO-100,Silver PPO,MysteryPlan,Acme Health,2023/09/11,,A,Self,MEM000389
+DEP0003891,Caleb,Brown,1983-04-21,F,caleb.brown.3891@example.com,5552061624,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-06-01,2024-01-01,Active,Spouse,MEM000389
+DEP0003892,Sofia,Patel,2008/07/24,O,sofia.patel.3892@example.com,(555) 569-5661,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/11/23,,Active,Child,
+MEM000390,Evan,Brown,05/01/1983,Male,evan.brown.0390@example.com,555-976-7676,EPO-400,Metro EPO,EPO,Northstar Benefits,05/09/2023,2023-09-30,T,Self,MEM000390
+DEP0003901,Avery,Thomas,2035-01-01,F,,(555) 469-4538,HMO-200,Basic HMO,HMO,Acme Health,2024-04-30,,A,Dependent,MEM000390
+MEM000391,,Rivera,1998-03-07,M,tara.rivera.0391@example.com,555-136-7983,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-02-04,,Pending,Self,MEM000391
+DEP0003911,Caleb,Davis,08/12/1990,O,caleb.davis.3911@example.com,(555) 463-5495,,Basic HMO,HMO,Acme Health,2024-10-27,2025/02/09,Termed,Spouse,MEM000391
+DEP0003551,Noah,Conflict,1962-03-14,O,noah.rivera.0392@example.com,5551743079,POS-500,Choice POS,POS,Contoso Care,2023-01-08,,Active,Self,MEM000392
+DEP0003921,Evan,Rivera,2016-02-15,Female,evan.rivera.3921@example.com,555-268-8457,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-07-08,,A,Dependent,MEM000392
+MEM000393,Maya,Johnson,1962-04-17,O,,5556595311,HMO-200,Basic HMO,HMO,Acme Health,2024/12/12,,A,Self,MEM000393
+DEP0003931,Evan,Wilson,2018/03/15,O,evan.wilson.3931@example.com,5553133755,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,04/22/2025,01/09/2027,Termed,Child,MEM000393
+MEM000394,Marcus,Moore,1995-06-05,O,marcus.moore.0394@example.com,(555) 646-9425,HMO-200,Basic HMO,HMO,Acme Health,2023/12/29,,Active,Self,MEM000394
+DEP0003941,Elena,Nguyen,1997/01/01,Female,elena.nguyen.3941@example.com,5552400769,PPO-100,Silver PPO,PPO,Acme Health,2025/10/24,,Pending,Spouse,MEM000394
+MEM000395,Iris,Patel,1987/05/22,Female,iris.patel.0395@example.com,5558417337,PPO-100,Silver PPO,PPO,Acme Health,05/28/2024,,Pending,Self,MEM000395
+DEP0003951,Iris,Khan,1989/02/09,O,iris.khan.3951@example.com,(555) 128-0267,EPO-400,Metro EPO,EPO,Northstar Benefits,08/08/2024,,A,Spouse,MEM000395
+DEP0003952,Nina,Brown,11/25/2021,F,nina.brown.3952@example.com,(555) 920-8489,PPO-100,Silver PPO,PPO,Acme Health,2025/08/26,,A,Dependent,MEM000395
+MEM000396,Maya,Thomas,1990-12-25,M,maya.thomas.0396@example.com,5552530230,HMO-200,Basic HMO,HMO,Acme Health,2024/02/19,,A,Self,MEM000396
+DEP0003961,Maya,Rivera,2012/04/25,F,maya.rivera.3961@example.com,(555) 660-7604,POS-500,Choice POS,POS,Contoso Care,11/26/2025,2027-05-18,Terminated,Child,MEM000396
+MEM000397,Luis,Davis,1998/04/25,F,luis.davis.0397@example.com,555-801-1522,PPO-100,Silver PPO,PPO,Acme Health,04/13/2025,,Active,Self,MEM000397
+DEP0003971,Owen,Patel,02/15/2010,O,owen.patel.3971@example.com,5556454263,HMO-200,Basic HMO,HMO,Acme Health,04/25/2023,,Pending,Dependent,MEM000397
+DEP0003972,Riley,Thomas,04/25/1994,F,riley.thomas.3972@example.com,(555) 488-2375,HMO-200,Basic HMO,HMO,Acme Health,2023/05/05,,Pending,Spouse,MEM000397
+MEM000398,Mia,Chen,06/04/1984,F,mia.chen.0398@example.com,555-754-5885,PPO-100,Silver PPO,P.P.O,Acme Health,2025/07/02,,A,Self,MEM000398
+DEP0003981,Elena,Martinez,2017-12-25,F,elena.martinez.3981@example.com,5553653637,EPO-400,Metro EPO,EPO,Northstar Benefits,2024/07/19,02/22/2025,T,Dependent,MEM000398
+MEM000399,Noah,Davis,1986-04-19,O,noah.davis.0399@example.com,5554976013,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-03-05,,Pending,Self,MEM000399
+DEP0003991,Jordan,Rivera,08/20/2016,M,jordan.rivera.3991@example.com,5551174544,HMO-200,Basic HMO,HMO,Acme Health,2023/07/26,,Pending,Child,MEM000399
+MEM000400,Leo,Wilson,1964/08/15,O,leo.wilson.0400@example.com,(555) 278-1947,PPO-100,Silver PPO,P.P.O,Acme Health,2024/05/14,,Active,Self,MEM000400
+DEP0004001,Riley,Rivera,10/15/2015,Male,riley.rivera.4001@example.com,(555) 730-9171,POS-500,Choice POS,POS,Contoso Care,2025/07/09,2025-11-15,T,Dependent,MEM000400
+MEM000401,Nina,Garcia,1979/08/31,O,nina.garcia.0401@example.com,(555) 272-8563,HMO-200,Basic HMO,HMO,Acme Health,04/02/2023,,Pending,Self,MEM000401
+DEP0004011,Sam,Brown,12/17/2010,Female,sam.brown.4011@example.com,(555) 308-4428,HMO-200,Basic HMO,HMO,Acme Health,09/27/2024,,Pending,Child,MEM000401
+MEM000402,Evan,Khan,1994-10-03,Male,evan.khan.0402@example.com,555-229-2787,POS-500,Choice POS,POS,Contoso Care,2023/06/05,,A,Self,MEM000402
+MEM000403,Noah,Lee,02/07/1973,O,noah.lee.0403@example.com,5554761071,PPO-100,Silver PPO,PPO,Acme Health,2025-04-06,,A,Self,MEM000403
+DEP0004031,Priya,Martinez,1975/10/03,F,priya.martinez.4031@example.com,5556213430,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-12-05,,Pending,Spouse,MEM000403
+MEM000404,Jordan,Wilson,1979-02-30,Male,jordan.wilson.0404@example.com,5558345983,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-07-08,,Active,Self,MEM000404
+DEP0004041,Riley,Garcia,11/05/2021,O,not-an-email,5553079926,HMO-200,Basic HMO,HMO,Acme Health,2024/01/08,,Pending,Dependent,MEM000404
+MEM000405,Luis,Johnson,07/29/1984,M,,abc,HMO-200,Basic HMO,HMO,Acme Health,02/25/2024,,Active,Self,MEM000405
+MEM000406,Owen,Garcia,12/14/1979,Female,,5556065704,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2025-12-08,,UnknownStatus,Self,MEM000406
+DEP0004061,Luis,Smith,10/28/1983,F,luis.smith.4061@example.com,(555) 233-1658,HMO-200,Basic HMO,HMO,Acme Health,2023-11-04,2024-10-18,T,Partner,MEM000406
+MEM000407,Mia,Chen,1988-09-29,Female,mia.chen.0407@example.com,5557767666,HDHP-300,Saver HDHP,MysteryPlan,Northstar Benefits,2023/08/29,,Active,Self,MEM000407
+MEM000408,Luis,Smith,1967-03-14,O,luis.smith.0408@example.com,(555) 707-9513,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-06-01,2024-01-01,A,Self,MEM000408
+DEP0004081,Iris,Chen,2017-11-09,Male,iris.chen.4081@example.com,5558890886,POS-500,Choice POS,POS,Contoso Care,2023-10-11,,A,Dependent,
+MEM000409,Tara,Wilson,1997-12-30,O,tara.wilson.0409@example.com,(555) 102-9831,PPO-100,Silver PPO,P.P.O,Acme Health,2025/03/09,,Pending,Self,MEM000409
+DEP0004091,Nina,Smith,2035-01-01,M,nina.smith.4091@example.com,(555) 972-4809,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-06-11,,Pending,Dependent,MEM000409
+MEM000410,,Chen,1966/07/08,M,riley.chen.0410@example.com,5552822053,POS-500,Choice POS,POS,Contoso Care,2023/04/02,,A,Self,MEM000410
+DEP0004101,Luis,Lee,2016-10-04,F,luis.lee.4101@example.com,555-557-9141,,Choice POS,POS,Contoso Care,2023-08-12,,Active,Dependent,MEM000410
+DEP0003221,Maya,Conflict,1962-03-14,F,maya.brown.4102@example.com,555-385-3886,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-08-11,05/03/2025,Termed,Dependent,MEM000410
+MEM000411,Leo,Brown,1962-05-20,O,leo.brown.0411@example.com,(555) 551-6322,EPO-400,Metro EPO,EPO,Northstar Benefits,04/08/2023,,Pending,Self,MEM000411
+DEP0004111,Marcus,Brown,2008-05-24,Male,marcus.brown.4111@example.com,5553712001,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-03-14,,Pending,Dependent,MEM000411
+DEP0004112,Caleb,Brown,1964/07/12,O,caleb.brown.4112@example.com,(555) 678-9835,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2023/01/13,,A,Spouse,MEM000411
+MEM000412,Iris,Moore,01/03/1997,Male,iris.moore.0412@example.com,555-159-0865,EPO-400,Metro EPO,EPO,Northstar Benefits,09/27/2023,,A,Self,MEM000412
+DEP0004121,Riley,Garcia,08/11/2012,O,riley.garcia.4121@example.com,(555) 701-9239,POS-500,Choice POS,POS,Contoso Care,2024/06/28,,Pending,Child,MEM000412
+DEP0004122,Maya,Lee,1977/02/15,M,maya.lee.4122@example.com,5551679884,POS-500,Choice POS,POS,Contoso Care,08/19/2023,,A,Spouse,MEM000412
+MEM000413,Mia,Chen,1992-03-22,Male,mia.chen.0413@example.com,5555182490,HMO-200,Basic HMO,HMO,Acme Health,2023/09/05,,Pending,Self,MEM000413
+DEP0004131,Sofia,Lee,2018-11-03,M,sofia.lee.4131@example.com,(555) 971-8998,EPO-400,Metro EPO,EPO,Northstar Benefits,07/14/2025,,Active,Child,MEM000413
+MEM000414,Nina,Lee,1965/01/07,O,nina.lee.0414@example.com,555-121-3548,POS-500,Choice POS,POS,Contoso Care,09/15/2025,,A,Self,MEM000414
+DEP0004141,Avery,Martinez,06/15/1992,O,avery.martinez.4141@example.com,555-202-1098,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-07-03,,Pending,Spouse,MEM000414
+DEP0004142,Elena,Khan,2010/05/09,F,elena.khan.4142@example.com,555-346-0922,EPO-400,Metro EPO,EPO,Northstar Benefits,07/06/2025,2027/03/26,T,Child,MEM000414
+MEM000415,Sam,Brown,1987/01/15,O,sam.brown.0415@example.com,555-225-5815,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-04-02,,Active,Self,MEM000415
+MEM000416,Sofia,Lee,1972/04/04,F,sofia.lee.0416@example.com,555-822-7065,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,02/16/2023,,Active,Self,MEM000416
+DEP0004161,Nina,Martinez,06/28/1992,Male,nina.martinez.4161@example.com,(555) 172-6646,HMO-200,Basic HMO,HMO,Acme Health,2024-03-01,2024-09-17,Termed,Spouse,MEM000416
+MEM000417,Avery,Brown,12/06/1978,M,avery.brown.0417@example.com,5556878814,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,08/10/2024,,Pending,Self,MEM000417
+DEP0004171,Mia,Chen,2017-07-02,O,mia.chen.4171@example.com,555-391-6828,POS-500,Choice POS,POS,Contoso Care,03/14/2023,,Active,Child,MEM000417
+MEM000418,Sam,Brown,1982-07-24,Female,sam.brown.0418@example.com,555-651-9097,POS-500,Choice POS,POS,Contoso Care,2023-05-09,2024-07-22,T,Self,MEM000418
+DEP0004181,Elena,Chen,2009-12-27,F,elena.chen.4181@example.com,555-502-6767,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-08-12,,A,Child,MEM000418
+DEP0004182,Tara,Wilson,2022/05/19,Male,tara.wilson.4182@example.com,555-529-7425,HMO-200,Basic HMO,HMO,Acme Health,04/17/2025,,A,Child,MEM000418
+MEM000419,Owen,Brown,1990/10/18,Male,owen.brown.0419@example.com,5553504219,EPO-400,Metro EPO,EPO,Northstar Benefits,06/21/2023,,Pending,Self,MEM000419
+DEP0004191,Riley,Nguyen,03/28/1987,F,riley.nguyen.4191@example.com,5552838237,PPO-100,Silver PPO,PPO,Acme Health,2024/01/23,,A,Spouse,MEM000419
+DEP0004192,Priya,Davis,1995/12/01,Female,priya.davis.4192@example.com,5551547798,POS-500,Choice POS,POS,Contoso Care,03/15/2023,,Active,Spouse,MEM000419
+MEM000420,Riley,Thomas,08/06/1974,Female,riley.thomas.0420@example.com,555-641-2680,HMO-200,Basic HMO,HMO,Acme Health,04/17/2024,,Pending,Self,MEM000420
+DEP0004201,Nina,Wilson,2011-03-07,F,nina.wilson.4201@example.com,5553194392,POS-500,Choice POS,POS,Contoso Care,2025-04-01,,A,Dependent,MEM000420
+MEM000421,Nina,Thomas,1979-02-30,Female,nina.thomas.0421@example.com,555-218-2899,HMO-200,Basic HMO,HMO,Acme Health,04/12/2025,,A,Self,MEM000421
+MEM000422,Owen,Nguyen,1985/12/08,O,not-an-email,(555) 604-1327,HMO-200,Basic HMO,HMO,Acme Health,01/01/2025,,A,Self,MEM000422
+MEM000423,Noah,Garcia,1969-11-06,M,noah.garcia.0423@example.com,abc,POS-500,Choice POS,POS,Contoso Care,04/27/2025,,A,Self,MEM000423
+DEP0004231,Avery,Khan,2014/04/19,Male,avery.khan.4231@example.com,555-611-0773,HMO-200,Basic HMO,HMO,Acme Health,2023-12-02,,UnknownStatus,Child,MEM000423
+DEP0004232,Luis,Brown,10/01/2017,M,luis.brown.4232@example.com,5554651759,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-09-14,,Active,Partner,MEM000423
+MEM000424,Leo,Smith,1974-11-02,F,leo.smith.0424@example.com,555-547-5747,EPO-400,Metro EPO,MysteryPlan,Northstar Benefits,05/29/2025,,Pending,Self,MEM000424
+DEP0004241,Jordan,Johnson,1982-10-15,O,jordan.johnson.4241@example.com,5555977230,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-06-01,2024-01-01,Pending,Spouse,MEM000424
+MEM000425,Nina,Singh,1979/01/01,O,,5555854905,PPO-100,Silver PPO,PPO,Acme Health,2025/02/18,01/11/2026,Terminated,Self,MEM000425
+DEP0004251,Mia,Chen,2017/09/18,O,mia.chen.4251@example.com,(555) 132-4686,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2023-06-13,09/23/2024,Terminated,Dependent,MEM999999
+MEM000426,Caleb,Patel,2035-01-01,O,caleb.patel.0426@example.com,5552438990,PPO-100,Silver PPO,PPO,Acme Health,2023-03-12,03/09/2024,Terminated,Self,MEM000426
+DEP0004261,,Rivera,05/26/2008,M,caleb.rivera.4261@example.com,555-731-6167,HMO-200,Basic HMO,HMO,Acme Health,2023/10/16,,Pending,Child,MEM000426
+DEP0004262,Caleb,Singh,02/06/2016,O,caleb.singh.4262@example.com,555-264-0740,,Saver HDHP,HDHP,Northstar Benefits,07/30/2024,,Pending,Dependent,MEM000426
+DEP0002691,Nina,Conflict,1962-03-14,Female,nina.lee.0427@example.com,5552911139,PPO-100,Silver PPO,PPO,Acme Health,2024/12/27,,Pending,Self,MEM000427
+DEP0004271,Caleb,Moore,02/26/2014,F,caleb.moore.4271@example.com,555-570-7207,HMO-200,Basic HMO,HMO,Acme Health,2024-04-09,,Active,Dependent,MEM000427
+MEM000428,Avery,Garcia,1961/06/13,Female,avery.garcia.0428@example.com,5557296525,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,04/29/2025,08/21/2026,Termed,Self,MEM000428
+DEP0004281,Marcus,Chen,2019-08-24,F,marcus.chen.4281@example.com,5554277791,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-03-30,,A,Child,MEM000428
+MEM000429,Sofia,Lee,05/10/1976,Male,sofia.lee.0429@example.com,(555) 620-7239,HMO-200,Basic HMO,HMO,Acme Health,2024/08/05,,A,Self,MEM000429
+MEM000430,Luis,Martinez,1969-12-26,Male,luis.martinez.0430@example.com,(555) 171-6023,EPO-400,Metro EPO,EPO,Northstar Benefits,07/06/2024,,Pending,Self,MEM000430
+DEP0004301,Iris,Johnson,2016/08/21,Female,iris.johnson.4301@example.com,555-365-1557,PPO-100,Silver PPO,PPO,Acme Health,2024/04/13,,Active,Child,MEM000430
+MEM000431,Noah,Thomas,03/05/1995,O,noah.thomas.0431@example.com,555-729-8854,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-04-27,,Pending,Self,MEM000431
+DEP0004311,Riley,Martinez,1979-03-20,F,riley.martinez.4311@example.com,555-179-1541,POS-500,Choice POS,POS,Contoso Care,2024-07-26,,A,Spouse,MEM000431
+MEM000432,Iris,Chen,1973-02-25,M,iris.chen.0432@example.com,(555) 542-1783,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,02/24/2023,,A,Self,MEM000432
+DEP0004321,Owen,Nguyen,2014-07-07,O,owen.nguyen.4321@example.com,(555) 122-4079,PPO-100,Silver PPO,P.P.O,Acme Health,2025/08/14,2027-05-11,Termed,Dependent,MEM000432
+MEM000433,Nina,Lee,12/17/1989,Male,nina.lee.0433@example.com,555-213-2195,EPO-400,Metro EPO,EPO,Northstar Benefits,11/27/2024,,A,Self,MEM000433
+DEP0004331,Caleb,Johnson,03/18/1981,M,caleb.johnson.4331@example.com,555-518-4686,PPO-100,Silver PPO,P.P.O,Acme Health,2024/05/04,2024-10-26,Termed,Spouse,MEM000433
+MEM000434,Iris,Chen,1960/10/04,M,iris.chen.0434@example.com,5552197635,POS-500,Choice POS,POS,Contoso Care,2024/07/22,2025-07-21,T,Self,MEM000434
+DEP0004341,Riley,Smith,2016-07-10,F,riley.smith.4341@example.com,(555) 115-7198,PPO-100,Silver PPO,PPO,Acme Health,2024/12/17,,Active,Dependent,MEM000434
+MEM000435,Sam,Moore,09/12/1976,F,sam.moore.0435@example.com,(555) 997-0779,POS-500,Choice POS,POS,Contoso Care,02/25/2025,,Active,Self,MEM000435
+MEM000436,Maya,Rivera,1971-11-19,M,maya.rivera.0436@example.com,555-783-6475,HMO-200,Basic HMO,HMO,Acme Health,02/10/2025,,Active,Self,MEM000436
+MEM000437,Nina,Davis,1997/04/24,Male,nina.davis.0437@example.com,(555) 782-0222,EPO-400,Metro EPO,EPO,Northstar Benefits,2023/06/19,,Pending,Self,MEM000437
+MEM000438,Jordan,Johnson,10/13/1979,O,jordan.johnson.0438@example.com,(555) 197-7649,PPO-100,Silver PPO,PPO,Acme Health,2023-09-16,2023/11/19,Termed,Self,MEM000438
+MEM000439,Sofia,Moore,10/08/1978,Male,sofia.moore.0439@example.com,5556411334,HMO-200,Basic HMO,HMO,Acme Health,06/30/2024,,A,Self,MEM000439
+DEP0004391,Sofia,Patel,2014-03-30,Male,,(555) 925-8572,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2024-10-17,2026-09-18,Termed,Child,MEM000439
+MEM000440,Jordan,Smith,1990-09-24,O,jordan.smith.0440@example.com,(555) 924-3237,HMO-200,Basic HMO,HMO,Acme Health,02/07/2024,,Active,Self,MEM000440
+DEP0004401,Caleb,Khan,2013/07/26,F,caleb.khan.4401@example.com,555-757-4144,HMO-200,Basic HMO,HMO,Acme Health,2024-08-11,,A,Dependent,MEM000440
+MEM000441,Luis,Johnson,1963/10/16,M,,(555) 857-4812,POS-500,Choice POS,POS,Contoso Care,2023/02/09,,Active,Self,MEM000441
+MEM000442,Caleb,Brown,06/18/1992,F,caleb.brown.0442@example.com,(555) 466-2735,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-01-23,,A,Self,MEM000442
+DEP0004421,Luis,Davis,1979-02-30,F,luis.davis.4421@example.com,5557572488,PPO-100,Silver PPO,P.P.O,Acme Health,2023/06/30,,Pending,Dependent,MEM000442
+MEM000443,Priya,Johnson,1994/01/08,O,not-an-email,5552489499,HMO-200,Basic HMO,HMO,Acme Health,2024/08/27,,Pending,Self,MEM000443
+DEP0004431,Owen,Davis,1977-09-29,O,,abc,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2023-06-09,,Pending,Spouse,MEM000443
+MEM000444,Iris,Johnson,1971-02-09,F,iris.johnson.0444@example.com,(555) 601-9603,PPO-100,Silver PPO,PPO,Acme Health,2024/06/05,,UnknownStatus,Self,MEM000444
+DEP0004441,Leo,Rivera,2013/11/03,F,leo.rivera.4441@example.com,555-815-5008,HMO-200,Basic HMO,HMO,Acme Health,06/27/2025,,Pending,Partner,MEM000444
+MEM000445,Noah,Martinez,1985/08/03,Male,noah.martinez.0445@example.com,555-404-0712,PPO-100,Silver PPO,MysteryPlan,Acme Health,2024-03-17,,Active,Self,MEM000445
+DEP0004451,Jordan,Singh,2010-03-31,F,jordan.singh.4451@example.com,(555) 246-7499,PPO-100,Silver PPO,PPO,Acme Health,2025-06-01,2024-01-01,Pending,Child,MEM000445
+DEP0004452,Luis,Lee,2015/08/15,Female,luis.lee.4452@example.com,5557999009,POS-500,Choice POS,POS,Contoso Care,02/18/2023,,Pending,Child,
+MEM000446,Avery,Thomas,1966/12/09,O,avery.thomas.0446@example.com,(555) 703-2822,HMO-200,Basic HMO,HMO,Acme Health,01/01/2023,,Active,Self,MEM000446
+DEP0004461,Elena,Johnson,2035-01-01,Male,elena.johnson.4461@example.com,5557280371,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-11-21,,Active,Dependent,MEM000446
+DEP0004462,,Johnson,1977-04-21,F,ana.johnson.4462@example.com,5553346296,POS-500,Choice POS,POS,Contoso Care,2023/08/16,,Active,Spouse,MEM000446
+MEM000447,Sam,Smith,1965-10-07,M,sam.smith.0447@example.com,555-181-7378,,Saver HDHP,HDHP,Northstar Benefits,2023-04-15,,A,Self,MEM000447
+DEP0000031,Leo,Conflict,1962-03-14,Male,leo.garcia.4471@example.com,(555) 473-4608,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2024-06-12,,Pending,Child,MEM000447
+DEP0004472,Sam,Khan,1961/05/13,Male,sam.khan.4472@example.com,5556456775,POS-500,Choice POS,POS,Contoso Care,2024/09/17,,Active,Spouse,MEM000447
+MEM000448,Luis,Smith,08/13/1983,O,luis.smith.0448@example.com,555-700-5648,HMO-200,Basic HMO,HMO,Acme Health,07/07/2025,,Active,Self,MEM000448
+DEP0004481,Nina,Patel,2009/02/23,F,nina.patel.4481@example.com,555-925-1641,EPO-400,Metro EPO,EPO,Northstar Benefits,04/19/2024,,Active,Child,MEM000448
+MEM000449,Mia,Patel,06/28/1961,Female,mia.patel.0449@example.com,555-135-2570,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-11-12,2025/08/16,Terminated,Self,MEM000449
+MEM000450,Marcus,Patel,1966-06-30,Female,marcus.patel.0450@example.com,5558639913,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025-01-17,2026/11/14,T,Self,MEM000450
+DEP0004501,Priya,Martinez,05/01/2018,F,priya.martinez.4501@example.com,(555) 784-3035,PPO-100,Silver PPO,PPO,Acme Health,12/12/2023,,A,Child,MEM000450
+MEM000451,Evan,Chen,08/01/1972,O,evan.chen.0451@example.com,5559130691,HMO-200,Basic HMO,HMO,Acme Health,09/06/2024,,Active,Self,MEM000451
+DEP0004511,Noah,Singh,2009-11-02,Female,noah.singh.4511@example.com,(555) 553-3573,EPO-400,Metro EPO,EPO,Northstar Benefits,09/19/2024,,Active,Dependent,MEM000451
+MEM000452,Sam,Singh,1975-12-18,Female,sam.singh.0452@example.com,5558791610,POS-500,Choice POS,POS,Contoso Care,05/11/2024,,Active,Self,MEM000452
+DEP0004521,Avery,Thomas,2015-06-08,Female,avery.thomas.4521@example.com,555-663-6137,POS-500,Choice POS,POS,Contoso Care,2024/07/27,,Active,Dependent,MEM000452
+MEM000453,Nina,Moore,04/07/1972,M,nina.moore.0453@example.com,5557211915,PPO-100,Silver PPO,PPO,Acme Health,03/15/2023,2024-07-11,T,Self,MEM000453
+MEM000454,Noah,Moore,1978-04-17,M,noah.moore.0454@example.com,(555) 568-4683,POS-500,Choice POS,POS,Contoso Care,2025-04-21,2025-08-07,Terminated,Self,MEM000454
+DEP0004541,Sofia,Patel,07/26/2013,M,sofia.patel.4541@example.com,5554131544,HMO-200,Basic HMO,HMO,Acme Health,2025-06-29,,A,Child,MEM000454
+DEP0004542,Mia,Johnson,1972/12/07,Female,mia.johnson.4542@example.com,(555) 793-3644,PPO-100,Silver PPO,PPO,Acme Health,04/14/2025,,A,Spouse,MEM000454
+MEM000455,Sofia,Lee,1995/02/23,M,sofia.lee.0455@example.com,555-674-8127,EPO-400,Metro EPO,EPO,Northstar Benefits,03/23/2024,,Active,Self,MEM000455
+MEM000456,Noah,Singh,11/28/1970,M,noah.singh.0456@example.com,5552415558,PPO-100,Silver PPO,PPO,Acme Health,2024-11-12,,A,Self,MEM000456
+DEP0004561,Caleb,Thomas,2016/09/22,Male,,555-171-8624,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2025-10-25,,Pending,Dependent,MEM000456
+MEM000457,Caleb,Moore,1986/02/12,Male,caleb.moore.0457@example.com,(555) 312-7464,POS-500,Choice POS,POS,Contoso Care,2023-09-01,,Active,Self,MEM000457
+DEP0004571,Mia,Garcia,2018-12-10,Male,mia.garcia.4571@example.com,(555) 403-3225,PPO-100,Silver PPO,P.P.O,Acme Health,2024/10/23,,Active,Dependent,MEM000457
+DEP0004572,Tara,Chen,1970-09-24,Male,tara.chen.4572@example.com,5552224118,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023/11/28,,Active,Spouse,MEM000457
+MEM000458,Owen,Moore,1996-08-01,O,owen.moore.0458@example.com,(555) 337-0065,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-03-02,04/14/2025,Termed,Self,MEM000458
+DEP0004581,Mia,Martinez,1968/08/16,Female,mia.martinez.4581@example.com,555-626-0425,HMO-200,Basic HMO,HMO,Acme Health,2025/10/03,,A,Spouse,MEM000458
+MEM000459,Noah,Garcia,1998-11-29,O,noah.garcia.0459@example.com,555-720-6523,PPO-100,Silver PPO,PPO,Acme Health,2025/03/28,02/01/2026,Termed,Self,MEM000459
+DEP0004591,Riley,Patel,2012/06/09,Female,riley.patel.4591@example.com,(555) 756-6050,PPO-100,Silver PPO,PPO,Acme Health,05/12/2023,,Pending,Dependent,MEM000459
+MEM000460,Nina,Johnson,1979-02-30,M,nina.johnson.0460@example.com,(555) 269-2314,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025-05-27,,Active,Self,MEM000460
+MEM000461,Evan,Lee,10/28/1976,M,not-an-email,(555) 274-6431,POS-500,Choice POS,POS,Contoso Care,2023/01/11,,Active,Self,MEM000461
+DEP0004611,Sofia,Garcia,1988/02/25,M,sofia.garcia.4611@example.com,abc,POS-500,Choice POS,POS,Contoso Care,2024/05/27,,Active,Spouse,MEM000461
+MEM000462,Ana,Chen,1960-02-25,Male,,(555) 363-6270,HMO-200,Basic HMO,HMO,Acme Health,01/02/2023,2023-09-03,UnknownStatus,Self,MEM000462
+DEP0004621,Iris,Singh,2011/04/12,O,iris.singh.4621@example.com,(555) 207-6498,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024/08/20,,Pending,Partner,MEM000462
+MEM000463,Noah,Patel,1969-06-07,O,noah.patel.0463@example.com,(555) 397-2328,HMO-200,Basic HMO,MysteryPlan,Acme Health,2025-04-27,,Active,Self,MEM000463
+DEP0004631,Sofia,Thomas,1996/02/18,M,sofia.thomas.4631@example.com,555-377-4950,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-06-01,2024-01-01,A,Spouse,MEM000463
+MEM000464,Iris,Garcia,1963-04-30,F,iris.garcia.0464@example.com,5557835150,HMO-200,Basic HMO,HMO,Acme Health,2023/11/24,2024-06-16,Terminated,Self,MEM000464
+DEP0004641,Marcus,Smith,2019/02/21,Female,marcus.smith.4641@example.com,5556037850,HMO-200,Basic HMO,HMO,Acme Health,2025-02-13,2025-07-29,Terminated,Child,MEM999999
+DEP0004642,Owen,Rivera,2035-01-01,F,owen.rivera.4642@example.com,(555) 307-7241,EPO-400,Metro EPO,EPO,Northstar Benefits,02/02/2023,,A,Dependent,MEM000464
+MEM000465,,Khan,1969/03/17,Male,,5555742900,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-09-25,,Pending,Self,MEM000465
+DEP0004651,Mia,Lee,2009/10/12,Female,mia.lee.4651@example.com,5558465734,,Basic HMO,HMO,Acme Health,03/09/2023,,Active,Dependent,MEM000465
+DEP0000661,Caleb,Conflict,1962-03-14,Female,caleb.smith.0466@example.com,(555) 286-2404,POS-500,Choice POS,POS,Contoso Care,2023-08-04,2024-12-22,Termed,Self,MEM000466
+DEP0004661,Leo,Lee,10/15/2018,M,leo.lee.4661@example.com,555-421-5857,POS-500,Choice POS,POS,Contoso Care,06/19/2025,,A,Child,MEM000466
+MEM000467,Jordan,Lee,07/30/1979,O,jordan.lee.0467@example.com,(555) 102-7596,PPO-100,Silver PPO,P.P.O,Acme Health,06/07/2024,,Active,Self,MEM000467
+DEP0004671,Leo,Johnson,1990/11/02,M,leo.johnson.4671@example.com,555-143-4755,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,10/06/2023,,Active,Spouse,MEM000467
+MEM000468,Jordan,Rivera,11/05/1982,Male,jordan.rivera.0468@example.com,(555) 124-8907,EPO-400,Metro EPO,EPO,Northstar Benefits,05/04/2023,,A,Self,MEM000468
+MEM000469,Elena,Singh,1970-01-30,Female,elena.singh.0469@example.com,555-701-6161,PPO-100,Silver PPO,PPO,Acme Health,2023-05-13,,Active,Self,MEM000469
+DEP0004691,Nina,Martinez,07/11/1976,O,nina.martinez.4691@example.com,(555) 970-2570,PPO-100,Silver PPO,PPO,Acme Health,07/30/2023,,A,Spouse,MEM000469
+MEM000470,Jordan,Brown,1970/03/15,Female,jordan.brown.0470@example.com,5557952691,EPO-400,Metro EPO,EPO,Northstar Benefits,2023/06/20,,Pending,Self,MEM000470
+DEP0004701,Sofia,Khan,11/09/2012,Male,sofia.khan.4701@example.com,(555) 529-0841,HMO-200,Basic HMO,HMO,Acme Health,2025-11-29,,A,Child,MEM000470
+DEP0004702,Avery,Garcia,2010-05-28,F,avery.garcia.4702@example.com,(555) 332-5721,POS-500,Choice POS,POS,Contoso Care,2024-06-26,,Pending,Dependent,MEM000470
+MEM000471,Iris,Khan,1977/02/07,Female,iris.khan.0471@example.com,555-104-0009,EPO-400,Metro EPO,EPO,Northstar Benefits,2023-02-10,,A,Self,MEM000471
+DEP0004711,Avery,Brown,02/28/2015,O,avery.brown.4711@example.com,555-913-5462,HMO-200,Basic HMO,HMO,Acme Health,2025-05-18,,Active,Dependent,MEM000471
+DEP0004712,Noah,Brown,03/21/2021,Male,noah.brown.4712@example.com,5551358700,HMO-200,Basic HMO,HMO,Acme Health,2023/07/05,,A,Child,MEM000471
+MEM000472,Nina,Singh,1980/10/19,F,nina.singh.0472@example.com,555-921-2448,PPO-100,Silver PPO,PPO,Acme Health,2023-07-01,,A,Self,MEM000472
+DEP0004721,Avery,Thomas,10/08/1980,F,avery.thomas.4721@example.com,(555) 952-2544,EPO-400,Metro EPO,EPO,Northstar Benefits,2025-04-16,,A,Spouse,MEM000472
+MEM000473,Evan,Wilson,07/03/1982,O,evan.wilson.0473@example.com,5555143228,HMO-200,Basic HMO,HMO,Acme Health,2024/02/14,2025/03/11,Terminated,Self,MEM000473
+MEM000474,Owen,Khan,03/19/1985,F,owen.khan.0474@example.com,(555) 562-2759,PPO-100,Silver PPO,PPO,Acme Health,2024/08/21,,A,Self,MEM000474
+MEM000475,Leo,Davis,01/16/1964,Female,leo.davis.0475@example.com,(555) 666-5578,HMO-200,Basic HMO,HMO,Acme Health,11/29/2024,,Pending,Self,MEM000475
+DEP0004751,Luis,Thomas,1997/10/25,O,luis.thomas.4751@example.com,5559083117,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2025-08-24,,Active,Spouse,MEM000475
+MEM000476,Sam,Johnson,1964/03/25,Male,sam.johnson.0476@example.com,5551402477,PPO-100,Silver PPO,PPO,Acme Health,2025-11-06,05/20/2026,Termed,Self,MEM000476
+MEM000477,Noah,Nguyen,1966-05-16,Female,noah.nguyen.0477@example.com,5557205857,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024/06/07,,A,Self,MEM000477
+DEP0004771,Ana,Martinez,2015-08-15,Male,ana.martinez.4771@example.com,555-667-3751,POS-500,Choice POS,POS,Contoso Care,2024-04-11,,Active,Child,MEM000477
+MEM000478,Ana,Nguyen,1962/02/03,Female,ana.nguyen.0478@example.com,555-394-1646,PPO-100,Silver PPO,PPO,Acme Health,2024-02-25,,Active,Self,MEM000478
+DEP0004781,Marcus,Lee,2014/03/05,O,marcus.lee.4781@example.com,5554256897,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,11/26/2023,,A,Dependent,MEM000478
+DEP0004782,Evan,Wilson,2014-06-05,Female,evan.wilson.4782@example.com,555-382-4743,POS-500,Choice POS,POS,Contoso Care,2024/04/24,,A,Child,MEM000478
+MEM000479,Marcus,Brown,1979-02-30,Female,marcus.brown.0479@example.com,5555801937,EPO-400,Metro EPO,EPO,Northstar Benefits,01/15/2025,2025/11/09,Terminated,Self,MEM000479
+DEP0004791,Luis,Martinez,1962/02/20,F,not-an-email,555-558-5375,EPO-400,Metro EPO,EPO,Northstar Benefits,12/23/2025,,A,Spouse,MEM000479
+MEM000480,Iris,Wilson,04/10/1988,F,iris.wilson.0480@example.com,abc,HMO-200,Basic HMO,HMO,Acme Health,02/23/2023,,Pending,Self,MEM000480
+MEM000481,Evan,Rivera,10/28/1978,Male,evan.rivera.0481@example.com,555-763-9798,PPO-100,Silver PPO,P.P.O,Acme Health,2025/01/15,,UnknownStatus,Self,MEM000481
+MEM000482,Maya,Lee,02/13/1984,Female,maya.lee.0482@example.com,(555) 837-0480,POS-500,Choice POS,POS,Contoso Care,2025-09-29,,A,Partner,MEM000482
+DEP0004821,Iris,Wilson,08/27/1974,O,iris.wilson.4821@example.com,(555) 403-3977,PPO-100,Silver PPO,MysteryPlan,Acme Health,2023-04-02,,Active,Spouse,MEM000482
+MEM000483,Nina,Martinez,1976/04/18,O,nina.martinez.0483@example.com,(555) 144-4625,PPO-100,Silver PPO,PPO,Acme Health,2025-06-01,2024-01-01,A,Self,MEM000483
+DEP0004831,Iris,Patel,2018/11/21,Male,iris.patel.4831@example.com,5556425494,PPO-100,Silver PPO,PPO,Acme Health,2025-09-19,,A,Dependent,
+MEM000484,Evan,Brown,1984/06/04,Male,evan.brown.0484@example.com,5557946731,HMO-200,Basic HMO,HMO,Acme Health,2025-08-25,,A,Self,MEM000484
+DEP0004841,Tara,Chen,2035-01-01,Female,tara.chen.4841@example.com,5552343891,POS-500,Choice POS,POS,Contoso Care,11/09/2023,,A,Child,MEM000484
+MEM000485,,Rivera,1982-06-29,Female,ana.rivera.0485@example.com,555-278-4683,PPO-100,Silver PPO,PPO,Acme Health,2023-05-04,,Active,Self,MEM000485
+DEP0004851,Marcus,Smith,12/04/2009,M,marcus.smith.4851@example.com,555-918-7796,,Metro EPO,EPO,Northstar Benefits,2023/12/16,,Active,Child,MEM000485
+MEM000235,Riley,Conflict,1962-03-14,Female,riley.smith.0486@example.com,555-735-7645,POS-500,Choice POS,POS,Contoso Care,2024-07-30,,Active,Self,MEM000486
+DEP0004861,Noah,Johnson,2009-03-04,O,noah.johnson.4861@example.com,(555) 275-9733,PPO-100,Silver PPO,P.P.O,Acme Health,2025/12/15,,Active,Dependent,MEM000486
+MEM000487,Marcus,Johnson,10/23/1966,O,marcus.johnson.0487@example.com,555-127-6592,EPO-400,Metro EPO,EPO,Northstar Benefits,2024/08/27,,Pending,Self,MEM000487
+DEP0004871,Riley,Lee,08/19/1964,Female,riley.lee.4871@example.com,555-263-1544,EPO-400,Metro EPO,EPO,Northstar Benefits,03/06/2023,,Active,Spouse,MEM000487
+MEM000488,Maya,Chen,01/13/1995,Female,maya.chen.0488@example.com,5553446275,HMO-200,Basic HMO,HMO,Acme Health,2023-12-10,,Active,Self,MEM000488
+DEP0004881,Maya,Rivera,05/08/1970,F,maya.rivera.4881@example.com,555-589-3709,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,08/28/2024,,A,Spouse,MEM000488
+DEP0004882,Tara,Brown,1988-08-02,Male,,(555) 151-1487,PPO-100,Silver PPO,PPO,Acme Health,2023/12/27,,A,Spouse,MEM000488
+MEM000489,Iris,Khan,05/11/1997,Male,iris.khan.0489@example.com,555-127-5847,HMO-200,Basic HMO,HMO,Acme Health,2024-08-08,,Active,Self,MEM000489
+DEP0004891,Owen,Davis,09/02/2014,M,owen.davis.4891@example.com,(555) 191-1913,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-11-09,,Active,Dependent,MEM000489
+MEM000490,Noah,Rivera,1965/05/15,F,noah.rivera.0490@example.com,555-568-9829,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2023-07-21,,Active,Self,MEM000490
+DEP0004901,Mia,Smith,1991-08-12,M,mia.smith.4901@example.com,5557825299,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2025/04/14,,Pending,Spouse,MEM000490
+MEM000491,Owen,Brown,04/06/1972,M,owen.brown.0491@example.com,5556151050,EPO-400,Metro EPO,EPO,Northstar Benefits,09/05/2023,03/02/2025,T,Self,MEM000491
+DEP0004911,Ana,Garcia,2018-03-12,M,,5554891303,HMO-200,Basic HMO,HMO,Acme Health,2023-07-06,,Active,Dependent,MEM000491
+MEM000492,Noah,Martinez,1980-12-04,M,noah.martinez.0492@example.com,(555) 494-0047,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,2024-01-23,,A,Self,MEM000492
+DEP0004921,Nina,Chen,1997/07/28,F,nina.chen.4921@example.com,(555) 623-1000,EPO-400,Metro EPO,EPO,Northstar Benefits,08/01/2023,,A,Spouse,MEM000492
+MEM000493,Tara,Singh,1986-01-08,Male,tara.singh.0493@example.com,555-554-6349,EPO-400,Metro EPO,EPO,Northstar Benefits,01/23/2025,,Active,Self,MEM000493
+DEP0004931,Luis,Garcia,2017/03/12,Male,luis.garcia.4931@example.com,(555) 732-5183,HDHP-300,Saver HDHP,HDHP,Northstar Benefits,03/03/2023,06/12/2024,Terminated,Dependent,MEM000493
+MEM000494,Evan,Johnson,1998-07-25,O,evan.johnson.0494@example.com,555-267-7485,HMO-200,Basic HMO,HMO,Acme Health,05/18/2023,,A,Self,MEM000494
+DEP0004941,Nina,Brown,1987/01/03,Female,nina.brown.4941@example.com,5559285476,HMO-200,Basic HMO,HMO,Acme Health,2024/11/09,,Active,Spouse,MEM000494
+MEM000495,Iris,Wilson,1964/07/05,Female,iris.wilson.0495@example.com,555-306-5324,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,2025-06-02,,A,Self,MEM000495
+MEM000496,Elena,Lee,07/05/1965,O,elena.lee.0496@example.com,5551973606,POS-500,Choice POS,POS,Contoso Care,2025/01/13,,Active,Self,MEM000496
+DEP0004961,Priya,Rivera,2011-04-16,M,priya.rivera.4961@example.com,5551123646,EPO-400,Metro EPO,EPO,Northstar Benefits,07/31/2025,2026/09/20,Terminated,Child,MEM000496
+MEM000497,Sam,Rivera,10/30/1964,F,sam.rivera.0497@example.com,555-769-8205,EPO-400,Metro EPO,EPO,Northstar Benefits,2024-12-26,,Active,Self,MEM000497
+DEP0004971,Luis,Smith,2021-10-12,M,,555-740-6980,EPO-400,Metro EPO,EPO,Northstar Benefits,2024/01/28,,Active,Dependent,MEM000497
+MEM000498,Maya,Khan,12/26/1964,Female,maya.khan.0498@example.com,555-705-5275,POS-500,Choice POS,POS,Contoso Care,02/12/2025,2025/09/24,T,Self,MEM000498
+DEP0004981,Noah,Khan,1979-02-30,M,noah.khan.4981@example.com,(555) 691-3356,HDHP-300,Saver HDHP,High Deductible,Northstar Benefits,06/03/2023,,A,Spouse,MEM000498

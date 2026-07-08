@@ -1,0 +1,10 @@
+streamlit>=1.40
+pandas>=2.2
+SQLAlchemy>=2.0
+psycopg[binary]>=3.2
+openai>=1.50
+python-dotenv>=1.0
+reportlab>=4.2
+pytest>=8.0
+certifi>=2026.0
+truststore>=0.10
