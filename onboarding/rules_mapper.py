@@ -4,7 +4,8 @@ from difflib import SequenceMatcher
 from typing import Any
 
 from onboarding.profiler import normalize_column_name
-from onboarding.schema import FIELD_ALIASES, TARGET_FIELDS_BY_FIELD, TARGET_SCHEMA, TargetField
+from onboarding.schema import FIELD_ALIASES, TARGET_SCHEMA, TargetField, target_fields_by_field
+from onboarding.transformations import recommended_steps
 
 AMBIGUOUS_EXACT_TERMS = {
     "id": "Could be member, subscriber, plan, employee, or internal row ID.",
@@ -22,9 +23,16 @@ AMBIGUOUS_PHRASES = {
 }
 
 
-def _target_aliases(target_field: str) -> list[str]:
+def _target_aliases(
+    target_field: str,
+    *,
+    target: TargetField | None = None,
+    aliases_by_field: dict[str, list[str]] | None = None,
+) -> list[str]:
     aliases = [target_field.replace("_", " ")]
-    aliases.extend(FIELD_ALIASES.get(target_field, []))
+    aliases.extend((aliases_by_field or FIELD_ALIASES).get(target_field, []))
+    if target is not None:
+        aliases.extend(target.aliases)
     return [normalize_column_name(alias) for alias in aliases]
 
 
@@ -36,8 +44,14 @@ def _token_overlap(source: str, alias: str) -> float:
     return len(source_tokens & alias_tokens) / len(alias_tokens)
 
 
-def score_name_match(source_normalized: str, target_field: str) -> tuple[int, str]:
-    aliases = _target_aliases(target_field)
+def score_name_match(
+    source_normalized: str,
+    target_field: str,
+    *,
+    target: TargetField | None = None,
+    aliases_by_field: dict[str, list[str]] | None = None,
+) -> tuple[int, str]:
+    aliases = _target_aliases(target_field, target=target, aliases_by_field=aliases_by_field)
     if source_normalized in aliases:
         return 70, f"Exact alias match for {target_field}."
 
@@ -89,8 +103,12 @@ def _date_profile_score(profile: dict[str, Any], target: TargetField) -> tuple[i
     return -10, "Values do not look date-like."
 
 
-def score_value_profile(profile: dict[str, Any], target_field: str) -> tuple[int, str]:
-    target = TARGET_FIELDS_BY_FIELD[target_field]
+def score_value_profile(
+    profile: dict[str, Any],
+    target_field: str,
+    target: TargetField | None = None,
+) -> tuple[int, str]:
+    target = target or target_fields_by_field()[target_field]
     inferred_type = str(profile.get("inferred_type") or "")
     unique_rate = float(profile.get("unique_rate") or 0.0)
     null_rate = float(profile.get("null_rate") or 0.0)
@@ -191,11 +209,20 @@ def _type_alignment_from_value_score(value_score: int) -> str:
     return "aligned"
 
 
-def _candidate_scores(profiles: list[dict[str, Any]], target: TargetField) -> list[dict[str, Any]]:
+def _candidate_scores(
+    profiles: list[dict[str, Any]],
+    target: TargetField,
+    aliases_by_field: dict[str, list[str]] | None = None,
+) -> list[dict[str, Any]]:
     candidates: list[dict[str, Any]] = []
     for profile in profiles:
-        name_score, name_reason = score_name_match(profile["normalized_name"], target.field)
-        value_score, value_reason = score_value_profile(profile, target.field)
+        name_score, name_reason = score_name_match(
+            profile["normalized_name"],
+            target.field,
+            target=target,
+            aliases_by_field=aliases_by_field,
+        )
+        value_score, value_reason = score_value_profile(profile, target.field, target)
         penalty, flags, review_reason = ambiguity_penalty(profile["normalized_name"])
         raw_score = name_score + value_score + penalty
         score = max(0, min(100, raw_score))
@@ -220,14 +247,18 @@ def _candidate_scores(profiles: list[dict[str, Any]], target: TargetField) -> li
     return sorted(candidates, key=lambda item: item["confidence"], reverse=True)
 
 
-def generate_rules_based_mappings(profiles: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def generate_rules_based_mappings(
+    profiles: list[dict[str, Any]],
+    target_schema: list[TargetField] | None = None,
+    aliases_by_field: dict[str, list[str]] | None = None,
+) -> list[dict[str, Any]]:
     mappings: list[dict[str, Any]] = []
 
-    for target in TARGET_SCHEMA:
+    for target in target_schema or TARGET_SCHEMA:
         if target.generated:
             continue
 
-        candidates = _candidate_scores(profiles, target)
+        candidates = _candidate_scores(profiles, target, aliases_by_field)
         best = candidates[0] if candidates else None
         if not best or best["confidence"] < 50:
             mappings.append(
@@ -250,6 +281,10 @@ def generate_rules_based_mappings(profiles: list[dict[str, Any]]) -> list[dict[s
                     "review_reason": "Required field is unmapped." if target.required else "",
                     "approved": False,
                     "score_breakdown": {},
+                    "source_columns": [],
+                    "transformation_steps": recommended_steps(target),
+                    "failure_policy": "error" if target.required else "warning_set_null",
+                    "transformation_approved": False,
                 }
             )
             continue
@@ -283,6 +318,10 @@ def generate_rules_based_mappings(profiles: list[dict[str, Any]]) -> list[dict[s
                 "reason": best["reason"],
                 "review_reason": review_reason,
                 "approved": False,
+                "source_columns": [best["source_column"]],
+                "transformation_steps": recommended_steps(target),
+                "failure_policy": "error" if target.required else "warning_set_null",
+                "transformation_approved": False,
                 "score_breakdown": {
                     "name_score": best["name_score"],
                     "value_profile_score": best["value_profile_score"],

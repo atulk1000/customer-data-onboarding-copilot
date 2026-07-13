@@ -2,7 +2,7 @@
 
 This page captures local verification evidence for the Customer Data Onboarding Copilot. The goal is to show that the project was run end to end, not just described architecturally.
 
-Run date: 2026-07-07
+Run date: 2026-07-12
 
 Local stack:
 
@@ -61,7 +61,7 @@ Result:
 ```text
 black --check passed
 ruff check passed
-20 passed
+32 passed
 ```
 
 Test suite:
@@ -73,7 +73,7 @@ Test suite:
 Result:
 
 ```text
-20 passed
+32 passed
 ```
 
 Compile check:
@@ -87,6 +87,10 @@ Result:
 ```text
 compileall passed
 ```
+
+## Real LLM Mapping Check
+
+The OpenAI adapter was exercised against the configured `gpt-5-mini` model with low reasoning effort and a sanitized three-column synthetic profile. The strict response schema returned five valid source-to-target suggestions with approved-catalog transformation steps. No API key or customer-sensitive value was logged or committed.
 
 ## Rejected Rows Export Check
 
@@ -152,8 +156,62 @@ Each lineage row includes:
 - transformation applied
 - issue codes and messages
 
+V1.3 lineage also includes:
+
+- stable source record ID
+- all contributing source columns and values
+- corrected values, when present
+- ordered transformation trace JSON
+- final target value
+- exact contract and mapping-template versions
+
+## V1.3 Database Verification
+
+Verification command:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\verify_v13_release.py --publish --verify-rollback --verify-correction
+```
+
+Observed results:
+
+```text
+Clean initial publish: pre-publish PASS, post-publish PASS, transaction committed
+Exact replay: 3 members, 2 plans, and 3 coverage records classified unchanged
+Reconciliation evidence per successful run: 2 stages
+Field-lineage evidence for three source rows: 57 rows
+Forced conflicting-key failure: blocked before write and retained as reconciliation_failed
+Correction parent: 1 rejected row
+Correction child: 1 recovered row, 1 persisted field correction, transaction committed
+```
+
+## V1.3 Realistic-Volume Check
+
+Transform-only command:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\verify_v13_release.py --demo-file
+```
+
+Observed local timings and results:
+
+```text
+Profile: 0.40 seconds
+Mapping: 0.08 seconds
+Canonical build with transformation traces: 5.11 seconds
+Validation: 2.51 seconds
+Transform and 19,000-row lineage: 12.15 seconds
+Total core pipeline: 20.26 seconds
+Accepted rows: 721
+Rejected rows: 279
+Reconciliation status: WARNING
+Conflicting target duplicates: 0
+```
+
+The messy demo coalesces 721 repeated plan candidates into five canonical plans. A missing optional plan type does not conflict with a known value for the same plan, while two different non-null values still produce a hard integrity failure. The resulting `WARNING` is driven by the demo's intentional reject rate and requires reviewer signoff before publish. The forced rollback scenario above separately proves the hard-conflict path.
+
 ## Notes
 
 - This is a local demo, not a production deployment benchmark.
-- The project intentionally uses one canonical schema in v1 so the workflow remains focused and reviewable.
+- The project includes one built-in healthcare contract and supports imported contracts through the approved type and validation vocabulary.
 - AI-assisted mapping is optional; rules-based mapping and all validation/transform/report tests run without an API key.

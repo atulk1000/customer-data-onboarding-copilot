@@ -2,17 +2,16 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
-from datetime import date
+from datetime import date, datetime
 from typing import Any
 
 import pandas as pd
 
 from onboarding.profiler import normalize_token
 from onboarding.schema import (
-    COVERAGE_STATUS_NORMALIZATION,
-    GENDER_NORMALIZATION,
-    PLAN_TYPE_NORMALIZATION,
-    RELATIONSHIP_NORMALIZATION,
+    ENUM_NORMALIZERS,
+    TARGET_SCHEMA,
+    TargetField,
 )
 
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
@@ -70,6 +69,10 @@ def _clean_text(value: Any) -> str | None:
 def _parse_date(value: Any) -> date | None:
     if is_blank(value):
         return None
+    if isinstance(value, datetime):
+        return value.date()
+    if isinstance(value, date):
+        return value
     parsed = pd.to_datetime(pd.Series([value]), errors="coerce", format="mixed").iloc[0]
     if pd.isna(parsed):
         return None
@@ -100,33 +103,76 @@ def _normalize_phone(value: Any) -> str | None:
     return f"{digits[:3]}-{digits[3:6]}-{digits[6:]}"
 
 
-def normalize_canonical_frame(flat_df: pd.DataFrame) -> pd.DataFrame:
-    normalized = flat_df.copy()
-    text_fields = [
-        "member_id",
-        "first_name",
-        "last_name",
-        "plan_id",
-        "plan_name",
-        "carrier_name",
-        "subscriber_id",
-    ]
-    for field in text_fields:
-        normalized[field] = normalized[field].map(_clean_text)
+def _normalize_allowed_enum(value: Any, target: TargetField) -> str | None:
+    normalizer = ENUM_NORMALIZERS.get(target.validation_kind)
+    if normalizer is not None:
+        return _normalize_enum(value, normalizer)
+    if is_blank(value):
+        return None
+    normalized = normalize_token(value)
+    for allowed_value in target.allowed_values:
+        if normalize_token(allowed_value) == normalized:
+            return allowed_value
+    return None
 
-    for field in ["date_of_birth", "coverage_start_date", "coverage_end_date"]:
-        normalized[field] = normalized[field].map(_parse_date)
 
-    normalized["gender"] = normalized["gender"].map(lambda value: _normalize_enum(value, GENDER_NORMALIZATION))
-    normalized["coverage_status"] = normalized["coverage_status"].map(
-        lambda value: _normalize_enum(value, COVERAGE_STATUS_NORMALIZATION)
+def _normalize_numeric(value: Any) -> float | int | None:
+    if is_blank(value):
+        return None
+    parsed = pd.to_numeric(pd.Series([value]), errors="coerce").iloc[0]
+    if pd.isna(parsed):
+        return None
+    numeric = float(parsed)
+    return int(numeric) if numeric.is_integer() else numeric
+
+
+def _normalize_boolean(value: Any) -> bool | None:
+    if is_blank(value):
+        return None
+    normalized = normalize_token(value)
+    if normalized in {"true", "t", "yes", "y", "1"}:
+        return True
+    if normalized in {"false", "f", "no", "n", "0"}:
+        return False
+    return None
+
+
+def normalize_canonical_frame(
+    flat_df: pd.DataFrame,
+    target_schema: list[TargetField] | None = None,
+) -> pd.DataFrame:
+    selected_schema = target_schema or TARGET_SCHEMA
+    source_attrs = dict(flat_df.attrs)
+    normalized = pd.DataFrame(
+        flat_df.to_numpy(copy=True),
+        columns=flat_df.columns.copy(),
+        index=flat_df.index.copy(),
     )
-    normalized["relationship_to_subscriber"] = normalized["relationship_to_subscriber"].map(
-        lambda value: _normalize_enum(value, RELATIONSHIP_NORMALIZATION)
-    )
-    normalized["plan_type"] = normalized["plan_type"].map(lambda value: _normalize_enum(value, PLAN_TYPE_NORMALIZATION))
-    normalized["email"] = normalized["email"].map(_normalize_email)
-    normalized["phone"] = normalized["phone"].map(_normalize_phone)
+    fields_by_name: dict[str, TargetField] = {}
+    for target in selected_schema:
+        fields_by_name.setdefault(target.field, target)
+    for field_name, target in fields_by_name.items():
+        if target.generated:
+            continue
+        if field_name not in normalized.columns:
+            normalized[field_name] = None
+        if target.data_type in {"text", "identifier"}:
+            normalized[field_name] = normalized[field_name].map(_clean_text)
+        elif target.data_type == "date":
+            normalized[field_name] = normalized[field_name].map(_parse_date)
+        elif target.data_type == "enum":
+            normalized[field_name] = normalized[field_name].map(
+                lambda value, selected_target=target: _normalize_allowed_enum(value, selected_target)
+            )
+        elif target.data_type == "email":
+            normalized[field_name] = normalized[field_name].map(_normalize_email)
+        elif target.data_type == "phone":
+            normalized[field_name] = normalized[field_name].map(_normalize_phone)
+        elif target.data_type == "numeric":
+            normalized[field_name] = normalized[field_name].map(_normalize_numeric)
+        elif target.data_type == "boolean":
+            normalized[field_name] = normalized[field_name].map(_normalize_boolean)
+    normalized.attrs.update(source_attrs)
     return normalized
 
 
@@ -164,38 +210,103 @@ def _attach_source_columns(issues: list[ValidationIssue], field_source_columns: 
 def validate_canonical_frame(
     flat_df: pd.DataFrame,
     field_source_columns: dict[str, str] | None = None,
+    target_schema: list[TargetField] | None = None,
+    preprocessing_issues: list[dict[str, Any]] | None = None,
 ) -> ValidationResult:
-    normalized = normalize_canonical_frame(flat_df)
-    issues: list[ValidationIssue] = []
-    known_member_ids = {str(value) for value in normalized["member_id"].dropna().tolist() if str(value).strip()}
+    selected_schema = target_schema or TARGET_SCHEMA
+    normalized = normalize_canonical_frame(flat_df, selected_schema)
+    fields_by_name: dict[str, TargetField] = {}
+    for target in selected_schema:
+        fields_by_name.setdefault(target.field, target)
+    issues: list[ValidationIssue] = [
+        ValidationIssue(
+            source_row_number=int(issue["source_row_number"]),
+            severity=str(issue.get("severity") or "error"),
+            issue_code=str(issue.get("issue_code") or "transformation_failed"),
+            issue_message=str(issue.get("issue_message") or "Transformation failed."),
+            target_field=str(issue.get("target_field") or ""),
+            source_column=str(issue.get("source_column") or ""),
+        )
+        for issue in list(flat_df.attrs.get("transformation_issues") or []) + list(preprocessing_issues or [])
+    ]
+    working_normalized = pd.DataFrame(
+        normalized.to_numpy(copy=False),
+        columns=normalized.columns,
+        index=normalized.index,
+    )
+    working_raw = pd.DataFrame(
+        flat_df.to_numpy(copy=False),
+        columns=flat_df.columns,
+        index=flat_df.index,
+    )
+    known_member_ids = (
+        {str(value) for value in working_normalized["member_id"].dropna().tolist() if str(value).strip()}
+        if "member_id" in working_normalized.columns
+        else set()
+    )
 
-    for idx, row in normalized.iterrows():
-        raw = flat_df.iloc[idx]
+    for idx, row in working_normalized.iterrows():
+        raw = working_raw.loc[idx]
         row_number = int(row["source_row_number"])
 
-        required_fields = [
-            "member_id",
-            "first_name",
-            "last_name",
-            "date_of_birth",
-            "plan_id",
-            "plan_name",
-            "coverage_start_date",
-            "coverage_status",
-            "relationship_to_subscriber",
-        ]
-        for field in required_fields:
-            if is_blank(row[field]):
+        for field_name, target in fields_by_name.items():
+            if target.generated:
+                continue
+            if target.required and is_blank(row.get(field_name)):
                 _add_issue(
                     issues,
                     row_number,
                     "error",
-                    f"{field}_missing_or_invalid",
-                    f"{field} is missing or invalid.",
-                    field,
+                    f"{field_name}_missing_or_invalid",
+                    f"{field_name} is missing or invalid.",
+                    field_name,
+                )
+            elif (
+                not target.required
+                and not is_blank(raw.get(field_name))
+                and is_blank(row.get(field_name))
+                and field_name not in {"email", "phone", "gender", "plan_type"}
+            ):
+                severity = "warning"
+                if target.validation_rules:
+                    severity = str(target.validation_rules[0].get("severity") or severity)
+                _add_issue(
+                    issues,
+                    row_number,
+                    severity,
+                    f"{field_name}_invalid_{target.data_type}",
+                    f"{field_name} could not be normalized as {target.data_type}.",
+                    field_name,
                 )
 
-        dob = row["date_of_birth"]
+            for rule in target.validation_rules:
+                rule_kind = str(rule.get("kind") or "")
+                parameters = rule.get("parameters") or {}
+                value = row.get(field_name)
+                severity = str(rule.get("severity") or "error")
+                if rule_kind == "not_future" and value and value > date.today():
+                    _add_issue(
+                        issues,
+                        row_number,
+                        severity,
+                        f"{field_name}_future",
+                        f"{field_name} is in the future.",
+                        field_name,
+                    )
+                if rule_kind == "numeric_range" and value is not None:
+                    minimum = parameters.get("minimum")
+                    maximum = parameters.get("maximum")
+                    if (minimum is not None and value < minimum) or (maximum is not None and value > maximum):
+                        _add_issue(
+                            issues,
+                            row_number,
+                            severity,
+                            f"{field_name}_out_of_range",
+                            f"{field_name} is outside the configured numeric range.",
+                            field_name,
+                        )
+
+        dob = row.get("date_of_birth")
         if dob:
             age = _age_years(dob)
             if dob > date.today():
@@ -217,8 +328,8 @@ def validate_canonical_frame(
                     "date_of_birth",
                 )
 
-        coverage_start = row["coverage_start_date"]
-        coverage_end = row["coverage_end_date"]
+        coverage_start = row.get("coverage_start_date")
+        coverage_end = row.get("coverage_end_date")
         if coverage_start and coverage_end and coverage_end < coverage_start:
             _add_issue(
                 issues,
@@ -229,8 +340,8 @@ def validate_canonical_frame(
                 "coverage_end_date",
             )
 
-        relationship = row["relationship_to_subscriber"]
-        subscriber_id = row["subscriber_id"]
+        relationship = row.get("relationship_to_subscriber")
+        subscriber_id = row.get("subscriber_id")
         if relationship and relationship != "self":
             if is_blank(subscriber_id):
                 _add_issue(
@@ -251,23 +362,23 @@ def validate_canonical_frame(
                     "subscriber_id",
                 )
 
-        if is_blank(raw.get("email")):
+        if "email" in fields_by_name and is_blank(raw.get("email")):
             _add_issue(issues, row_number, "warning", "email_missing", "email is missing.", "email")
-        elif is_blank(row["email"]):
+        elif "email" in fields_by_name and is_blank(row.get("email")):
             _add_issue(issues, row_number, "warning", "email_invalid", "email format is invalid.", "email")
 
-        if not is_blank(raw.get("phone")) and is_blank(row["phone"]):
+        if "phone" in fields_by_name and not is_blank(raw.get("phone")) and is_blank(row.get("phone")):
             _add_issue(issues, row_number, "warning", "phone_invalid", "phone format is invalid.", "phone")
 
-        if is_blank(row["gender"]):
+        if "gender" in fields_by_name and is_blank(row.get("gender")):
             _add_issue(issues, row_number, "warning", "gender_unknown", "gender is missing or unknown.", "gender")
 
-        if is_blank(row["plan_type"]):
+        if "plan_type" in fields_by_name and is_blank(row.get("plan_type")):
             _add_issue(
                 issues, row_number, "warning", "plan_type_unknown", "plan_type is missing or unknown.", "plan_type"
             )
 
-        if row["coverage_status"] == "terminated" and is_blank(row["coverage_end_date"]):
+        if row.get("coverage_status") == "terminated" and is_blank(row.get("coverage_end_date")):
             _add_issue(
                 issues,
                 row_number,
@@ -277,9 +388,12 @@ def validate_canonical_frame(
                 "coverage_end_date",
             )
 
-    _add_duplicate_identity_issues(normalized, issues)
-    _add_duplicate_coverage_warnings(normalized, issues)
-    _add_plan_conflict_warnings(normalized, issues)
+    if {"member_id", "first_name", "last_name", "date_of_birth"}.issubset(working_normalized.columns):
+        _add_duplicate_identity_issues(working_normalized, issues)
+    if {"member_id", "plan_id", "coverage_start_date", "coverage_end_date"}.issubset(working_normalized.columns):
+        _add_duplicate_coverage_warnings(working_normalized, issues)
+    if {"plan_id", "plan_name", "plan_type"}.issubset(working_normalized.columns):
+        _add_plan_conflict_warnings(working_normalized, issues)
     _attach_source_columns(issues, field_source_columns)
     return ValidationResult(normalized_df=normalized, issues=issues)
 

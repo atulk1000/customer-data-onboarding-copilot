@@ -7,7 +7,8 @@ Project name: Customer Data Onboarding Copilot
 Repository name: customer-data-onboarding-copilot  
 Demo domain: Healthcare member eligibility onboarding  
 Primary stack: Streamlit, pandas, PostgreSQL in Docker, OpenAI API, ReportLab  
-Current release scope: MVP plus v1.1 audit readiness and v1.2 exception explainability  
+Current implemented scope: MVP, v1.1 audit readiness, v1.2 exception explainability, and v1.3 contract-driven onboarding
+Next release specification: [v1.3 Contract-Driven Onboarding And Reconciliation](v1.3-prd.md)
 
 ## 1. Product Summary
 
@@ -1416,7 +1417,6 @@ Post-MVP enhancements:
 - EDI 834 parsing.
 - SFTP ingestion.
 - API publish target.
-- Admin-managed configurable canonical schemas with versioning and promotion controls.
 - Real privacy controls for AI mode:
   - sample masking
   - pattern-only profiling

@@ -6,7 +6,8 @@ import ssl
 from typing import Any
 
 from onboarding.mapping_quality import apply_mapping_type_alignment
-from onboarding.schema import TARGET_FIELDS_BY_KEY, target_schema_payload
+from onboarding.schema import TARGET_SCHEMA, TargetField, target_fields_by_key, target_schema_payload
+from onboarding.transformations import APPROVED_OPERATIONS, normalize_steps
 
 DEFAULT_OPENAI_MODEL = "gpt-5-mini"
 DEFAULT_REASONING_EFFORT = "low"
@@ -32,10 +33,11 @@ def _load_dotenv_if_available() -> None:
 def build_ai_mapping_payload(
     profiles: list[dict[str, Any]],
     rules_based_suggestions: list[dict[str, Any]] | None = None,
+    target_schema: list[TargetField] | None = None,
 ) -> dict[str, Any]:
     return {
-        "task": "Map customer healthcare eligibility file columns into the canonical target schema.",
-        "target_schema": target_schema_payload(),
+        "task": "Map customer source columns into the supplied versioned canonical target contract.",
+        "target_schema": target_schema_payload(target_schema),
         "scoring_guidance": {
             "name_match_score": "0-70",
             "value_profile_score": "0-30",
@@ -55,6 +57,11 @@ def build_ai_mapping_payload(
             "Type",
             "Code",
         ],
+        "transformation_guidance": {
+            "approved_operations": sorted(APPROVED_OPERATIONS),
+            "parameters_format": "Return parameters_json as a JSON object encoded in a string.",
+            "approval_rule": "Transformation steps are suggestions and require reviewer approval.",
+        },
         "source_columns": [
             {
                 "column_name": profile.get("column_name"),
@@ -79,6 +86,7 @@ def build_ai_mapping_payload(
 def validate_ai_mapping_response(
     parsed: dict[str, Any],
     profiles: list[dict[str, Any]],
+    target_schema: list[TargetField] | None = None,
 ) -> list[dict[str, Any]]:
     if not isinstance(parsed, dict):
         raise AIMapperValidationError("AI mapping response must be a JSON object.")
@@ -88,6 +96,8 @@ def validate_ai_mapping_response(
         raise AIMapperValidationError("AI mapping response must include a mappings list.")
 
     source_columns = {str(profile.get("column_name")) for profile in profiles}
+    selected_schema = target_schema or TARGET_SCHEMA
+    targets_by_key = target_fields_by_key(selected_schema)
     seen_targets: set[tuple[str, str]] = set()
     validated: list[dict[str, Any]] = []
 
@@ -100,7 +110,7 @@ def validate_ai_mapping_response(
         source_column = str(mapping.get("source_column") or "").strip()
         target_key = (target_table, target_field)
 
-        if target_key not in TARGET_FIELDS_BY_KEY:
+        if target_key not in targets_by_key:
             raise AIMapperValidationError(f"AI returned unknown target field: {target_table}.{target_field}.")
         if source_column and source_column not in source_columns:
             raise AIMapperValidationError(
@@ -126,14 +136,33 @@ def validate_ai_mapping_response(
 
         rationale = str(mapping.get("rationale") or "").strip()
         transformation_hint = str(mapping.get("transformation_hint") or "").strip()
+        raw_transformation_steps = []
+        for raw_step in mapping.get("transformation_steps") or []:
+            step = dict(raw_step)
+            if "parameters" not in step and "parameters_json" in step:
+                try:
+                    step["parameters"] = json.loads(str(step.get("parameters_json") or "{}"))
+                except json.JSONDecodeError as exc:
+                    raise AIMapperValidationError(
+                        f"AI returned invalid parameters_json for {target_table}.{target_field}: {exc.msg}."
+                    ) from exc
+            raw_transformation_steps.append(step)
+        try:
+            transformation_steps = normalize_steps(raw_transformation_steps)
+        except ValueError as exc:
+            raise AIMapperValidationError(
+                f"AI returned invalid transformation steps for {target_table}.{target_field}: {exc}"
+            ) from exc
+        target = targets_by_key[target_key]
         validated.append(
             {
                 "target_table": target_table,
                 "target_field": target_field,
-                "required": TARGET_FIELDS_BY_KEY[target_key].required,
-                "target_data_type": TARGET_FIELDS_BY_KEY[target_key].data_type,
-                "target_validation_kind": TARGET_FIELDS_BY_KEY[target_key].validation_kind,
+                "required": target.required,
+                "target_data_type": target.data_type,
+                "target_validation_kind": target.validation_kind,
                 "source_column": source_column,
+                "source_columns": [source_column] if source_column else [],
                 "confidence": confidence,
                 "mapping_status": "ai_suggested" if source_column else "unmapped",
                 "needs_review": needs_review or confidence < 85,
@@ -142,6 +171,9 @@ def validate_ai_mapping_response(
                 "review_reason": "; ".join(review_flags),
                 "approved": False,
                 "transformation_hint": transformation_hint,
+                "transformation_steps": transformation_steps,
+                "failure_policy": "error" if target.required else "warning_set_null",
+                "transformation_approved": False,
             }
         )
 
@@ -152,7 +184,7 @@ def validate_ai_mapping_response(
         if not isinstance(value, list) or not all(isinstance(item, str) for item in value):
             raise AIMapperValidationError(f"AI mapping response field {key} must be a list of strings.")
 
-    return apply_mapping_type_alignment(validated, profiles)
+    return apply_mapping_type_alignment(validated, profiles, selected_schema)
 
 
 def _response_schema() -> dict[str, Any]:
@@ -175,6 +207,7 @@ def _response_schema() -> dict[str, Any]:
                         "review_flags",
                         "rationale",
                         "transformation_hint",
+                        "transformation_steps",
                     ],
                     "properties": {
                         "target_table": {"type": "string"},
@@ -185,6 +218,21 @@ def _response_schema() -> dict[str, Any]:
                         "review_flags": {"type": "array", "items": {"type": "string"}},
                         "rationale": {"type": "string"},
                         "transformation_hint": {"type": "string"},
+                        "transformation_steps": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "additionalProperties": False,
+                                "required": ["operation", "parameters_json"],
+                                "properties": {
+                                    "operation": {
+                                        "type": "string",
+                                        "enum": sorted(APPROVED_OPERATIONS),
+                                    },
+                                    "parameters_json": {"type": "string"},
+                                },
+                            },
+                        },
                     },
                 },
             },
@@ -252,6 +300,7 @@ def suggest_mappings_with_ai(
     profiles: list[dict[str, Any]],
     rules_based_suggestions: list[dict[str, Any]] | None = None,
     model: str | None = None,
+    target_schema: list[TargetField] | None = None,
 ) -> list[dict[str, Any]]:
     _load_dotenv_if_available()
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
@@ -265,7 +314,8 @@ def suggest_mappings_with_ai(
 
     http_client = httpx.Client(verify=_httpx_verify_context())
     client = OpenAI(api_key=api_key, http_client=http_client)
-    payload = build_ai_mapping_payload(profiles, rules_based_suggestions)
+    selected_schema = target_schema or TARGET_SCHEMA
+    payload = build_ai_mapping_payload(profiles, rules_based_suggestions, selected_schema)
     selected_model = model or _openai_model()
     system_message = (
         "You are a careful data onboarding mapping assistant. Return only JSON. "
@@ -298,4 +348,4 @@ def suggest_mappings_with_ai(
         ) from exc
     raw_text = _extract_response_text(response)
     parsed = json.loads(raw_text)
-    return validate_ai_mapping_response(parsed, profiles)
+    return validate_ai_mapping_response(parsed, profiles, selected_schema)

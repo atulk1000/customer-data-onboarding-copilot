@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Any
 
 from onboarding.rules_mapper import score_value_profile
-from onboarding.schema import TARGET_FIELDS_BY_KEY, TargetField
+from onboarding.schema import TargetField, target_fields_by_key
 
 BLOCKING_ALIGNMENT_STATUSES = {"mismatch", "unknown_source"}
 
@@ -41,21 +41,23 @@ def _alignment_from_score(value_score: int) -> str:
 
 
 def evaluate_type_alignment(profile: dict[str, Any], target: TargetField) -> tuple[str, int, str]:
-    value_score, reason = score_value_profile(profile, target.field)
+    value_score, reason = score_value_profile(profile, target.field, target)
     return _alignment_from_score(value_score), value_score, reason
 
 
 def apply_mapping_type_alignment(
     mappings: list[dict[str, Any]],
     profiles: list[dict[str, Any]],
+    target_schema: list[TargetField] | None = None,
 ) -> list[dict[str, Any]]:
     profiles_by_column = _profile_lookup(profiles)
+    targets_by_key = target_fields_by_key(target_schema)
     annotated: list[dict[str, Any]] = []
 
     for mapping in mappings:
         row = dict(mapping)
         target_key = (str(row.get("target_table") or ""), str(row.get("target_field") or ""))
-        target = TARGET_FIELDS_BY_KEY.get(target_key)
+        target = targets_by_key.get(target_key)
         source_column = str(row.get("source_column") or "").strip()
 
         if target is not None:

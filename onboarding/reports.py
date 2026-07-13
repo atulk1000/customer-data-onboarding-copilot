@@ -7,6 +7,8 @@ from typing import Any
 
 import pandas as pd
 
+from onboarding.contracts import ContractVersion
+from onboarding.reconciliation import ReconciliationResult
 from onboarding.source_coverage import source_coverage_summary
 from onboarding.transform import TransformOutputs
 from onboarding.validation import ValidationResult
@@ -44,6 +46,13 @@ def build_report_data(
     source_coverage: list[dict[str, Any]] | None = None,
     source_coverage_reviewed: bool = False,
     signoff: dict[str, Any] | None = None,
+    contract: ContractVersion | None = None,
+    mapping_template_version: int | str = "",
+    pre_reconciliation: ReconciliationResult | None = None,
+    post_reconciliation: ReconciliationResult | None = None,
+    correction_audit: list[dict[str, Any]] | None = None,
+    parent_import_run_id: int | None = None,
+    run_kind: str = "original",
 ) -> dict[str, Any]:
     issues_df = validation_result.issues_df
     rejected_rows = outputs.rejected_rows
@@ -51,6 +60,7 @@ def build_report_data(
     coverage_summary = source_coverage_summary(source_coverage_rows)
     replay_check = import_replay_check or {}
     signoff = signoff or {}
+    correction_audit = correction_audit or []
     field_lineage = outputs.field_lineage
     if published:
         signoff_status = "Published to PostgreSQL"
@@ -73,6 +83,9 @@ def build_report_data(
             "target_schema_name": target_schema_name,
             "target_schema_version": target_schema_version,
             "mapping_template_name": mapping_template_name,
+            "mapping_template_version": mapping_template_version,
+            "parent_import_run_id": parent_import_run_id,
+            "run_kind": run_kind,
             "source_file_hash_short": source_file_hash[:12] if source_file_hash else "",
             "is_replay": bool(replay_check.get("is_replay")),
             "previous_import_run_id": replay_check.get("previous_import_run_id"),
@@ -92,6 +105,14 @@ def build_report_data(
                 "needs_review": mapping.get("needs_review"),
                 "approved": mapping.get("approved"),
                 "reason": mapping.get("reason") or mapping.get("rationale"),
+                "source_columns": "; ".join(
+                    str(value) for value in (mapping.get("source_columns") or [mapping.get("source_column")]) if value
+                ),
+                "transformation_operations": ", ".join(
+                    str(step.get("operation") or "") for step in mapping.get("transformation_steps") or []
+                ),
+                "failure_policy": mapping.get("failure_policy") or "error",
+                "transformation_approved": bool(mapping.get("transformation_approved", False)),
             }
             for mapping in mappings
         ],
@@ -106,7 +127,50 @@ def build_report_data(
             "members_created": len(outputs.members),
             "plans_created": len(outputs.plans),
             "coverage_records_created": len(outputs.member_coverage),
+            "status": (
+                post_reconciliation.status
+                if post_reconciliation
+                else pre_reconciliation.status if pre_reconciliation else "Not run"
+            ),
         },
+        "contract_summary": {
+            "contract_key": contract.contract_key if contract else "",
+            "contract_name": contract.name if contract else target_schema_name,
+            "contract_version": contract.version if contract else target_schema_version,
+            "contract_status": contract.status if contract else "",
+            "contract_checksum_short": contract.checksum[:12] if contract else "",
+            "domain": contract.domain if contract else "",
+        },
+        "transformation_summary": [
+            {
+                "target": f"{mapping.get('target_table')}.{mapping.get('target_field')}",
+                "sources": "; ".join(
+                    str(value) for value in (mapping.get("source_columns") or [mapping.get("source_column")]) if value
+                ),
+                "operations": ", ".join(
+                    str(step.get("operation") or "") for step in mapping.get("transformation_steps") or []
+                )
+                or "canonical normalization only",
+                "failure_policy": mapping.get("failure_policy") or "error",
+                "approved": bool(mapping.get("transformation_approved", False)),
+            }
+            for mapping in mappings
+            if mapping.get("approved")
+        ],
+        "reconciliation_forecast": pre_reconciliation.to_dict() if pre_reconciliation else {},
+        "reconciliation_actual": post_reconciliation.to_dict() if post_reconciliation else {},
+        "reconciliation_checks": (
+            [check.__dict__ for check in post_reconciliation.checks]
+            if post_reconciliation
+            else [check.__dict__ for check in pre_reconciliation.checks] if pre_reconciliation else []
+        ),
+        "correction_summary": {
+            "corrected_records": len({row.get("source_record_id") for row in correction_audit}),
+            "corrected_fields": len(correction_audit),
+            "parent_import_run_id": parent_import_run_id,
+            "run_kind": run_kind,
+        },
+        "correction_audit_preview": correction_audit[:25],
         "source_coverage_summary": {
             **coverage_summary,
             "source_coverage_reviewed": source_coverage_reviewed,
@@ -149,6 +213,13 @@ def render_html_report(report_data: dict[str, Any]) -> str:
     reconciliation_rows = [{"metric": key, "value": value} for key, value in reconciliation.items()]
     coverage_rows = [{"metric": key, "value": value} for key, value in report_data["source_coverage_summary"].items()]
     signoff_rows = [{"field": key, "value": value} for key, value in report_data["reviewer_signoff"].items()]
+    contract_rows = [{"field": key, "value": value} for key, value in report_data["contract_summary"].items()]
+    active_reconciliation = report_data["reconciliation_actual"] or report_data["reconciliation_forecast"]
+    reconciliation_table_rows = [
+        {"target_table": table_name, **metrics}
+        for table_name, metrics in (active_reconciliation.get("table_metrics") or {}).items()
+    ]
+    correction_rows = [{"metric": key, "value": value} for key, value in report_data["correction_summary"].items()]
 
     return f"""<!doctype html>
 <html>
@@ -174,8 +245,14 @@ def render_html_report(report_data: dict[str, Any]) -> str:
   <h2>Import Summary</h2>
   {_table_html(summary_rows, "No import summary available.")}
 
+  <h2>Target Contract</h2>
+  {_table_html(contract_rows, "No target contract metadata available.")}
+
   <h2>Mapping Summary</h2>
   {_table_html(report_data["mapping_summary"], "No mapping decisions available.")}
+
+  <h2>Transformation Summary</h2>
+  {_table_html(report_data["transformation_summary"], "No approved transformation pipelines available.")}
 
   <h2>Source Coverage</h2>
   {_table_html(coverage_rows, "No source coverage available.")}
@@ -189,6 +266,12 @@ def render_html_report(report_data: dict[str, Any]) -> str:
 
   <h2>Reconciliation</h2>
   {_table_html(reconciliation_rows, "No reconciliation summary available.")}
+  {_table_html(reconciliation_table_rows, "No table-level reconciliation metrics available.")}
+  {_table_html(report_data["reconciliation_checks"], "No detailed reconciliation checks available.")}
+
+  <h2>Correction And Reprocessing</h2>
+  {_table_html(correction_rows, "No correction summary available.")}
+  {_table_html(report_data["correction_audit_preview"], "No corrected fields in this run.")}
 
   <h2>Reviewer Signoff</h2>
   {_table_html(signoff_rows, "No reviewer signoff captured.")}
@@ -197,7 +280,7 @@ def render_html_report(report_data: dict[str, Any]) -> str:
   {_table_html(report_data["rejected_rows_preview"], "No rejected rows.")}
 
   <h2>Field-Level Lineage Preview</h2>
-  {_table_html(_select_columns(report_data["field_lineage_preview"], ["source_row_number", "row_status", "lineage_status", "target_table", "target_field", "source_column", "original_value", "normalized_value", "transformation_applied", "issue_codes"]), "No field lineage available.")}
+  {_table_html(_select_columns(report_data["field_lineage_preview"], ["source_row_number", "source_record_id", "row_status", "lineage_status", "target_table", "target_field", "source_column", "original_value", "corrected_values_json", "final_value", "transformation_applied", "issue_codes"]), "No field lineage available.")}
 </body>
 </html>
 """
@@ -276,6 +359,12 @@ def render_pdf_report(report_data: dict[str, Any]) -> bytes:
         "No import summary available.",
     )
 
+    add_heading("Target Contract")
+    add_table(
+        [{"field": key, "value": value} for key, value in report_data["contract_summary"].items()],
+        "No target contract metadata available.",
+    )
+
     add_heading("Mapping Summary")
     add_table(
         _select_columns(
@@ -292,6 +381,12 @@ def render_pdf_report(report_data: dict[str, Any]) -> bytes:
             ],
         ),
         "No mapping decisions available.",
+    )
+
+    add_heading("Transformation Summary")
+    add_table(
+        report_data["transformation_summary"],
+        "No approved transformation pipelines available.",
     )
 
     add_heading("Source Coverage")
@@ -324,6 +419,42 @@ def render_pdf_report(report_data: dict[str, Any]) -> bytes:
         [{"metric": key, "value": value} for key, value in report_data["reconciliation_summary"].items()],
         "No reconciliation summary available.",
     )
+    active_reconciliation = report_data["reconciliation_actual"] or report_data["reconciliation_forecast"]
+    add_table(
+        [
+            {"target_table": table_name, **metrics}
+            for table_name, metrics in (active_reconciliation.get("table_metrics") or {}).items()
+        ],
+        "No table-level reconciliation metrics available.",
+    )
+    add_table(
+        _select_columns(
+            report_data["reconciliation_checks"],
+            ["check_code", "severity", "status", "expected_value", "actual_value", "message"],
+        ),
+        "No detailed reconciliation checks available.",
+    )
+
+    add_heading("Correction And Reprocessing")
+    add_table(
+        [{"metric": key, "value": value} for key, value in report_data["correction_summary"].items()],
+        "No correction summary available.",
+    )
+    add_table(
+        _select_columns(
+            report_data["correction_audit_preview"],
+            [
+                "source_record_id",
+                "source_row_number",
+                "source_column",
+                "original_value",
+                "corrected_value",
+                "correction_reason",
+                "correction_status",
+            ],
+        ),
+        "No corrected fields in this run.",
+    )
 
     add_heading("Reviewer Signoff")
     add_table(
@@ -337,6 +468,7 @@ def render_pdf_report(report_data: dict[str, Any]) -> bytes:
             report_data["rejected_rows_preview"],
             [
                 "source_row_number",
+                "source_record_id",
                 "error_count",
                 "error_codes",
                 "error_target_fields",
@@ -360,7 +492,8 @@ def render_pdf_report(report_data: dict[str, Any]) -> bytes:
                 "target_field",
                 "source_column",
                 "original_value",
-                "normalized_value",
+                "corrected_values_json",
+                "final_value",
                 "issue_codes",
             ],
         ),

@@ -17,6 +17,9 @@ class TargetField:
     expected_evidence: list[str] = dataclass_field(default_factory=list)
     allowed_values: list[str] = dataclass_field(default_factory=list)
     generated: bool = False
+    aliases: list[str] = dataclass_field(default_factory=list)
+    generation_strategy: str = ""
+    validation_rules: list[dict[str, Any]] = dataclass_field(default_factory=list)
 
 
 TARGET_SCHEMA: list[TargetField] = [
@@ -362,7 +365,19 @@ ENUM_NORMALIZERS: dict[str, dict[str, str]] = {
 }
 
 
-def target_schema_payload() -> list[dict[str, Any]]:
+def target_fields_by_key(target_schema: list[TargetField] | None = None) -> dict[tuple[str, str], TargetField]:
+    fields = target_schema or TARGET_SCHEMA
+    return {(field.table, field.field): field for field in fields}
+
+
+def target_fields_by_field(target_schema: list[TargetField] | None = None) -> dict[str, TargetField]:
+    fields_by_name: dict[str, TargetField] = {}
+    for target_field in target_schema or TARGET_SCHEMA:
+        fields_by_name.setdefault(target_field.field, target_field)
+    return fields_by_name
+
+
+def target_schema_payload(target_schema: list[TargetField] | None = None) -> list[dict[str, Any]]:
     return [
         {
             "table": field.table,
@@ -374,11 +389,14 @@ def target_schema_payload() -> list[dict[str, Any]]:
             "allowed_values": field.allowed_values,
             "description": field.description,
             "expected_evidence": field.expected_evidence,
+            "aliases": field.aliases,
+            "generation_strategy": field.generation_strategy,
+            "validation_rules": field.validation_rules,
         }
-        for field in TARGET_SCHEMA
+        for field in target_schema or TARGET_SCHEMA
         if not field.generated
     ]
 
 
-def required_target_fields() -> list[TargetField]:
-    return [field for field in TARGET_SCHEMA if field.required and not field.generated]
+def required_target_fields(target_schema: list[TargetField] | None = None) -> list[TargetField]:
+    return [field for field in target_schema or TARGET_SCHEMA if field.required and not field.generated]

@@ -9,9 +9,9 @@ The app is intentionally framed as an implementation control plane rather than a
 ## Core Flow
 
 1. Target schema
-   - define canonical tables and fields
-   - declare data type, required status, nullability, validation kind, and allowed values
-   - version the schema so reports, templates, and import runs remain explainable
+   - select a published contract from the PostgreSQL registry
+   - import/export JSON contracts with tables, keys, relationships, types, validations, and reconciliation policy
+   - keep published versions immutable and retain draft/published/retired lifecycle evidence
 
 2. Source profiling
    - normalize source column names
@@ -22,7 +22,8 @@ The app is intentionally framed as an implementation control plane rather than a
    - generate deterministic rules-based suggestions
    - optionally call an LLM for AI-assisted suggestions
    - compare source profile evidence against target data type contracts
-   - require human approval before validation
+   - configure ordered deterministic transformation pipelines from an approved operation catalog
+   - preview before/after values and require human approval before validation
 
 4. Coverage review
    - show every source column
@@ -34,36 +35,43 @@ The app is intentionally framed as an implementation control plane rather than a
    - create blocking errors for rows that cannot publish
    - create warnings for quality issues that do not block publish
    - attach target field and mapped source column to each issue
+   - expose inline correction, correction CSV upload, and acknowledged-reject controls
 
 6. Transformation
-   - split accepted rows into `members`, `plans`, and `member_coverage`
+   - build contract-defined output tables, including `members`, `plans`, and `member_coverage` for the demo
    - generate deterministic `coverage_id` values
    - produce rejected rows with original values
-   - produce field-level lineage for every source row and target field
+   - produce field-level lineage with the ordered transformation trace for every source row and target field
 
 7. Publish
    - run PostgreSQL connectivity and replay checks
+   - forecast inserts, updates, unchanged rows, duplicates, missing outputs, and foreign-key orphans
    - capture reviewer signoff
-   - upsert canonical records
-   - persist import run, mapping decisions, source coverage, validation issues, and rejected rows
+   - publish in one transaction and verify stored values before commit
+   - roll back hard reconciliation failures and retain a failed import-run audit record
+   - persist contract/template versions, import data, lineage, reconciliation, corrections, and signoff
 
 8. Report
    - generate HTML and PDF reports from the same report data model
-   - export canonical outputs, rejected rows, and field lineage as CSV
+   - export canonical data, correction work queue, correction audit, lineage, contract, template, and reconciliation evidence
 
 ## Module Boundaries
 
 | Module | Responsibility |
 | --- | --- |
 | `onboarding/schema.py` | Canonical schema, aliases, data type contracts, enum normalizers |
+| `onboarding/contracts.py` | Contract validation, checksums, lifecycle, JSON import/export, PostgreSQL registry |
 | `onboarding/profiler.py` | Source column profiling and type inference |
 | `onboarding/rules_mapper.py` | Deterministic mapping suggestions and scoring |
 | `onboarding/ai_mapper.py` | OpenAI-assisted mapping with structured output validation |
 | `onboarding/mapping_quality.py` | Source/target type alignment and blocking mismatch checks |
 | `onboarding/source_coverage.py` | Unused source column audit and recommendations |
-| `onboarding/mapping_templates.py` | Local schema-versioned mapping template save/load |
+| `onboarding/mapping_templates.py` | Exact-contract-version mapping and transformation template save/load |
 | `onboarding/validation.py` | Canonical validation errors and warnings |
-| `onboarding/transform.py` | Canonical table outputs, rejected rows, field lineage |
+| `onboarding/transformations.py` | Controlled operation catalog, pipeline execution, preview, failure policies |
+| `onboarding/transform.py` | Dynamic canonical outputs, deduplication metrics, rejected rows, field lineage |
+| `onboarding/corrections.py` | Stable source identity, correction CSV validation, immutable overlays, audit rows |
+| `onboarding/reconciliation.py` | Transform/pre/post reconciliation, database forecast, stored-value verification |
 | `onboarding/idempotency.py` | Source file fingerprint and import replay check |
 | `onboarding/database.py` | PostgreSQL schema initialization and publish path |
 | `onboarding/reports.py` | HTML/PDF report data and rendering |
@@ -93,6 +101,8 @@ Target field data types are declared before mapping:
 - `enum`
 - `email`
 - `phone`
+- `numeric`
+- `boolean`
 
 The profiler infers source types, but the target field type decides final handling:
 
@@ -113,6 +123,8 @@ They include:
 - warning metadata
 - mapped source columns
 - original source values prefixed with `original__`
+- editable values prefixed with `corrected__`
+- stable source record ID and immutable original-row fingerprint
 
 Field lineage is designed as an explainability artifact.
 
@@ -121,16 +133,19 @@ It answers:
 ```text
 For this target field, which source column and source value were used?
 What normalized value did the app produce?
-What transformation was applied?
+Which ordered transformation steps were applied?
+Was a corrected overlay used?
 Was the field accepted, warning-only, or erroring?
 ```
+
+Source-value corrections revalidate only the selected reject set and publish recovered rows through a child run. Mapping or transformation changes create a new template version and force a full source rerun so one file is never processed under mixed logic.
 
 ## Production Upgrade Path
 
 - Add authentication, roles, and organization-level separation.
-- Move mapping templates from local JSON files to governed database-backed templates.
+- Add organization-level contract/template sharing, promotion, and permissions.
 - Add AI privacy controls such as masking, sample minimization, and prompt preview.
-- Add publish dry-run impact counts for inserted, updated, unchanged, and rejected records.
-- Add reprocess-corrected-rows workflow.
 - Add import history UI and run comparison.
 - Support multi-file onboarding packages and non-CSV source formats.
+- Move retained source snapshots to encrypted object storage for asynchronous reruns.
+- Add recurring feed schema and value-distribution drift monitoring.

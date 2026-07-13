@@ -2,6 +2,7 @@
 
 __all__ = [
     "schema",
+    "contracts",
     "profiler",
     "rules_mapper",
     "source_coverage",
@@ -10,6 +11,9 @@ __all__ = [
     "ai_mapper",
     "validation",
     "transform",
+    "transformations",
+    "corrections",
+    "reconciliation",
     "database",
     "reports",
     "exports",
